@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style-compliled.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="login-background-image-light relative px-5 lg:px-[80px]">
+
+        <div class="gap-4 mb-4 pt-5 ps-0 lg:ps-12 flex" style="padding: calc();">
+            <img src="./Images/logo.png" class="h-[47px] w-[42px]" />
+            <span class="text-[23px] text-white font-semibold text-shadow-sm shadow-black">Adfactors
+                StockGuard</span>
+        </div>
+
+        <div class="flex flex-col lg:flex-row justify-center h-full w-full">
+            <div class="lg:w-1/2 w-full flex justify-center ps-0 lg:ps-12 mt-5">
+                <div class="flex flex-col text-white" style="opacity: 1;">
+                    <div class="text-[32px] leading-[38px]">
+                        Where Market Speculation <br /> Meets Transparent Verification
+                    </div>
+                    <p class="text-[16px] font-light leading-[19px] !pt-5 !text-primary-light">
+                        A platform that filters and verifies stock market rumors for SEBI. It uses advanced analytics to
+                        distinguish facts from speculation, enhancing transparency and supporting informed regulatory
+                        decisions.
+                    </p>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full h-full relative flex justify-end items-center pt-5 lg:pt-0 ">
+                <div class="login-form-wrapper-light w-full lg:w-[80%] xl:w-[70%] xl:max-w-[60%] lg:h-[75%] h-full"
+                    style="opacity: 1;">
+                    <div class="login-form-light h-full">
+                        <form>
+                            <div class="flex h-full w-full flex-col gap-6">
+                                <div class="w-full flex justify-between">
+                                    <h1 class="text-[16px] leading-[19.36px] font-semibold text-secondary-dark">Login
+                                    </h1>
+                                    <p id="openModal"
+                                        class="font-medium text-[13px] text-[#4B65E1] leading-[15.7px] underline underline-offset-1 cursor-pointer"
+                                        href="http://">Create an
+                                        account</p>
+
+                                </div>
+                                <div class="flex flex-col gap-6 h-full">
+                                    <div>
+                                        <div class="flex flex-col gap-6">
+                                            <div>
+                                                <div class="relative">
+                                                    <input type="email" id="email"
+                                                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                                        placeholder="Enter your email" required>
+                                                    <label for="email"
+                                                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Email
+                                                        Address</label>
+                                                </div>
+                                                <p id="outlined_helper_text:r0:"
+                                                    class="mt-1 text-xs text-gray-600 dark:text-gray-400"></p>
+                                            </div>
+                                            <div>
+                                                <div class="relative">
+                                                    <input type="password" id="password"
+                                                        aria-describedby="outlined_success_help"
+                                                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                                        placeholder="Password" data-testid="floating-label"
+                                                        autocomplete="off" style="padding-right: 35px;">
+                                                    <label for="password"
+                                                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Password</label>
+                                                    <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer"
+                                                        id="togglePassword">
+                                                        <svg stroke="currentColor" id="eyeIcon" fill="currentColor"
+                                                            stroke-width="0" viewBox="0 0 512 512"
+                                                            class="cursor-pointer text-secondary-light opacity-50"
+                                                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M432 448a15.92 15.92 0 0 1-11.31-4.69l-352-352a16 16 0 0 1 22.62-22.62l352 352A16 16 0 0 1 432 448zm-176.34-64c-41.49 0-81.5-12.28-118.92-36.5-34.07-22-64.74-53.51-88.7-91v-.08c19.94-28.57 41.78-52.73 65.24-72.21a2 2 0 0 0 .14-2.94L93.5 161.38a2 2 0 0 0-2.71-.12c-24.92 21-48.05 46.76-69.08 76.92a31.92 31.92 0 0 0-.64 35.54c26.41 41.33 60.4 76.14 98.28 100.65C162 402 207.9 416 255.66 416a239.13 239.13 0 0 0 75.8-12.58 2 2 0 0 0 .77-3.31l-21.58-21.58a4 4 0 0 0-3.83-1 204.8 204.8 0 0 1-51.16 6.47zm235.18-145.4c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.66 96a227.34 227.34 0 0 0-74.89 12.83 2 2 0 0 0-.75 3.31l21.55 21.55a4 4 0 0 0 3.88 1 192.82 192.82 0 0 1 50.21-6.69c40.69 0 80.58 12.43 118.55 37 34.71 22.4 65.74 53.88 89.76 91a.13.13 0 0 1 0 .16 310.72 310.72 0 0 1-64.12 72.73 2 2 0 0 0-.15 2.95l19.9 19.89a2 2 0 0 0 2.7.13 343.49 343.49 0 0 0 68.64-78.48 32.2 32.2 0 0 0-.1-34.78z">
+                                                            </path>
+                                                            <path
+                                                                d="M256 160a95.88 95.88 0 0 0-21.37 2.4 2 2 0 0 0-1 3.38l112.59 112.56a2 2 0 0 0 3.38-1A96 96 0 0 0 256 160zm-90.22 73.66a2 2 0 0 0-3.38 1 96 96 0 0 0 115 115 2 2 0 0 0 1-3.38z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <p id="outlined_helper_text:r1:"
+                                                    class="mt-1 text-xs text-gray-600 dark:text-gray-400">
+                                                <p>
+                                                    <a class="font-normal text-[#6E7174] text-[12px] flex justify-end leading-[14.5px] underline underline-offset-1"
+                                                        href="http://"> Forgot Password?</a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="flex items-center text-xs text-[#6E7174] gap-1">
+                                            <div class="checkbox-wrapper-4"><input class="inp-cbx" id="remember-me"
+                                                    type="checkbox"><label class="cbx" for="remember-me"><span><svg
+                                                            width="12px" height="10px">
+                                                            <use xlink:href="#check-4"></use>
+                                                        </svg></span></label><svg class="inline-svg">
+                                                    <symbol id="check-4" viewBox="0 0 12 10">
+                                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                    </symbol>
+                                                </svg></div><label for="remember-me"
+                                                class="cursor-pointer select-none">Remember me</label>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="group relative flex items-center justify-center text-center focus:outline-none border border-none bg-[var(--primary)] !font-semibold text-base text-white rounded w-full !py-[8px] !px-[12px] !text-sm leading-[17px]"
+                                        type="submit">Login</button>
+
+                                    <div class="flex items-center">
+                                        <div class="flex-grow border-t border-[#E7E5E5]"></div>
+                                        <span class="!mx-4 text-gray-500">or</span>
+                                        <div class="flex-grow border-t border-[#E7E5E5]"></div>
+                                    </div>
+
+                                    <div class="flex justify-center gap-[10px]">
+                                        <button class="border border-[#E7E5E5] rounded-xs p-[10px] hover:shadow-md">
+                                            <img src="./Images/google.png" alt="Google" class="w-6 h-5">
+                                        </button>
+
+                                        <button class="border border-[#E7E5E5] rounded-xs p-[10px] hover:shadow-md">
+                                            <img src="./Images/outlook.png" alt="Outlook" class="w-6 h-5">
+                                        </button>
+
+                                        <button class="border border-[#E7E5E5] rounded-xs p-[10px] hover:shadow-md">
+                                            <img src="./Images/twitter.png" alt="X" class="w-6 h-5">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex text-white text-xs px-6 py-4 justify-end absolute bottom-0 right-0">Powered by :
+            Adfactors</div>
+    </div>
+
+    <!-- register user account modal -->
+    <div class="hidden z-10 absolute top-0 right-0 h-[100vh] w-[100vw] justify-center flex items-center m-auto opacity-0 transition-opacity duration-200"
+        id="registerModal" style="background-color: rgba(35, 35, 35, 0.85);">
+        <div class="bg-white w-[708px] shadow-xs rounded-[10px] p-4">
+
+            <h1 class="text-base font-semibold leading-[19px]">Create an Account</h1>
+
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <div class="relative">
+                    <input type="text" id="username"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter your Username" required>
+                    <label for="username"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Username</label>
+                </div>
+                <div class="relative">
+                    <input type="password" id="password" aria-describedby="outlined_success_help"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter Password" data-testid="floating-label" autocomplete="off"
+                        style="padding-right: 35px;">
+                    <label for="password"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Enter
+                        Password</label>
+                    <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer" id="togglePassword">
+                        <svg stroke="currentColor" id="eyeIcon" fill="currentColor" stroke-width="0"
+                            viewBox="0 0 512 512" class="cursor-pointer text-secondary-light opacity-50" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M432 448a15.92 15.92 0 0 1-11.31-4.69l-352-352a16 16 0 0 1 22.62-22.62l352 352A16 16 0 0 1 432 448zm-176.34-64c-41.49 0-81.5-12.28-118.92-36.5-34.07-22-64.74-53.51-88.7-91v-.08c19.94-28.57 41.78-52.73 65.24-72.21a2 2 0 0 0 .14-2.94L93.5 161.38a2 2 0 0 0-2.71-.12c-24.92 21-48.05 46.76-69.08 76.92a31.92 31.92 0 0 0-.64 35.54c26.41 41.33 60.4 76.14 98.28 100.65C162 402 207.9 416 255.66 416a239.13 239.13 0 0 0 75.8-12.58 2 2 0 0 0 .77-3.31l-21.58-21.58a4 4 0 0 0-3.83-1 204.8 204.8 0 0 1-51.16 6.47zm235.18-145.4c-26.46-40.92-60.79-75.68-99.27-100.53C349 110.55 302 96 255.66 96a227.34 227.34 0 0 0-74.89 12.83 2 2 0 0 0-.75 3.31l21.55 21.55a4 4 0 0 0 3.88 1 192.82 192.82 0 0 1 50.21-6.69c40.69 0 80.58 12.43 118.55 37 34.71 22.4 65.74 53.88 89.76 91a.13.13 0 0 1 0 .16 310.72 310.72 0 0 1-64.12 72.73 2 2 0 0 0-.15 2.95l19.9 19.89a2 2 0 0 0 2.7.13 343.49 343.49 0 0 0 68.64-78.48 32.2 32.2 0 0 0-.1-34.78z">
+                            </path>
+                            <path
+                                d="M256 160a95.88 95.88 0 0 0-21.37 2.4 2 2 0 0 0-1 3.38l112.59 112.56a2 2 0 0 0 3.38-1A96 96 0 0 0 256 160zm-90.22 73.66a2 2 0 0 0-3.38 1 96 96 0 0 0 115 115 2 2 0 0 0 1-3.38z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="relative">
+                    <input type="email" id="email"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter Email" required>
+                    <label for="email"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Enter
+                        Email</label>
+                </div>
+                <div class="relative">
+                    <input type="Name" id="Name"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter your Full Name" required>
+                    <label for="Name"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Enter
+                        your Full Name</label>
+                </div>
+                <div class="relative">
+                    <input type="email" id="email"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter your email" required>
+                    <label for="email"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Email
+                        Address</label>
+                </div>
+                <div class="relative">
+                    <input type="text" id="company"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter company" required>
+                    <label for="company"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Enter
+                        Company</label>
+                </div>
+                <div class="relative">
+                    <input type="phone" id="mobile"
+                        class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5] bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                        placeholder="Enter Mobile" required>
+                    <label for="mobile"
+                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">Enter
+                        Mobile</label>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-4 py-4">
+                <button id="cancelButton"
+                    class="group relative flex items-center justify-center text-center focus:outline-none border border-primary bg-white font-semibold text-base text-[var(--primary)] rounded-sm w-[128px] h-[40px] py-[8px] px-[12px] text-sm leading-[17px]"
+                    type="submit">Cancel</button>
+
+                <button id="createButton"
+                    class="group relative flex items-center justify-center text-center focus:outline-none border border-none bg-[var(--primary)] font-semibold text-base text-white rounded-sm w-[128px] h-[40px] py-[8px] px-[12px] text-sm leading-[17px]"
+                    type="submit">Create</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./javascript/floatLabel.js"></script>
+<script src="./javascript/modal.js"></script>
+
+</html>

@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #4B65E1; /* #25ACFF */
+  --success: 20, 145, 68; /* #149144 */
+  --failure: 254, 69, 67; /* #fe4543 */
+  --primary-dark: 15, 18, 24; /*0F1218*/
+  --secondary-dark: 35, 35, 35; /*#232323*/
+  --primary-light: 231, 229, 229; /*#E7E5E5*/
+  --secondary-light: 129, 129, 131; /*#818183*/
+  --tertiary-light: 242, 243, 244; /*#F2F3F4*/
+  --primary-blue: 238, 246, 251; /*#EEF6FB*/
+  --secondary-blue: 31, 123, 244; /*#1F7BF4*/
+  --primary-yellow: 255, 244, 235; /*#FFF4EB*/
+  --secondary-yellow: 255, 159, 32; /*#FF9F20*/
+  --primary-green: 0, 158, 40; /*#009E28*/
+  --primary-background: 246, 246, 246; /*#F6F6F6*/
+  --secondary-bg: 129, 129, 131; /*#818183*/
+  --tertiary-bg: 249, 249, 249; /*#F9F9F9*/
+  --gray-color : #6E7174;
+}
+
+body {
+  font-family: "Inter", system-ui, "Segoe UI", sans-serif;
+  width: 100vw;
+  scrollbar-width: thin !important;
+}
+
+.gradient-text {
+  background: linear-gradient(109deg, #eaf7ff 2%, #66c8ff 22%, #bc66ff 35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-light {
+  color: #0f1218;
+  font-size: 14px;
+}
+
+.main-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar:hover {
+  width: 4px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #b1b2b5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #b1b2b533;
+}
+
+/* Date Range Filter CSS */
+
+/* Hide the left section of the DateRangePicker */
+.date-range-container .rdrDefinedRangesWrapper {
+  display: none;
+}
+
+/* Adjust the width of the remaining calendar */
+.date-range-container .rdrCalendarWrapper {
+  width: 100%;
+}
+
+.query-field {
+  margin-bottom: 16px;
+}
+
+.query-field:last-child {
+  margin-bottom: 0px;
+}
+
+*::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.react-toastify {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #000;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: #e74c3c;
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+
+  --toastify-toast-width: 359px;
+  --toastify-toast-background: #fff;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-font-family: "Inter", system-ui, "Segoe UI", sans-serif;
+  --toastify-z-index: 9999;
+
+  --toastify-text-color-light: #6e7174;
+  --toastify-text-color-dark: #b1b2b5;
+
+  /* Used only for colored theme */
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+
+  /* Used when no type is provided */
+  /* toast("*hello*") */
+  --toastify-color-progress-light: linear-gradient(
+    to right,
+    #4cd964,
+    #5ac8fa,
+    #007aff,
+    #34aadc,
+    #5856d6,
+    #ff2d55
+  );
+  /* Used when no type is provided */
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+
+  /* used to control the opacity of the progress trail */
+  --toastify-color-progress-bgo: 0.2;
+}
+
+.Toastify__toast {
+  opacity: 1;
+  border: 1px solid #4d4d56;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.Toastify__toast--success {
+  border: 1px solid #07bc0c;
+}
+
+.Toastify__toast--error {
+  border: 1px solid #e74c3c;
+}
+
+.Toastify__toast--info {
+  border: 1px solid #3498db;
+}
+
+.Toastify__toast--loading {
+  border: 1px solid #3498db;
+}
