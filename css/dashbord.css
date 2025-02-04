@@ -231,10 +231,19 @@
 }
 .link:hover {
   border-left: 4px solid var(--primary);
-  background: #6e717433;
+  /* background: #6e717433; */
+  background: rgba(246, 246, 246, 1);
   /* color: #66c8ff; */
   transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
+.link-active {
+    border-left: 4px solid var(--primary);
+    background: rgba(246, 246, 246, 1);
+}
+.link-active span{
+    color: var(--primary) !important;
+}
+
 /* .active {
     border-left: 4px solid #66c8ff;
     background: #6e717433;
