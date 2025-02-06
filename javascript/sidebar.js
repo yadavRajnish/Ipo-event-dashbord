@@ -2,6 +2,12 @@ const sidebar = document.getElementById("sidebar");
 const navTabs = document.querySelectorAll(".navTab");
 const contentOverlay = document.getElementById("contentOverlay");
 
+
+const mobile_sidebar = document.getElementById("mobile_sidebar");
+const openMobileSidebar = document.getElementById("openMobileSidebar");
+const closeMobileSidebar = document.getElementById("closeMobileSidebar");
+
+
 sidebar.addEventListener("mouseover", function () {
   sidebar.style.width = "200px";
   navTabs.forEach(tab => tab.classList.remove("hidden"));
@@ -17,6 +23,30 @@ sidebar.addEventListener("mouseout", function () {
   contentOverlay.classList.remove("opacity-100", "pointer-events-auto");
   contentOverlay.classList.add("opacity-0");
 });
+
+// mobile
+
+openMobileSidebar.addEventListener("click", function () {
+  mobile_sidebar.style.width = "45px";
+  navTabs.forEach(tab => tab.classList.remove("hidden"));
+  //   contentOverlay.classList.remove("hidden")
+  contentOverlay.classList.remove("opacity-0");
+  contentOverlay.classList.add("opacity-100", "pointer-events-auto");
+});
+
+closeMobileSidebar.addEventListener("click", function () {
+  mobile_sidebar.style.width = "0px";
+  navTabs.forEach(tab => tab.classList.add("hidden"));
+  //   contentOverlay.classList.add("hidden")
+  contentOverlay.classList.remove("opacity-100", "pointer-events-auto");
+  contentOverlay.classList.add("opacity-0");
+});
+
+
+
+
+
+
 
 
 
