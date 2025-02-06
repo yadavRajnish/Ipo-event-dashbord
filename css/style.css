@@ -1,29 +1,172 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #4B65E1; /* #25ACFF */
-  --success: 20, 145, 68; /* #149144 */
-  --failure: 254, 69, 67; /* #fe4543 */
-  --primary-dark: 15, 18, 24; /*0F1218*/
-  --secondary-dark: 35, 35, 35; /*#232323*/
-  --primary-light: 231, 229, 229; /*#E7E5E5*/
-  --secondary-light: 129, 129, 131; /*#818183*/
-  --tertiary-light: 242, 243, 244; /*#F2F3F4*/
-  --primary-blue: 238, 246, 251; /*#EEF6FB*/
-  --secondary-blue: 31, 123, 244; /*#1F7BF4*/
-  --primary-yellow: 255, 244, 235; /*#FFF4EB*/
-  --secondary-yellow: 255, 159, 32; /*#FF9F20*/
-  --primary-green: 0, 158, 40; /*#009E28*/
-  --primary-background: 246, 246, 246; /*#F6F6F6*/
-  --secondary-bg: 129, 129, 131; /*#818183*/
-  --tertiary-bg: 249, 249, 249; /*#F9F9F9*/
-  --gray-color : #6E7174;
+  --primary: #4b65e1; /* #25ACFF */
+  --success: rgb(20, 145, 68); /* #149144 */
+  --failure: rgb(254, 69, 67); /* #fe4543 */
+  --primary-dark: rgb(15, 18, 24); /* #0F1218 */
+  --secondary-dark: rgb(35, 35, 35); /* #232323 */
+  --primary-light: rgb(231, 229, 229); /* #E7E5E5 */
+  --secondary-light: rgb(129, 129, 131); /* #818183 */
+  --tertiary-light: rgb(242, 243, 244); /* #F2F3F4 */
+  --primary-blue: rgb(238, 246, 251); /* #EEF6FB */
+  --secondary-blue: rgb(31, 123, 244); /* #1F7BF4 */
+  --primary-yellow: rgb(255, 244, 235); /* #FFF4EB */
+  --secondary-yellow: rgb(255, 159, 32); /* #FF9F20 */
+  --primary-green: rgb(0, 158, 40); /* #009E28 */
+  --primary-background: rgb(246, 246, 246); /* #F6F6F6 */
+  --secondary-bg: rgb(129, 129, 131); /* #818183 */
+  --tertiary-bg: rgb(249, 249, 249); /* #F9F9F9 */
+  --text-primary: rgb(110, 113, 116);
+  --gray-light: rgb(160, 160, 167);
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-failure {
+  background-color: var(--failure);
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+.bg-secondary-dark {
+  background-color: var(--secondary-dark);
+}
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+.bg-secondary-light {
+  background-color: var(--secondary-light);
+}
+.bg-tertiary-light {
+  background-color: var(--tertiary-light);
+}
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+.bg-secondary-blue {
+  background-color: var(--secondary-blue);
+}
+.bg-primary-yellow {
+  background-color: var(--primary-yellow);
+}
+.bg-secondary-yellow {
+  background-color: var(--secondary-yellow);
+}
+.bg-primary-green {
+  background-color: var(--primary-green);
+}
+.bg-primary-background {
+  background-color: var(--primary-background);
+}
+.bg-secondary-bg {
+  background-color: var(--secondary-bg);
+}
+.bg-tertiary-bg {
+  background-color: var(--tertiary-bg);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary);
+}
+.text-success {
+  color: var(--success);
+}
+.text-failure {
+  color: var(--failure);
+}
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+.text-secondary-dark {
+  color: var(--secondary-dark);
+}
+.text-primary-light {
+  color: var(--primary-light);
+}
+.text-secondary-light {
+  color: var(--secondary-light);
+}
+.text-tertiary-light {
+  color: var(--tertiary-light);
+}
+.text-primary-blue {
+  color: var(--primary-blue);
+}
+.text-secondary-blue {
+  color: var(--secondary-blue);
+}
+.text-primary-yellow {
+  color: var(--primary-yellow);
+}
+.text-secondary-yellow {
+  color: var(--secondary-yellow);
+}
+.text-primary-green {
+  color: var(--primary-green);
+}
+.text-text-primary {
+  color: var(--text-primary);
+}
+.text-gray-light {
+  color: var(--gray-light);
+}
+
+/* Border Colors */
+.border-primary {
+  border-color: var(--primary);
+}
+.border-success {
+  border-color: var(--success);
+}
+.border-failure {
+  border-color: var(--failure);
+}
+.border-primary-dark {
+  border-color: var(--primary-dark);
+}
+.border-secondary-dark {
+  border-color: var(--secondary-dark);
+}
+.border-primary-light {
+  border-color: var(--primary-light);
+}
+.border-secondary-light {
+  border-color: var(--secondary-light);
+}
+.border-tertiary-light {
+  border-color: var(--tertiary-light);
+}
+.border-primary-blue {
+  border-color: var(--primary-blue);
+}
+.border-secondary-blue {
+  border-color: var(--secondary-blue);
+}
+.border-primary-yellow {
+  border-color: var(--primary-yellow);
+}
+.border-secondary-yellow {
+  border-color: var(--secondary-yellow);
+}
+.border-primary-green {
+  border-color: var(--primary-green);
+}
+.border-gray-light {
+  border-color: var(--gray-light);
 }
 
 body {
   font-family: "Inter", system-ui, "Segoe UI", sans-serif;
   width: 100vw;
   scrollbar-width: thin !important;
+  color: var(--text-primary) !important;
 }
 
 .gradient-text {
@@ -173,4 +316,50 @@ body {
 
 .Toastify__toast--loading {
   border: 1px solid #3498db;
+}
+
+.float-label select:focus + label,
+.float-label select:not([value=""]) + label {
+  top: -0.4rem;
+  left: 0.75rem;
+  color: #6e7174;
+}
+.float-label label {
+  transition: all 0.2s ease;
+  background-color: white;
+}
+.float-label select {
+  transition: border-color 0.2s ease;
+  padding-right: 2rem; /* Adjust space for SVG */
+}
+.float-label select:focus {
+  outline: none;
+}
+
+.event-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12.52px;
+  color: #6e7174;
+}
+
+.event-table-tbody tr td span,
+.event-table-tbody tr td {
+  font-size: 13px;
+  line-height: 13.73px;
+  font-weight: 400;
+  color: #232323;
+}
+
+.bg-gray-btn {
+  background: rgba(110, 113, 116, 0.1);
+}
+
+.chart-btn button {
+  border-color: rgba(110, 113, 116, 0.2) !important;
+  cursor: pointer;
+}
+
+.bg-gray-light-btn {
+  background: rgba(249, 249, 249, 1) !important;
 }
