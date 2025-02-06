@@ -363,3 +363,22 @@ body {
 .bg-gray-light-btn {
   background: rgba(249, 249, 249, 1) !important;
 }
+
+.event-head{
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.05px;
+  width: fit-content;
+  position: relative;
+}
+
+.event-head::after{
+  content: "";
+  height: 3px;
+  background: var(--primary);
+  width: 30%;
+  position : absolute;
+  bottom: -4px;
+  left: 0;
+}

@@ -19,10 +19,9 @@
                 <header
                     class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-5 py-2 min-h-[56px]">
                     <nav class="w-full flex items-center">
-
                         <!-- Search Input (Centered) -->
                         <div class="flex-1 flex justify-center">
-                            <div class="w-full md:w-[425px]">
+                            <div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[425px]">
                                 <div class="flex items-center w-full text-md rounded-xs
                                 border border-[#a0a0a780] h-8 p-2">
                                     <span class="cursor-pointer text-xl flex items-center justify-center h-full">
@@ -33,7 +32,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <!-- Icons & Profile Image (Right Side) -->
                         <div class="flex items-center space-x-4">
@@ -46,15 +44,16 @@
                 </header>
 
                 <div class="main-container" style="opacity: 1; transform: none;">
-                    <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar" style="width: 64px;">
+                    <!-- <div class="fixed top-0 left-0 h-full bg-white shadow-lg transition-all duration-300 ease-in-out transform -translate-x-full md:translate-x-0 md:w-64" id="sidebar"> -->
+                        <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar">
                         <div class="top_section">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
                                 <span
-                                    class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
-                                    Event Management
-                                </span>
-                            </div>
+                                class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                Event Management
+                            </span>
+                        </div>
                         </div>
                         <div class="flex flex-col mb-6 h-full">
                             <section class="routes"><a class="" href="index.html">
@@ -223,18 +222,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-end ml-auto h-full w-[calc(100%-4rem)]">
+                <div class="flex justify-end ml-auto h-full w-full md:w-[calc(100%-4rem)]">
                     <div
-                        class="transition-all duration-[400ms] w-full px-6 pt-6 justify-between flex flex-col h-[calc(100%-3rem)] mt-10">
+                        class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6 justify-between flex flex-col h-[calc(100%-3rem)] mt-10">
                         <div>
-                            <h1 class="text-2xl font-extralight leading-[29px] !text-[#232323]">Welcome Back, Ashish
+                            <h1 class="text-xl md:text-2xl font-extralight leading-[24px] md:leading-[29px] !text-[#232323]">Welcome Back, Ashish
                             </h1>
 
-                            <div class="flex flex-col gap-4 mt-8">
-                                <div class="flex justify-between items-center h-[40px]">
-                                    <div class="flex items-center gap-[20px]">
+                            <div class="flex flex-col gap-4 mt-8 w-full">
+                                <div class="flex flex-col sm:flex-row items-start justify-between sm:items-center h-[40px] w-full sm:gap-0 gap-4 mb-10 sm:mb-0">
+                                    <div class="flex justify-between sm:justify-start items-center gap-[20px] w-full sm:w-[70%]">
                                         <h2 class="text-sm font-medium leading-[17px]">Upcoming Events</h2>
-                                        <div class="relative float-label w-[102px] bg-white">
+                                        <div class="md:block hidden relative float-label w-[102px] bg-white">
                                             <select id="dropdown"
                                                 class="block w-full px-3 pr-10 py-3 border border-gray-300 rounded-xs cursor-pointer focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
                                                 onchange="this.setAttribute('value', this.value)">
@@ -257,7 +256,27 @@
 
                                     </div>
 
-                                    <div class="flex items-center space-x-4 text-[var(--primary)]">
+                                    <div class="flex justify-between sm:justify-end w-full items-center space-x-4 text-[var(--primary)] sm:w-[30%]">
+                                        <div class="md:hidden block relative float-label w-[102px] bg-white">
+                                            <select id="dropdown"
+                                                class="block w-full px-3 pr-10 py-3 border border-gray-300 rounded-xs cursor-pointer focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
+                                                onchange="this.setAttribute('value', this.value)">
+                                                <option value="" disabled selected hidden>All Clients</option>
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <label for="dropdown"
+                                                class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
+                                                Client
+                                            </label>
+                                            <svg class="absolute right-3 top-4 w-3 h-3 text-gray-400 pointer-events-none"
+                                                width="9" height="5" viewBox="0 0 9 5" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
+                                            </svg>
+                                        </div>
                                         <button
                                             class="flex items-center px-3 py-2 h-[26px] border rounded-xs cursor-pointer text-xs font-normal leading-[14.52px]">
                                             <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -272,8 +291,9 @@
                                         <a href="#" class="text-xs font-medium leading-[14.52px]">View All</a>
                                     </div>
                                 </div>
+
                                 <!-- Table -->
-                                <div class="overflow-x-auto">
+                                <div class="overflow-x-auto w-full">
                                     <table class="w-full border border-[#EBEBE6] rounded-lg event-table">
                                         <thead class="bg-[#F9F9F9] h-[32px]">
                                             <tr class="text-sm font-medium text-[#6E7174]">
@@ -296,6 +316,7 @@
                                                 <th class="py-2 px-4">Confirm Registrations</th>
                                                 <th class="py-2 px-4">Pending Approval</th>
                                                 <th class="py-2 px-4"></th>
+                                             
                                             </tr>
                                         </thead>
                                         <tbody class="text-sm event-table-tbody">
@@ -310,11 +331,12 @@
                                                 <td class="py-2 px-4 text-center">5</td>
                                                 <td class="py-2 px-4 text-center">5</td>
                                                 <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4 flex space-x-3">
+                                                <td class="py-2 px-4 flex space-x-3" style="width: 100px;">
                                                     <img src="Images/list_alrt.svg" class="h-4 w-4" alt="list">
                                                     <img src="Images/Group.svg" class="h-4 w-4" alt="group">
                                                     <img src="Images/3-Dot.svg" class="h-4 w-4" alt="3 dot">
                                                 </td>
+                                               
                                             </tr>
 
                                             <!-- 1px Transparent Gap Row -->
@@ -414,55 +436,52 @@
                                 </div>
 
                                 <!-- card -->
-                                <div class="flex gap-4 min-h-[76px]">
+                                <div class="md:flex gap-4 min-h-[76px] flex-wrap grid grid-cols-2 justify-center items-center">
                                     <!-- Card 1 -->
-                                    <div class="relative flex-1 h-full">
+                                    <div class="relative flex-1 !h-full max-w-xs w-full">
                                         <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-4 border border-[#EBEBE6] pl-5">
+                                        <div class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
                                             <p class="font-normal text-xs leading-3">Total Events</p>
                                             <p class="text-lg font-medium leading-5 text-black">75</p>
                                         </div>
                                     </div>
-
+                                
                                     <!-- Card 2 -->
-                                    <div class="relative flex-1 h-full">
+                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
                                         <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex justify-between items-center bg-white rounded-xs p-4 border border-primary pl-5">
-
-                                            <div class="flex gap-1 flex-col ">
+                                        <div class="flex justify-between items-center bg-white rounded-xs p-2 md:p-4 border  border-primary pl-5">
+                                            <div class="flex gap-1 flex-col">
                                                 <p class="font-normal text-xs leading-3">Past Event Attendees</p>
                                                 <p class="text-lg font-medium leading-5 text-black">15</p>
                                             </div>
                                             <img src="Images/equalizer.svg" alt="">
                                         </div>
-
                                     </div>
-
+                                
                                     <!-- Card 3 -->
-                                    <div class="relative flex-1 h-full">
+                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
                                         <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-4 border border-[#EBEBE6] pl-5">
+                                        <div class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
                                             <p class="font-normal text-xs leading-3">New Users Added</p>
                                             <p class="text-lg font-medium leading-5 text-black">15</p>
                                         </div>
                                     </div>
-
+                                
                                     <!-- Card 4 -->
-                                    <div class="relative flex-1 h-full">
+                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
                                         <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-4 border border-[#EBEBE6] pl-5">
+                                        <div class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
                                             <p class="font-normal text-xs leading-3">New Clients Added</p>
                                             <p class="text-lg font-medium leading-5 text-black">25</p>
                                         </div>
                                     </div>
                                 </div>
+                                
+                                
+                                
                                 <!-- chart -->
                                 <div class="bg-white p-4 border border-[#EBEBE6]">
-                                    <div class="flex justify-between items-center mb-4">
+                                    <div class="flex sm:flex-row flex-col justify-start sm:justify-between items-start sm:items-center mb-4 gap-2 sm: gap-0">
 
                                         <h2
                                             class="text-base font-medium leading-5 text-black flex items-center justify-between">
@@ -475,7 +494,7 @@
                                             </svg>
                                         </h2>
 
-                                        <div class="flex space-x-2 text-[10px] font-medium leading-3 chart-btn">
+                                        <div class="grid sm:grid-cols-5 grid-cols-3 gap-2 sm:gap-0 space-x-2 text-[10px] font-medium leading-3 chart-btn">
                                             <button class="p-[10px] border rounded-xs text-[#41414E] bg-gray-btn">This
                                                 Month</button>
                                             <button class="p-[10px] border rounded-xs text-text-primary">Last
@@ -485,8 +504,8 @@
                                             <button class="p-[10px] border rounded-xs text-text-primary">Last
                                                 Year</button>
                                             <button
-                                                class="p-[10px] border rounded-xs bg-gray-light-btn flex justify-center items-center gap-4">
-                                                <span> Hide Chart</span>
+                                                class="p-[10px] w-full border rounded-xs bg-gray-light-btn flex justify-center items-center gap-4">
+                                                <span class="whitespace-nowrap"> Hide Chart</span>
                                                 <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M0.5 1.75V0.25H13.5V1.75H0.5Z" fill="#6E7174" />

@@ -171,3 +171,7 @@
   }
 }
 /* </style> */
+
+.input-border{
+  border-color:rgba(110, 113, 116, 0.5) !important;
+}
