@@ -27,7 +27,7 @@ sidebar.addEventListener("mouseout", function () {
 // mobile
 
 openMobileSidebar.addEventListener("click", function () {
-  mobile_sidebar.style.width = "45px";
+  mobile_sidebar.style.width = "200px";
   navTabs.forEach(tab => tab.classList.remove("hidden"));
   //   contentOverlay.classList.remove("hidden")
   contentOverlay.classList.remove("opacity-0");
@@ -41,15 +41,6 @@ closeMobileSidebar.addEventListener("click", function () {
   contentOverlay.classList.remove("opacity-100", "pointer-events-auto");
   contentOverlay.classList.add("opacity-0");
 });
-
-
-
-
-
-
-
-
-
 
 
 // const toggleBtn = document.getElementById("toggleBtn");
