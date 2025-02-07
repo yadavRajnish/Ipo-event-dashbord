@@ -19,6 +19,7 @@
   --tertiary-bg: rgb(249, 249, 249); /* #F9F9F9 */
   --text-primary: rgb(110, 113, 116);
   --gray-light: rgb(160, 160, 167);
+  --border-primary-gray: rgba(110, 113, 116, 0.4);
 }
 
 /* Background Colors */
@@ -160,6 +161,9 @@
 }
 .border-gray-light {
   border-color: var(--gray-light);
+}
+.border-primary-gray{
+  border-color: var(--border-primary-gray);
 }
 
 body {
