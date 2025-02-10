@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin>
+
 </head>
 
 <body>
@@ -417,15 +419,14 @@
                                 </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
 
                             <h1 class="event-head whitespace-nowrap">Create Event</h1>
-
                             <div
                                 class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-between my-[45px] md:my-0">
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:w-auto w-full justify-between">
-                                    <button
-                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Event
+                                    <button onclick="window.location.href='./create-events.html'"
+                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border border-primary-gray text-text-primary">Event
                                         Basic Details</button>
-                                    <button onclick="window.location.href='./create-events-template.html'"
-                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
+                                    <button
+                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border  border-primary-gray bg-[#1F7BF4] text-white  border-[#1F7BF4]">Event
                                         Templates</button>
                                     <button
                                         class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Send
@@ -436,9 +437,9 @@
                                 </div>
                             </div>
                             <form action="">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                                <div class="flex flex-col gap-4 mt-4">
                                     <div
-                                        class="relative float-label bg-white border border-primary-gray rounded-sm cursor-pointer w-full">
+                                        class="relative float-label bg-white border border-primary-gray rounded-sm cursor-pointer w-[400px]">
                                         <select id="dropdown"
                                             class="block w-full px-3 py-3 pr-2 focus:outline-none peer font-medium font-normal text-sm tracking-wider leading-[24px] h-full"
                                             onchange="this.setAttribute('value', this.value)">
@@ -452,169 +453,51 @@
                                             Client
                                         </label>
                                     </div>
-                                    <div class="relative">
-                                        <input type="text" id="eventname"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Event Name" required>
-                                        <label for="eventname"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Event
-                                            Name</label>
+
+                                    <div class="text-base font-medium leading-[19.36px] text-black">Invitation Template
                                     </div>
-                                    <div class="relative">
-                                        <input type="date" id="input_date" aria-describedby="outlined_success_help"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                            oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                            data-has-value="false">
-                                        <label for="input_date"
-                                            class="absolute left-2 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75  font-normal text-sm tracking-wider leading-[24px]"
-                                            style="transition: all 0.3s ease;">
-                                            Date⠀⠀⠀⠀⠀⠀
-                                        </label>
 
-                                        <div class="flex absolute top-[17px] right-0 !mr-4">
-                                            <img src="/Images/calendar.svg" alt="calendar">
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="time" id="time" aria-describedby="outlined_success_help"
-                                            class="peer block w-full appearance-none rounded-sm bg-white !py-3 !px-3 text-base focus:border-primary focus:outline-none focus:ring-0 border border-primary-gray font-normal tracking-wider leading-[24px]"
-                                            data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                            oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                            data-has-value="false">
+                                    <div class="main-container !relative !w-full !z-10 !min-h-[350px]">
+                                        <div class="editor-container editor-container_classic-editor editor-container_include-block-toolbar !absolute"
+                                            id="editor-container">
+                                            <div class="editor-container__editor">
+                                                <div id="editor">
+                                                    Dear (participant_name}].<br>
+                                                    Greetings from Adfactors PR! <br>
+                                                    On behalf of (event_client)], we cordially invite you to the
+                                                    {{event_name}} scheduled for {{event_date}} at {{event_time}}. The
+                                                    meeting will take place at {{event_venue}}.<br>
+                                                    Please find the event details in the invite below:<br>
+                                                    We request you to kindly register yourself for the conference
+                                                    through the link below:<br>
+                                                    Register Here<br>
+                                                    About {{event_client}}<br>
+                                                    Kabout_client)}<br>
+                                                    Regards,<br>
+                                                    {sender_name}}<br>
+                                                    (sender_company)} | M: {{sender_mobile]} | T: {{sender_tel_number]);
+                                                    Ext: {{sender_ext}}
 
-                                        <label for="time"
-                                            class="absolute left-2 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75"
-                                            style="transition: all 0.3s ease text-sm tracking-wider">
-                                            Time
-                                        </label>
-
-                                        <div class="flex absolute top-[17px] right-0 !mr-4">
-                                            <img src="/Images/calendar.svg" alt="calendar">
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" id="Venue"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Venue" required>
-                                        <label for="Venue"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Venue</label>
-                                    </div>
-                                    <div class=" relative">
-                                        <input type="text" id="Speaker"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Speaker" required>
-                                        <label for="Speaker"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Speaker</label>
-                                    </div>
-                                    <textarea name="enter_desc"
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Description" id="enter_desc"></textarea>
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Agenda" id=""></textarea>
-
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Special Requirememt" id=""></textarea>
-
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Extra Info" id=""></textarea>
-
-                                    <div class="flex flex-col justify-between gap-4 md:gap-0">
-                                        <div class="relative">
-                                            <input type="file" id="event_logo"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
-
-                                            <label for="event_logo"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Event Logo
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
-                                            </div>
-                                        </div>
-
-                                        <div class="relative">
-                                            <input type="file" id="inv_pdf"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
-
-                                            <label for="inv_pdf"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Invitation PDF
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-col justify-between gap-4 lg:gap-0">
-                                        <div class="relative">
-                                            <input type="file" id="event_logo_2"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
-
-                                            <label for="event_logo_2"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Event Logo
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
-                                            </div>
-                                        </div>
-
-                                        <div class="relative">
-                                            <div
-                                                class="flex items-center gap-4 peer block w-full appearance-none rounded-sm bg-white py-[14px] px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal cursor-pointer">
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="select-all"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="select-all" class="ml-2 text-sm text-gray-700">Select
-                                                        All</label>
-                                                </div>
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="admin"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="admin" class="ml-2 text-sm text-gray-700">admin</label>
-                                                </div>
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="eventmanager"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="eventmanager"
-                                                        class="ml-2 text-sm text-gray-700">eventmanager</label>
                                                 </div>
                                             </div>
-                                            <label for="event_logo_2"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Assign User
-                                            </label>
                                         </div>
-
+                                        <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"
+                                            crossorigin></script>
+                                        <script src="https://cdn.ckbox.io/ckbox/2.6.1/ckbox.js" crossorigin></script>
                                     </div>
+                                    <div
+                                        class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-end my-[45px] md:my-0">
+                                        <div class="flex gap-4 md:w-auto w-full">
+                                            <button
+                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
+                                            <button onclick="window.location.href='./create-events-template.html'"
+                                                class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Next</button>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </form>
-
-                            <div
-                                class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-end my-[45px] md:my-0">
-                                <div class="flex gap-4 md:w-auto w-full">
-                                    <button
-                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
-                                    <button onclick="window.location.href='./create-events-template.html'"
-                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Next</button>
-                                </div>
-                            </div>
 
                         </div>
                         <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
@@ -630,5 +513,6 @@
 
 </body>
 <script src="./javascript/sidebar.js"></script>
+<script src="./javascript/ckEditor.js"></script>
 
 </html>
