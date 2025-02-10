@@ -417,201 +417,149 @@
                                 </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
 
                             <h1 class="event-head whitespace-nowrap">Create Event</h1>
-
                             <div
                                 class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-between my-[45px] md:my-0">
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:w-auto w-full justify-between">
-                                    <button
-                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Event
+                                    <button onclick="window.location.href='./create-events.html'"
+                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border border-primary-gray text-text-primary">Event
                                         Basic Details</button>
                                     <button onclick="window.location.href='./create-events-template.html'"
                                         class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
                                         Templates</button>
                                     <button
+                                    onclick="window.location.href='./create-events-send-emails.html'"
                                         class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Send
                                         Emails to</button>
                                     <button
-                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
+                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border  border-primary-gray bg-[#1F7BF4] text-white  border-[#1F7BF4]">Event
                                         Overview</button>
                                 </div>
                             </div>
                             <form action="">
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                                <div class="flex flex-col gap-4 mt-4">
+
+                                    <div class="text-base font-medium leading-[19.36px] text-black mb-2">Event Details
+                                    </div>
+
                                     <div
-                                        class="relative float-label bg-white border border-primary-gray rounded-sm cursor-pointer w-full">
-                                        <select id="dropdown"
-                                            class="block w-full px-3 py-3 pr-2 focus:outline-none peer font-medium font-normal text-sm tracking-wider leading-[24px] h-full"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
-                                            <option value="option1">Client 1</option>
-                                            <option value="option2">Client 2</option>
-                                            <option value="option3">Client 3</option>
-                                        </select>
-                                        <label for="dropdown"
-                                            class="absolute left-3 px-1 text-gray-600 text-xs transition-transform transform duration-200 ease-in-out font-normal  tracking-wider">
-                                            Client
-                                        </label>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" id="eventname"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Event Name" required>
-                                        <label for="eventname"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Event
-                                            Name</label>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="date" id="input_date" aria-describedby="outlined_success_help"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                            oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                            data-has-value="false">
-                                        <label for="input_date"
-                                            class="absolute left-2 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75  font-normal text-sm tracking-wider leading-[24px]"
-                                            style="transition: all 0.3s ease;">
-                                            Date⠀⠀⠀⠀⠀⠀
-                                        </label>
+                                        class="bg-white border border-primary-gray w-full rounded-sm p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Client Name</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">Pakka Limited</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Title</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">test microsite url</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Date</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">28 Dec 2024, 12:00:00 AM
+                                            </p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Venue</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">Mumbai</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Speaker</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">Mr. ABC</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Description</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">desc</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Agenda</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">Agenda</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Special Requirements</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">-</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Event Managers</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">admin, eventmanager</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Mail Sender</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">eventmanager</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Invitation Emails</h1>
+                                            <p class="text-[#232323] text-sm leading-[16.94px]">Fund Manager, Broker</p>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Invitation PDF</h1>
+                                            <a href="#"
+                                                class="text-primary underline underline-offset-4 text-sm">Download
+                                                Invitation PDF</a>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Company Logo</h1>
+                                            <a href="#"
+                                                class="text-primary underline underline-offset-4 text-sm">Download
+                                                Company Logo</a>
+                                        </div>
+                                        <div class="font-normal flex flex-col gap-1">
+                                            <h1 class="text-xs leading-[14.54px]">Invitation Image</h1>
+                                            <a href="#"
+                                                class="text-primary underline underline-offset-4 text-sm">Download
+                                                Invitation Image</a>
+                                        </div>
 
-                                        <div class="flex absolute top-[17px] right-0 !mr-4">
-                                            <img src="/Images/calendar.svg" alt="calendar">
+                                        <div class="font-normal flex flex-col gap-1 sm:col-span-2 lg:col-span-2">
+                                            <h1 class="text-xs leading-[14.54px]">Subject</h1>
+                                            <p class="text-[#232323] text-sm">|| Invite || {{event_name}}: Scheduled for
+                                                {{event_date}} at {{event_time}} at {{event_venue}}</p>
+                                        </div>
+
+                                        <div class="font-normal flex flex-col gap-1 sm:col-span-2 lg:col-span-4">
+                                            <h1 class="text-xs leading-[14.54px]">Invitation Mail Message</h1>
+                                            <p class="text-[#232323] text-sm">Subject: || Invite || {{event_name}}:
+                                                Scheduled for {{event_date}} at {{event_time}} at {{event_venue}}</p>
                                         </div>
                                     </div>
-                                    <div class="relative">
-                                        <input type="time" id="time" aria-describedby="outlined_success_help"
-                                            class="peer block w-full appearance-none rounded-sm bg-white !py-3 !px-3 text-base focus:border-primary focus:outline-none focus:ring-0 border border-primary-gray font-normal tracking-wider leading-[24px]"
-                                            data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                            oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                            data-has-value="false">
 
-                                        <label for="time"
-                                            class="absolute left-2 top-1/2 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75"
-                                            style="transition: all 0.3s ease text-sm tracking-wider">
-                                            Time
-                                        </label>
-
-                                        <div class="flex absolute top-[17px] right-0 !mr-4">
-                                            <img src="/Images/calendar.svg" alt="calendar">
-                                        </div>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" id="Venue"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Venue" required>
-                                        <label for="Venue"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Venue</label>
-                                    </div>
-                                    <div class=" relative">
-                                        <input type="text" id="Speaker"
-                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
-                                            placeholder="Speaker" required>
-                                        <label for="Speaker"
-                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Speaker</label>
-                                    </div>
-                                    <textarea name="enter_desc"
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Description" id="enter_desc"></textarea>
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Agenda" id=""></textarea>
-
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Special Requirememt" id=""></textarea>
-
-                                    <textarea name=""
-                                        class="peer block w-full appearance-none rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]  min-h-[120px]"
-                                        placeholder="Enter Extra Info" id=""></textarea>
-
-                                    <div class="flex flex-col justify-between gap-4 md:gap-0">
-                                        <div class="relative">
-                                            <input type="file" id="event_logo"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
-
-                                            <label for="event_logo"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Event Logo
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
+                                    <div class="bg-[#F6F6F6] p-5 rounded-lg w-full">
+                                        <div class="flex flex-col gap-3 w-[80%]">
+                                            <h2 class="text-black font-normal text-sm leading-[16.94px]">Invitation Mail
+                                                Content</h2>
+                                            <p class="font-normal text-xs leading-[14.52px]">Dear {{participant_name}}
+                                                <br> Greetings from Adfactors PR! On behalf of
+                                                {{event_client}} <br> we cordially invite you to the {{event_name}}
+                                                scheduled for {{event_date}} at {{event_time}}. The meeting will take
+                                                place
+                                                at {{event_venue}}. Please find the event details in the invite below:
+                                            </p>
+                                            <div class="">
+                                                <p class="font-normal text-xs leading-[14.52px]">We request you to
+                                                    kindly
+                                                    register yourself for the conference through the link below
+                                                </p>
+                                                <a href="#"
+                                                    class="text-primary underline underline-offset-4 text-sm">Register
+                                                    Here</a>
                                             </div>
-                                        </div>
 
-                                        <div class="relative">
-                                            <input type="file" id="inv_pdf"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
-
-                                            <label for="inv_pdf"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Invitation PDF
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
-                                            </div>
+                                            <h2 class="text-black font-normal text-sm leading-[16.94px]">About</h2>
+                                            <p class="font-normal text-xs leading-[14.52px]">
+                                                {{about_client}} Regards<br> {{sender_name}} {{sender_company}} | M: {{sender_mobile}} | T: {{sender_tel_number}}; Ext: {{sender_ext}} This email and any files transmitted with it are confidential and intended solely for the addressee(s). Access to this email by anyone else is unauthorized. If you are not an intended recipient<br> you must not read<br> use or disseminate the information contained in this email.
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="flex flex-col justify-between gap-4 lg:gap-0">
-                                        <div class="relative">
-                                            <input type="file" id="event_logo_2"
-                                                class="peer block w-full appearance-none rounded-sm bg-white py-3 px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal tracking-wider leading-[24px] cursor-pointer"
-                                                data-testid="floating-label" autocomplete="off"
-                                                oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                                data-has-value="false">
 
-                                            <label for="event_logo_2"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Event Logo
-                                            </label>
-
-                                            <div class="absolute top-1/2 right-3 -translate-y-1/2">
-                                                <img src="/Images/upload_file.svg" alt="upload icon" class="w-5 h-5">
-                                            </div>
-                                        </div>
-
-                                        <div class="relative">
-                                            <div
-                                                class="flex items-center gap-4 peer block w-full appearance-none rounded-sm bg-white py-[14px] px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal cursor-pointer">
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="select-all"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="select-all" class="ml-2 text-sm text-gray-700">Select
-                                                        All</label>
-                                                </div>
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="admin"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="admin" class="ml-2 text-sm text-gray-700">admin</label>
-                                                </div>
-                                                <div class="flex items-center">
-                                                    <input type="checkbox" id="eventmanager"
-                                                        class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
-                                                    <label for="eventmanager"
-                                                        class="ml-2 text-sm text-gray-700">eventmanager</label>
-                                                </div>
-                                            </div>
-                                            <label for="event_logo_2"
-                                                class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal tracking-wider">
-                                                Assign User
-                                            </label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div
+                                    <div
                                     class="w-full h-[40px] mt-[20px] md:mt-5 flex items-center justify-end md:my-0">
                                     <div class="flex gap-4 md:w-auto w-full justify-between">
-                                        <button
-                                            class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
-                                        <button onclick="window.location.href='./create-events-template.html'"
-                                            class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Next</button>
+                                            <button
+                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
+                                            <button
+                                                class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Send
+                                                Invitation</button>
+                                        </div>
                                     </div>
+
+
                                 </div>
                             </form>
 
@@ -629,5 +577,6 @@
 
 </body>
 <script src="./javascript/sidebar.js"></script>
+<script src="./javascript/ckEditor.js"></script>
 
 </html>
