@@ -7,8 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
-    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin>
-
 </head>
 
 <body>
@@ -425,11 +423,11 @@
                                     <button onclick="window.location.href='./create-events.html'"
                                         class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border border-primary-gray text-text-primary">Event
                                         Basic Details</button>
-                                    <button
-                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border  border-primary-gray bg-[#1F7BF4] text-white  border-[#1F7BF4]">Event
+                                    <button onclick="window.location.href='./create-events-template.html'"
+                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
                                         Templates</button>
-                                    <button onclick="window.location.href='./create-events-send-emails.html'"
-                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Send
+                                    <button
+                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border  border-primary-gray bg-[#1F7BF4] text-white  border-[#1F7BF4]">Send
                                         Emails to</button>
                                     <button
                                         class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
@@ -438,63 +436,63 @@
                             </div>
                             <form action="">
                                 <div class="flex flex-col gap-4 mt-4">
-                                    <div
-                                        class="relative float-label bg-white border border-primary-gray rounded-sm cursor-pointer w-[400px]">
-                                        <select id="dropdown"
-                                            class="block w-full px-3 py-3 pr-2 focus:outline-none peer font-medium font-normal text-sm tracking-wider leading-[24px] h-full"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
-                                            <option value="option1">Client 1</option>
-                                            <option value="option2">Client 2</option>
-                                            <option value="option3">Client 3</option>
-                                        </select>
-                                        <label for="dropdown"
-                                            class="absolute left-3 px-1 text-gray-600 text-xs transition-transform transform duration-200 ease-in-out font-normal  tracking-wider">
-                                            Client
+
+
+                                    <div class="text-base font-medium leading-[19.36px] text-black mb-2">Send Invitation to</div>
+
+                                    <div class="relative">
+                                        <div
+                                            class="flex items-center gap-4 peer block w-full appearance-none rounded-sm bg-white py-[14px] px-3 pr-10 text-base focus:border-primary focus:outline-none focus:ring-0 border border-gray-300 font-normal cursor-pointer">
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="select-all"
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="select-all" class="ml-2 text-sm text-gray-700">Select
+                                                    All</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="sector_analyst"
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="sector_analyst" class="ml-2 text-sm text-gray-700">Sector
+                                                    Analyst</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="hoc_research"
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="hoc_research" class="ml-2 text-sm text-gray-700">Add Hoc
+                                                    Researcher</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="wealth_advisor"
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="wealth_advisor" class="ml-2 text-sm text-gray-700">Wealth
+                                                    Advisor</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="fund_manager"
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="fund_manager" class="ml-2 text-sm text-gray-700">Fund
+                                                    Manager</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="checkbox" id="broker" selected
+                                                    class="w-4 h-4 border-gray-400 rounded focus:ring-primary">
+                                                <label for="broker"
+                                                    class="ml-2 text-sm text-gray-700">Broker</label>
+                                            </div>
+                                        </div>
+                                        <label for="event_logo_2"
+                                            class="absolute left-3 px-1 -top-[10px] bg-white text-xs transition-transform transform duration-200 ease-in-out font-normal">
+                                            Selected Broker
                                         </label>
                                     </div>
 
-                                    <div class="text-base font-medium leading-[19.36px] text-black">Invitation Template
-                                    </div>
-
-                                    <div class="main-container !relative !w-full !z-10 !min-h-[350px]">
-                                        <div class="editor-container editor-container_classic-editor editor-container_include-block-toolbar !absolute"
-                                            id="editor-container">
-                                            <div class="editor-container__editor">
-                                                <div id="editor">
-                                                    Dear (participant_name}].<br>
-                                                    Greetings from Adfactors PR! <br>
-                                                    On behalf of (event_client)], we cordially invite you to the
-                                                    {{event_name}} scheduled for {{event_date}} at {{event_time}}. The
-                                                    meeting will take place at {{event_venue}}.<br>
-                                                    Please find the event details in the invite below:<br>
-                                                    We request you to kindly register yourself for the conference
-                                                    through the link below:<br>
-                                                    Register Here<br>
-                                                    About {{event_client}}<br>
-                                                    Kabout_client)}<br>
-                                                    Regards,<br>
-                                                    {sender_name}}<br>
-                                                    (sender_company)} | M: {{sender_mobile]} | T: {{sender_tel_number]);
-                                                    Ext: {{sender_ext}}
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"
-                                            crossorigin></script>
-                                        <script src="https://cdn.ckbox.io/ckbox/2.6.1/ckbox.js" crossorigin></script>
-                                    </div>
                                     <div
                                         class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-end my-[45px] md:my-0">
                                         <div class="flex gap-4 md:w-auto w-full">
                                             <button
-                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">
-                                                Cancel</button>
-
-                                                <button type="button" onclick="window.location.href='./create-events-send-emails.html'"
+                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
+                                            <button onclick="window.location.href='./create-events-template.html'"
                                                 class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Next</button>
-                                              
                                         </div>
                                     </div>
 
@@ -517,5 +515,5 @@
 </body>
 <script src="./javascript/sidebar.js"></script>
 <script src="./javascript/ckEditor.js"></script>
-<script src="./javascript//navigate.js"></script>
+
 </html>
