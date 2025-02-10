@@ -386,3 +386,11 @@ body {
   bottom: -4px;
   left: 0;
 }
+
+textarea::placeholder{
+  color: var(--text-primary);
+}
+
+textarea {
+  resize: none;
+}

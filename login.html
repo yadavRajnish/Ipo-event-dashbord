@@ -89,15 +89,21 @@
 
                                         <div class="flex items-center text-xs text-[#6E7174] gap-1">
                                             <div class="checkbox-wrapper-4"><input class="inp-cbx" id="remember-me"
-                                                    type="checkbox"><label class="cbx" for="remember-me"><span><svg
-                                                            width="12px" height="10px">
+                                                    type="checkbox">
+                                                <label class="cbx" for="remember-me">
+                                                    <span>
+                                                        <svg width="12px" height="10px">
                                                             <use xlink:href="#check-4"></use>
-                                                        </svg></span></label><svg class="inline-svg">
+                                                        </svg>
+                                                    </span>
+                                                </label>
+                                                <svg class="inline-svg">
                                                     <symbol id="check-4" viewBox="0 0 12 10">
                                                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                                     </symbol>
-                                                </svg></div><label for="remember-me"
-                                                class="cursor-pointer select-none">Remember me</label>
+                                                </svg>
+                                            </div>
+                                            <label for="remember-me" class="cursor-pointer select-none">Remember me</label>
                                         </div>
                                     </div>
 
@@ -153,7 +159,8 @@
                     <div class="relative">
                         <input type="password" id="registerPassword" aria-describedby="outlined_success_help"
                             class="peer block w-full appearance-none placeholder-transparent rounded-md border input-border bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                            placeholder="Enter Password" data-testid="floating-label" autocomplete="off" style="padding-right: 35px;">
+                            placeholder="Enter Password" data-testid="floating-label" autocomplete="off"
+                            style="padding-right: 35px;">
                         <label for="registerPassword"
                             class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75">
                             Enter Password
@@ -162,7 +169,7 @@
                             <img src="/Images/toggle.svg" alt="toggle">
                         </div>
                     </div>
-                    
+
                     <div class="relative">
                         <input type="email" id="email"
                             class="peer block w-full appearance-none placeholder-transparent rounded-md border input-border bg-primary-bg !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
