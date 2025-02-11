@@ -18,7 +18,7 @@
                     class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-2 md:ps-5 py-2 min-h-[56px]"
                     style="opacity: 1; transform: none;">
                     <button id="openMobileSidebar"
-                            class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
+                        class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
                     <nav class="w-full flex justify-between items-center" aria-label="Global">
                         <div class="flex items-center space-x-4 ml-auto">
                             <div class=""> <img src="./Images/notification.svg" alt=""></div>
@@ -210,7 +210,8 @@
                 </div>
 
                 <div class="block md:hidden main-container" style="opacity: 1; transform: none;">
-                    <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar" style="width: 0px;">
+                    <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar"
+                        style="width: 0px;">
                         <div class="top_section">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
@@ -416,10 +417,9 @@
                                 </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
 
                             <div class="flex justify-between items-center">
-                                <h1 class="event-head whitespace-nowrap">Event List</h1>
+                                <h1 class="event-head whitespace-nowrap">Send Invitation</h1>
                                 <!-- for mobile button -->
-                                <button
-                                    onclick="window.location.href='./create-events.html'"
+                                <button onclick="window.location.href='./create-events.html'"
                                     class="block md:hidden flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
                                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -431,30 +431,18 @@
                             </div>
                             <div class="w-full h-[40px] mt-5 flex items-center justify-between">
                                 <div class="flex gap-4 justify-between md:justify-start w-full md:w-fit">
-                                    <!-- input search -->
-                                    <div class="max-w-[260px] bg-white">
-                                        <div class="flex items-center w-full text-md rounded-xs
-                                        border border-primary-gray py-3 px-3">
-                                            <input
-                                                class="border-none outline-none bg-transparent w-full font-medium px-2 text-xs"
-                                                type="text" placeholder="Search Events" value="">
-                                            <span
-                                                class="cursor-pointer text-xl flex items-center justify-center h-full">
-                                                <img src="Images/search-icon.svg" alt="search-icon" class="h-[18px] w-[15px]">
-                                            </span>
-                                        </div>
-                                    </div>
                                     <!-- dropdown -->
-                                    <div class="relative float-label min-w-[102px] bg-white border border-gray-300 rounded-xs cursor-pointer">
-                                        <select id="dropdown"
-                                            class="block w-full px-3 pr-10 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
+                                    <div
+                                        class="relative float-label min-w-[121px] bg-white border border-gray-300 rounded-xs cursor-pointer">
+                                        <select id="dropdown1"
+                                            class="block w-full px-3 pr-10 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium leading-[12px]"
                                             onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
+                                            <option value="" disabled selected hidden>Pakka Limited</option>
                                             <option value="option1">Client 1</option>
                                             <option value="option2">Client 2</option>
                                             <option value="option3">Client 3</option>
                                         </select>
-                                        <label for="dropdown"
+                                        <label for="dropdown1"
                                             class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
                                             Client
                                         </label>
@@ -465,142 +453,288 @@
                                                 d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
                                         </svg>
                                     </div>
+                                    <div
+                                        class="relative float-label min-w-[121px] bg-white border border-gray-300 rounded-xs cursor-pointer">
+                                        <select id="dropdown2"
+                                            class="block w-full px-3 pr-10 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium leading-[12px]"
+                                            onchange="this.setAttribute('value', this.value)">
+                                            <option value="" disabled selected hidden>Investor met</option>
+                                            <option value="option1">Client 1</option>
+                                            <option value="option2">Client 2</option>
+                                            <option value="option3">Client 3</option>
+                                        </select>
+                                        <label for="dropdown2"
+                                            class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
+                                            Event
+                                        </label>
+                                        <svg class="absolute right-3 top-4 w-2 h-1 text-gray-400 pointer-events-none"
+                                            width="9" height="5" viewBox="0 0 9 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="relative float-label min-w-[121px] bg-white border border-gray-300 rounded-xs cursor-pointer">
+                                        <select id="dropdown3"
+                                            class="block w-full px-3 pr-10 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium leading-[12px]"
+                                            onchange="this.setAttribute('value', this.value)">
+                                            <option value="" disabled selected hidden>Analyst</option>
+                                            <option value="option1">Client 1</option>
+                                            <option value="option2">Client 2</option>
+                                            <option value="option3">Client 3</option>
+                                        </select>
+                                        <label for="dropdown3"
+                                            class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
+                                            Contact Type
+                                        </label>
+                                        <svg class="absolute right-3 top-4 w-2 h-1 text-gray-400 pointer-events-none"
+                                            width="9" height="5" viewBox="0 0 9 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <!-- this button for large device -->
-                                <div class="hidden md:block">
+                                <div class="hidden md:flex gap-4">
                                     <button
-                                     onclick="window.location.href='./create-events.html'"
+                                        class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-white text-primary border-primary text-white">
+                                        Send Invitation
+                                    </button>
+                                    <button
                                         class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                            </path>
-                                        </svg>
-                                        Create Event
+                                        Send Invitation Again
                                     </button>
                                 </div>
                             </div>
                             <!-- Table -->
                             <div class="overflow-x-auto w-full mt-4">
-                                <table class="w-full border border-[#EBEBE6] rounded-lg event-table">
+                                <table class="w-full border border-[#EBEBE6] rounded-lg event-table table-auto">
                                     <thead class="bg-[#F9F9F9] h-[32px]">
-                                        <tr class="text-sm font-medium text-[#6E7174]">
-                                            <th class="py-2 px-4 text-left flex items-center gap-1">Title
-                                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M12.0006 8.72816L8.98069 11.7608C8.63 12.1129 8.3457 11.9955 8.3457 11.4985V2.5"
-                                                        stroke="#B5BCD7" stroke-linecap="round" />
-                                                    <path
-                                                        d="M2 5.73572L5.01991 2.70311C5.37061 2.35094 5.6549 2.46835 5.6549 2.96535V11.9639"
-                                                        stroke="#B5BCD7" stroke-linecap="round" />
-                                                </svg>
+                                        <tr class="text-sm font-bold text-[#6E7174] text-center">
+                                            <th class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" id="selectAll" class="w-4 h-4 cursor-pointer">
+                                                </div>
                                             </th>
-                                            <th class="py-2 px-4">Date</th>
-                                            <th class="py-2 px-4">Time</th>
-                                            <th class="py-2 px-4 text-left">Venue</th>
-                                            <th class="py-2 px-4">Action</th>
-
+                                            <th class="py-2 px-4 text-left">Name</th>
+                                            <th class="py-2 px-4">Contact Type</th>
+                                            <th class="py-2 px-4">Company</th>
+                                            <th class="py-2 px-4">Mobile</th>
+                                            <th class="py-2 px-4">Email</th>
+                                            <th class="py-2 px-4">Invited</th>
+                                            <th class="py-2 px-4">Mail Sent</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="text-sm event-table-tbody">
+                                    <tbody class="text-sm event-table-tbody text-center">
                                         <!-- Row 1 -->
+
+                                        <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
                                         <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Microsote Event Testing</td>
-                                            <td class="py-2 px-4 text-center">20 Jul 2024</td>
-                                            <td class="py-2 px-4 text-center">10:12 AM</td>
-                                            <td class="py-2 px-4">Mumbai</td>
-                                            <td class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" class="h-[18px] w-[15px]" alt="delete">
-                                                <img src="Images/list_alrt.svg" class="h-[18px] w-[15px]" alt="list">
-                                                <img src="Images/Group.svg" class="h-[18px] w-[15px]" alt="group">
-                                                
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
                                             </td>
-
+                                            <td class="py-2 px-4 text-left">Kushal Mishra</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9734567891</td>
+                                            <td class="py-2 px-4">kushal.kant007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <span class="relative">
+                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                </span>
+                                            </td>
                                         </tr>
-
-                                        <!-- 1px Transparent Gap Row -->
+                            
+                                        <!-- Transparent border  -->
                                         <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
-                                        <!-- Row 2 -->
-                                        <tr class="border-t border-[#EBEBE6] bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Investor Meet</td>
-                                            <td class="py-2 px-4 text-center">19 Jul 2024</td>
-                                            <td class="py-2 px-4 text-center">12:15 PM</td>
-                                            <td class="py-2 px-4">Indore</td>
-                                            <td class="py-2 px-4 flex space-x-3 justify-center items-center">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" class="h-[18px] w-[15px]" alt="delete">
-                                                <img src="Images/list_alrt.svg" class="h-[18px] w-[15px]" alt="list">
-                                                <img src="Images/Group.svg" class="h-[18px] w-[15px]" alt="group">
-                                                
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <span class="relative">
+                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                </span>
                                             </td>
                                         </tr>
 
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] !bg-transparent">
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
-                                        <!-- Row 3 -->
-                                        <tr class="border-t border-[#EBEBE6] bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Microsote Event Testing</td>
-                                            <td class="py-2 px-4 text-center">18 Jul 2024</td>
-                                            <td class="py-2 px-4 text-center">10:12 AM</td>
-                                            <td class="py-2 px-4">Delhi</td>
-                                            <td class="py-2 px-4 flex space-x-3 justify-center items-center">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" class="h-[18px] w-[15px]" alt="delete">
-                                                <img src="Images/list_alrt.svg" class="h-[18px] w-[15px]" alt="list">
-                                                <img src="Images/Group.svg" class="h-[18px] w-[15px]" alt="group">
-                                                
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
                                             </td>
                                         </tr>
+                            
 
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] bg-transparent">
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
-                                        <!-- Row 4 -->
-                                        <tr class="border-t border-[#EBEBE6] bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Investor Meet</td>
-                                            <td class="py-2 px-4 text-center">17 Jul 2024</td>
-                                            <td class="py-2 px-4 text-center">10:12 AM</td>
-                                            <td class="py-2 px-4">Bangalore</td>
-                                            <td class="py-2 px-4 flex space-x-3 justify-center items-center">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" class="h-[18px] w-[15px]" alt="delete">
-                                                <img src="Images/list_alrt.svg" class="h-[18px] w-[15px]" alt="list">
-                                                <img src="Images/Group.svg" class="h-[18px] w-[15px]" alt="group">
-                                                
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <span class="relative">
+                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                </span>
                                             </td>
                                         </tr>
+                            
 
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] bg-transparent">
+
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
-                                        <!-- Row 5 -->
-                                        <tr class="border-t border-[#EBEBE6] bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Microsote Event Testing</td>
-                                            <td class="py-2 px-4 text-center">20 Jul 2024</td>
-                                            <td class="py-2 px-4 text-center">10:12 AM</td>
-                                            <td class="py-2 px-4">Chennai</td>
-                                            <td class="py-2 px-4 flex space-x-3 justify-center items-center">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" class="h-[18px] w-[15px]" alt="delete">
-                                                <img src="Images/list_alrt.svg" class="h-[18px] w-[15px]" alt="list">
-                                                <img src="Images/Group.svg" class="h-[18px] w-[15px]" alt="group">
-                                                
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <span class="relative">
+                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                </span>
                                             </td>
                                         </tr>
+                            
+
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
+                                            </td>
+                                        </tr>
+                            
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <span class="relative">
+                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                </span>
+                                            </td>
+                                        </tr>
+                            
+                                           <!-- Transparent border  -->
+                                           <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- table row -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4">
+                                                <div class="flex items-center justify-center">
+                                                    <input type="checkbox" class="rowCheckbox w-4 h-4 cursor-pointer">
+                                                </div>
+                                            </td>
+                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
+                                            <td class="py-2 px-4">Analyst</td>
+                                            <td class="py-2 px-4">Synerwiz</td>
+                                            <td class="py-2 px-4">9523678901</td>
+                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
+                                            <td class="py-2 px-4">Yes</td>
+                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
+                                            </td>
+                                        </tr>
+                            
+                                        
+                            
+                                       
                                     </tbody>
-
                                 </table>
                             </div>
                         </div>
@@ -617,5 +751,5 @@
 
 </body>
 <script src="./javascript/sidebar.js"></script>
-
+<script src="./javascript/table.js"></script>
 </html>
