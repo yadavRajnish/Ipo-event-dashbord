@@ -162,7 +162,7 @@
 .border-gray-light {
   border-color: var(--gray-light);
 }
-.border-primary-gray{
+.border-primary-gray {
   border-color: var(--border-primary-gray);
 }
 
@@ -368,7 +368,7 @@ body {
   background: rgba(249, 249, 249, 1) !important;
 }
 
-.event-head{
+.event-head {
   color: black;
   font-size: 24px;
   font-weight: 500;
@@ -377,20 +377,54 @@ body {
   position: relative;
 }
 
-.event-head::after{
+.event-head::after {
   content: "";
   height: 3px;
   background: var(--primary);
   width: 30%;
-  position : absolute;
+  position: absolute;
   bottom: -4px;
   left: 0;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   color: var(--text-primary);
 }
 
 textarea {
   resize: none;
+}
+
+.status-button {
+  height: 24px;
+  width: 97px;
+  border-radius: 26px;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-button span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+}
+
+.status-button img {
+  width: 10.67px;
+  height: 13.33px;
+}
+
+.approved-button {
+  background-color: rgba(18, 178, 140, 0.1);
+}
+
+.reject-button {
+  background-color: rgba(223, 81, 76, 0.1);
+}
+
+.pending-button {
+  background-color: rgba(251, 131, 12, 0.1);
 }

@@ -417,17 +417,7 @@
                                 </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
 
                             <div class="flex justify-between items-center">
-                                <h1 class="event-head whitespace-nowrap">Send Invitation</h1>
-                                <!-- for mobile button -->
-                                <button onclick="window.location.href='./create-events.html'"
-                                    class="block md:hidden flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                        </path>
-                                    </svg>
-                                    Create Event
-                                </button>
+                                <h1 class="event-head whitespace-nowrap">Send Invitation</h1> 
                             </div>
                             <div class="w-full h-[40px] mt-5 flex items-center justify-between">
                                 <div class="flex gap-4 justify-between md:justify-start w-full md:w-fit">
@@ -508,6 +498,19 @@
                                     </button>
                                 </div>
                             </div>
+                            <!-- this button for large device -->
+                            <div class="block md:hidden gap-2 flex w-full h-[40px] mt-5 flex items-center justify-end">
+                                <div class="flex justify-between items-center gap-4">
+                                    <button
+                                        class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-white text-primary border-primary text-white">
+                                        Send Invitation
+                                    </button>
+                                    <button
+                                        class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
+                                        Send Invitation Again
+                                    </button>
+                                </div>
+                            </div>
                             <!-- Table -->
                             <div class="overflow-x-auto w-full mt-4">
                                 <table class="w-full border border-[#EBEBE6] rounded-lg event-table table-auto">
@@ -515,7 +518,8 @@
                                         <tr class="text-sm font-bold text-[#6E7174] text-center">
                                             <th class="py-2 px-4">
                                                 <div class="flex items-center justify-center">
-                                                    <input type="checkbox" id="selectAll" class="w-4 h-4 cursor-pointer">
+                                                    <input type="checkbox" id="selectAll"
+                                                        class="w-4 h-4 cursor-pointer">
                                                 </div>
                                             </th>
                                             <th class="py-2 px-4 text-left">Name</th>
@@ -549,11 +553,13 @@
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
                                                 <span class="relative">
                                                     <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                    <img src="Images/success-tick.svg"
+                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
+                                                        alt="mail">
                                                 </span>
                                             </td>
                                         </tr>
-                            
+
                                         <!-- Transparent border  -->
                                         <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
@@ -575,13 +581,15 @@
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
                                                 <span class="relative">
                                                     <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                    <img src="Images/success-tick.svg"
+                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
+                                                        alt="mail">
                                                 </span>
                                             </td>
                                         </tr>
 
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -599,13 +607,14 @@
                                             <td class="py-2 px-4">anitadevit007@gmail.com</td>
                                             <td class="py-2 px-4">Yes</td>
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
+                                                    alt="mail">
                                             </td>
                                         </tr>
-                            
 
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -625,15 +634,17 @@
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
                                                 <span class="relative">
                                                     <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                    <img src="Images/success-tick.svg"
+                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
+                                                        alt="mail">
                                                 </span>
                                             </td>
                                         </tr>
-                            
 
 
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -653,14 +664,16 @@
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
                                                 <span class="relative">
                                                     <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                    <img src="Images/success-tick.svg"
+                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
+                                                        alt="mail">
                                                 </span>
                                             </td>
                                         </tr>
-                            
 
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -678,12 +691,13 @@
                                             <td class="py-2 px-4">anitadevit007@gmail.com</td>
                                             <td class="py-2 px-4">Yes</td>
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
+                                                    alt="mail">
                                             </td>
                                         </tr>
-                            
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -703,13 +717,15 @@
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
                                                 <span class="relative">
                                                     <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg" class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1" alt="mail">
+                                                    <img src="Images/success-tick.svg"
+                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
+                                                        alt="mail">
                                                 </span>
                                             </td>
                                         </tr>
-                            
-                                           <!-- Transparent border  -->
-                                           <tr class="h-[1px] bg-transparent">
+
+                                        <!-- Transparent border  -->
+                                        <tr class="h-[1px] bg-transparent">
                                             <td colspan="7" class="border-t border-transparent"></td>
                                         </tr>
 
@@ -727,13 +743,14 @@
                                             <td class="py-2 px-4">anitadevit007@gmail.com</td>
                                             <td class="py-2 px-4">Yes</td>
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]" alt="mail">
+                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
+                                                    alt="mail">
                                             </td>
                                         </tr>
-                            
-                                        
-                            
-                                       
+
+
+
+
                                     </tbody>
                                 </table>
                             </div>
@@ -752,4 +769,5 @@
 </body>
 <script src="./javascript/sidebar.js"></script>
 <script src="./javascript/table.js"></script>
+
 </html>
