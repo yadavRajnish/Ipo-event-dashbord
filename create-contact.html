@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
 </head>
 
 <body>
@@ -421,228 +422,120 @@
                         </div>
 
                         <div class="">
-                            <div class="flex justify-between items-center">
-                                <h1 class="event-head whitespace-nowrap">Contact List</h1>
-                                <!-- for mobile button -->
-                                <button onclick="window.location.href='./create-contact.html'"
-                                    class="block md:hidden flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                        </path>
-                                    </svg>
-                                    Create Contact
-                                </button>
-                            </div>
-                            <div class="w-full h-[40px] mt-5 flex items-center justify-between">
-                                <div class="flex gap-4 justify-between md:justify-start w-full md:w-fit">
-                                    <!-- input search -->
-                                    <div class="min-w-[260px] bg-white">
-                                        <div class="flex items-center w-full text-md rounded-xs
-                                            border border-primary-gray py-3 px-3">
-                                            <input
-                                                class="border-none outline-none bg-transparent w-full font-medium text-xs"
-                                                type="text" placeholder="Search by name" value="">
-                                            <span
-                                                class="cursor-pointer text-xl flex items-center justify-center h-full">
-                                                <img src="Images/search-icon.svg" alt="search-icon"
-                                                    class="h-[18px] w-[15px]">
-                                            </span>
-                                        </div>
+                            <h1 class="event-head whitespace-nowrap">Create Contact</h1>
+                            <form action="" class="mt-8">
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                                    <div class="custom-select">
+                                        <select id="dropdown" onchange="this.setAttribute('value', this.value)">
+                                            <option value="" disabled selected hidden>⠀</option>
+                                            <option value="option1">Client 1</option>
+                                            <option value="option2">Client 2</option>
+                                            <option value="option3">Client 3</option>
+                                        </select>
+                                        <label for="dropdown" id="dropdownLabel">Clients</label>
                                     </div>
-                                    <div
-                                        class="bg-white flex items-center drop-shadow-md px-2 py-2 rounded-sm cursor-pointer">
-                                        <img src="./Images/filter.svg" class="h-6 w-8" alt="filter">
+
+                                    
+                                    <div class="relative">
+                                        <input type="text" id="firstname"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="First Name" required>
+                                        <label for="firstname"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">First
+                                            Name</label>
+                                    </div>
+
+                                    <div class="relative">
+                                        <input type="text" id="lastname"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Last Name" required>
+                                        <label for="lastname"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Last
+                                            Name</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="email" id="email"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Email" required>
+                                        <label for="email"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Email</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="tel" id="Mobile"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Mobile" required>
+                                        <label for="Mobile"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Mobile</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="Company"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Company" required>
+                                        <label for="Company"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Company</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="Designation"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Designation" required>
+                                        <label for="Designation"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Designation</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="Address"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Address" required>
+                                        <label for="Address"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Address</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="City"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="City" required>
+                                        <label for="City"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">City</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="State"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="State" required>
+                                        <label for="State"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">State</label>
+                                    </div>
+                                    <div class="relative">
+                                        <input type="text" id="Country"
+                                            class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                            placeholder="Country" required>
+                                        <label for="Country"
+                                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Country</label>
+                                    </div>
+
+                                </div>
+                                <div class="w-full h-[40px] mt-[20px] md:mt-5 flex items-center justify-end md:my-0">
+                                    <div class="flex gap-4 md:w-auto w-full justify-between">
+                                        <button
+                                            class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
+                                        <button onclick="window.location.href='./events.html'"
+                                            class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Create Contact</button>
                                     </div>
                                 </div>
-                                <!-- this button for large device -->
-                                <div class="hidden md:block">
-                                    <button onclick="window.location.href='./create-contact.html'"
-                                        class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                            </path>
-                                        </svg>
-                                        Create Contact
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Table -->
-                            <div class="overflow-x-auto w-full mt-4">
-                                <table class="w-full border border-[#EBEBE6] rounded-lg event-table">
-                                    <thead class="bg-[#F9F9F9] h-[32px]">
-                                        <tr class="text-sm font-medium text-[#6E7174] text-center">
-                                            <th class="py-2 px-4 text-left flex items-center gap-1">Contact Type
-                                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M12.0006 8.72816L8.98069 11.7608C8.63 12.1129 8.3457 11.9955 8.3457 11.4985V2.5"
-                                                        stroke="#B5BCD7" stroke-linecap="round" />
-                                                    <path
-                                                        d="M2 5.73572L5.01991 2.70311C5.37061 2.35094 5.6549 2.46835 5.6549 2.96535V11.9639"
-                                                        stroke="#B5BCD7" stroke-linecap="round" />
-                                                </svg>
-                                            </th>
-                                            <th class="py-2 px-4">Name</th>
-                                            <th class="py-2 px-4">Mobile</th>
-                                            <th class="py-2 px-4">Email</th>
-                                            <th class="py-2 px-4">Company</th>
-                                            <th class="py-2 px-4">Designation</th>
-                                            <th class="py-2 px-4">City</th>
-                                            <th class="py-2 px-4">Action</th>
+                            </form>
 
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-sm event-table-tbody">
-                                        <!-- Row 1 -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
-                                            <td class="py-2 px-4 text-center">Saroj Laddha</td>
-                                            <td class="py-2 px-4 text-center">8133088228</td>
-                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
-                                            <td class="py-2 px-4 text-center">Synerwiz</td>
-                                            <td class="py-2 px-4 text-center">SSE</td>
-                                            <td class="py-2 px-4 text-center">Jorhat</td>
-                                            <td
-                                                class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" id="openModal"
-                                                    class="h-[18px] w-[15px] cursor-pointer" alt="delete">
-                                            </td>
-                                        </tr>
 
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- Row 2 -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
-                                            <td class="py-2 px-4 text-center">Saroj Laddha</td>
-                                            <td class="py-2 px-4 text-center">8133088228</td>
-                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
-                                            <td class="py-2 px-4 text-center">Synerwiz</td>
-                                            <td class="py-2 px-4 text-center">SSE</td>
-                                            <td class="py-2 px-4 text-center">Jorhat</td>
-                                            <td
-                                                class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" id="openModal"
-                                                    class="h-[18px] w-[15px] cursor-pointer" alt="delete">
-                                            </td>
-                                        </tr>
-
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] !bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- Row 3 -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
-                                            <td class="py-2 px-4 text-center">Saroj Laddha</td>
-                                            <td class="py-2 px-4 text-center">8133088228</td>
-                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
-                                            <td class="py-2 px-4 text-center">Synerwiz</td>
-                                            <td class="py-2 px-4 text-center">SSE</td>
-                                            <td class="py-2 px-4 text-center">Jorhat</td>
-                                            <td
-                                                class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" id="openModal"
-                                                    class="h-[18px] w-[15px] cursor-pointer" alt="delete">
-                                            </td>
-                                        </tr>
-
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- Row 4 -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
-                                            <td class="py-2 px-4 text-center">Saroj Laddha</td>
-                                            <td class="py-2 px-4 text-center">8133088228</td>
-                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
-                                            <td class="py-2 px-4 text-center">Synerwiz</td>
-                                            <td class="py-2 px-4 text-center">SSE</td>
-                                            <td class="py-2 px-4 text-center">Jorhat</td>
-                                            <td
-                                                class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" id="openModal"
-                                                    class="h-[18px] w-[15px] cursor-pointer" alt="delete">
-                                            </td>
-                                        </tr>
-
-                                        <!-- 1px Transparent Gap Row -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- Row 5 -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
-                                            <td class="py-2 px-4 text-center">Saroj Laddha</td>
-                                            <td class="py-2 px-4 text-center">8133088228</td>
-                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
-                                            <td class="py-2 px-4 text-center">Synerwiz</td>
-                                            <td class="py-2 px-4 text-center">SSE</td>
-                                            <td class="py-2 px-4 text-center">Jorhat</td>
-                                            <td
-                                                class="py-2 px-4 flex space-x-3 justify-center items-center min-w-[100px]">
-                                                <img src="Images/pencil.svg" class="h-[18px] w-[15px]" alt="pencil">
-                                                <img src="Images/delete.svg" id="openModal"
-                                                    class="h-[18px] w-[15px] cursor-pointer" alt="delete">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-
-                                </table>
-                            </div>
+                            <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
                         </div>
-
-
-
-                        <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
                     </div>
-                </div>
-                <div id="contentOverlay"
-                    class="absolute h-full w-full z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
-                </div>
+                    <div id="contentOverlay"
+                        class="absolute h-full w-full z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
+                    </div>
 
+                </div>
             </div>
         </div>
-        <div id="deleteModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
-        style="background-color: rgba(35, 35, 35, 0.3);">
-        <div class="bg-white rounded-[10px] shadow-lg p-6 relative flex flex-col min-w-[362px] min-h-[180px] justify-between">
-            <button id="closeModal"
-                class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px]">&times;</button>
-            <h2 class="text-base leading-[19.36px] font-semibold text-black">Delete Event</h2>
-
-            <!-- Modal Body -->
-            <p class="font-normal text-sm leading-[16.94px]">Are you sure you want to delete this event?</p>
-
-            <!-- Modal Actions -->
-            <div class="flex justify-center items-center space-x-4">
-                <button id="cancelDelete"
-                    class=" min-w-[128px] text-center py-2 border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-white text-primary border-primary">
-                    No
-                </button>
-                <button id="confirmDelete"
-                    class=" min-w-[128px] py-2 border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                    Yes
-                </button>
-            </div>
-        </div>
-    </div>
-    </div>
 
 </body>
 <script src="./javascript/sidebar.js"></script>
-<script src="./javascript/deleteModal.js"></script>
+<script src="./javascript/customSelect.js"></script>
+<script src="./javascript/floatLabel.js"></script>
 
 </html>

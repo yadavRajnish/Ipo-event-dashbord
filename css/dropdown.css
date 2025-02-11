@@ -1,0 +1,101 @@
+.custom-select {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+    border-radius: 4px; /* Tailwind's rounded-sm */
+    cursor: pointer;
+    font-size: 14px; /* Tailwind's text-sm */
+    font-weight: 400; /* Tailwind's font-medium */
+    /* padding: 12px; Tailwind's py-3 px-3 */
+    color: var(--text-primary);
+  }
+  
+  .custom-select select {
+    display: none;
+  }
+  
+  .select-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    color: #4b5563; /* Tailwind's text-gray-600 */
+    cursor: pointer;
+  }
+  
+  .select-selected:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid transparent;
+    border-right-color: #4b5563;
+    border-bottom-color: #4b5563; 
+    transform: rotate(45deg);
+  }
+  
+  .select-selected.select-arrow-active:after {
+    border-right-color: transparent;
+    border-bottom-color: transparent; 
+    
+    border-top-color: #4b5563;
+    border-left-color: #4b5563;
+    top: 17px;
+  }
+  
+  .select-items {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+  }
+  
+  .select-items div {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+
+  }
+  
+  .select-items div:hover,
+  .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.05); /* Tailwind's hover:bg-gray-100 */
+  }
+  
+  .select-hide {
+    display: none;
+  }
+
+
+.custom-select label {
+    position: absolute;
+    top: 10.5px;
+    left: 12px;
+    background: white;
+    padding: 0 4px;
+    font-size: 14px;
+    color: #6b7280;
+    transition: all 0.2s ease-in-out;
+  }
+  
+label:has(~ .select-items:not(.select-hide)), .custom-select>select.input ~ label {
+    top: -10px;
+    left: 12px;
+    background: white;
+    padding: 0 4px;
+    font-size: 12px;
+  }
+  

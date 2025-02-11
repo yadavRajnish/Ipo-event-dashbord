@@ -381,7 +381,7 @@ body {
   content: "";
   height: 3px;
   background: var(--primary);
-  width: 30%;
+  width: 20%;
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -428,3 +428,17 @@ textarea {
 .pending-button {
   background-color: rgba(251, 131, 12, 0.1);
 }
+
+/* 
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+    color: transparent !important;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: transparent !important;
+} */

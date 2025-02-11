@@ -62,7 +62,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   dobInput.addEventListener("input", updateLabel);
-  updateLabel(); // Run on load in case of pre-filled value
+  updateLabel();
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const dropdown = document.getElementById("dropdown");
+//   const dropdownLabel = document.getElementById("dropdownLabel");
+
+//   function updateLabel() {
+//     if (dropdown.value) {
+//       dropdownLabel.classList.add("top-2", "-translate-y-5", "scale-75");
+//     } else {
+//       dropdownLabel.classList.remove("top-2", "-translate-y-5", "scale-75");
+//     }
+//   }
+
+//   dropdown.addEventListener("input", updateLabel);
+//   updateLabel();
+// });
+
 
 
