@@ -1072,6 +1072,9 @@
   .border-transparent {
     border-color: transparent;
   }
+  .\!bg-\[\#F6F6F6\] {
+    background-color: #F6F6F6 !important;
+  }
   .\!bg-transparent {
     background-color: transparent !important;
   }
