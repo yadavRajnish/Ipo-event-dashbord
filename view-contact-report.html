@@ -395,7 +395,7 @@
 
                 <div class="flex justify-end ml-auto h-full w-full md:w-[calc(100%-4rem)]">
                     <div
-                        class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6  flex flex-col h-[calc(100%-3rem)] mt-10">
+                        class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6 justify-between flex flex-col h-[calc(100%-3rem)] mt-10">
                         <div>
                             <div class="text-secondary-light mb-5 text-sm font-normal flex items-center gap-3.5"><svg
                                     stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
@@ -430,12 +430,12 @@
                             <div
                                 class="w-full h-[40px] mt-[45px] md:mt-5 flex items-center justify-between my-[45px] md:my-0">
                                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:w-auto w-full justify-between">
-                                    <button
-                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Event
+                                    <button onclick="window.location.href='./reports.html'"
+                                        class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">Event
                                         Attendee Report
                                     </button>
-                                    <button onclick="window.location.href='./view-contact-report.html'"
-                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-text-primary border-primary-gray">View
+                                    <button
+                                        class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white  border-[#1F7BF4]">View
                                         Contact Report</button>
                                 </div>
                                 <!-- for large device -->
@@ -444,85 +444,125 @@
                                     <img src="./Images/download.svg" class="h-6 w-6" alt="">
                                 </div>
                             </div>
-                        </div>
 
-                        <div
-                            class="w-full h-[40px] mt-2 md:mt-[45px] md:mt-5 flex items-center justify-between md:my-0">
-                            <div class="flex md:flex-col flex-row gap-4  h-full justify-between w-full flex-wrap items-center">
-                                <div class="relative h-full">
-                                    <input type="text" id="eventname"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-xs bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] h-full"
-                                        placeholder="Event Name" required>
-                                    <label for="eventname"
-                                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-xs tracking-wider">Event
-                                        Name</label>
-                                </div>
-                                <div class="relative h-full max-w-[128px]">
-                                    <input type="date" id="start_date" aria-describedby="outlined_success_help"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm !bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
-                                        data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                        oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                        value="2025-02-12" data-has-value="true">
-                                    <label for="start_date"
-                                        class="absolute left-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 font-normal text-[8px] tracking-wider"
-                                        style="transition: all 0.3s ease;">
-                                        Start Date
-                                    </label>
-                                
-                                    <div class="flex absolute inset-y-0 right-3 items-center">
-                                        <img src="/Images/calendar.svg" alt="calendar">
-                                    </div>
-                                </div>
-                                
-                                <div class="relative h-full max-w-[128px]">
-                                    <input type="date" id="end_date" aria-describedby="outlined_success_help"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
-                                        data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
-                                        oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                        value="2025-02-15" data-has-value="true">
-                                    <label for="end_date"
-                                        class="absolute left-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5  font-normal text-[8px] tracking-wider"
-                                        style="transition: all 0.3s ease;">
-                                        End Date
-                                    </label>
 
-                                    <div class="flex absolute inset-y-0 right-3 items-center">
-                                        <img src="/Images/calendar.svg" alt="calendar">
-                                    </div>
-                                </div>
-                                <div class="custom-select h-full !max-w-[185px]">
-                                    <select id="dropdown" class="h-full !w-full" onchange="this.setAttribute('value', this.value)">
-                                        <option value="" disabled selected hidden>⠀</option>
-                                        <option value="option1">Client 1</option>
-                                        <option value="option2">Client 2</option>
-                                        <option value="option3">Client 3</option>
-                                    </select>
-                                    <label for="dropdown" id="dropdownLabel" class="whitespace-nowrap">Select
-                                        Approval Status</label>
-                                </div>
-                                <div class="relative h-full">
-                                    <input type="text" id="location"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] h-full"
-                                        placeholder="Location" required>
-                                    <label for="location"
-                                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider">Location</label>
-                                </div>
-                                <div class="relative h-full">
-                                    <input type="text" id="attendee"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider h-full"
-                                        placeholder="Attendee Name" required>
-                                    <label for="attendee"
-                                        class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider">Attendee
-                                        Name</label>
-                                </div>
-                                <button
-                                    class="text-sm cursor-pointer whitespace-nowrap font-semibold h-full leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Fetch
-                                    Report
-                                </button>
+                            <div class="overflow-x-auto w-full mt-4">
+                                <table class="w-full border border-[#EBEBE6] rounded-lg event-table">
+                                    <thead class="bg-[#F9F9F9] h-[32px]">
+                                        <tr class="text-sm font-medium text-[#6E7174] text-center">
+                                            <th class="py-2 px-4 text-left flex items-center gap-1">Contact Type
+                                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.0006 8.72816L8.98069 11.7608C8.63 12.1129 8.3457 11.9955 8.3457 11.4985V2.5"
+                                                        stroke="#B5BCD7" stroke-linecap="round" />
+                                                    <path
+                                                        d="M2 5.73572L5.01991 2.70311C5.37061 2.35094 5.6549 2.46835 5.6549 2.96535V11.9639"
+                                                        stroke="#B5BCD7" stroke-linecap="round" />
+                                                </svg>
+                                            </th>
+                                            <th class="py-2 px-4">Company</th>
+                                            <th class="py-2 px-4">Designation</th>
+                                            <th class="py-2 px-4">Email</th>
+                                            <th class="py-2 px-4">Mobile</th>
+                                            <th class="py-2 px-4">Address</th>
+                                            <th class="py-2 px-4">City</th>
+                                            <th class="py-2 px-4">State</th>
+                                            <th class="py-2 px-4">Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-sm event-table-tbody">
+                                        <!-- Row 1 -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
+                                            <td class="py-2 px-4 text-center">Synerwiz</td>
+                                            <td class="py-2 px-4 text-center">SSE</td>
+                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
+                                            <td class="py-2 px-4 text-center">8133088228</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Assam</td>
+                                            <td class="py-2 px-4 text-center">India</td>
+                                        </tr>
+
+                                        <!-- 1px Transparent Gap Row -->
+                                        <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- Row 2 -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
+                                            <td class="py-2 px-4 text-center">Synerwiz</td>
+                                            <td class="py-2 px-4 text-center">SSE</td>
+                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
+                                            <td class="py-2 px-4 text-center">8133088228</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Assam</td>
+                                            <td class="py-2 px-4 text-center">India</td>
+                                        </tr>
+                                        <!-- 1px Transparent Gap Row -->
+                                        <tr class="h-[1px] !bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- Row 3 -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
+                                            <td class="py-2 px-4 text-center">Synerwiz</td>
+                                            <td class="py-2 px-4 text-center">SSE</td>
+                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
+                                            <td class="py-2 px-4 text-center">8133088228</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Assam</td>
+                                            <td class="py-2 px-4 text-center">India</td>
+                                        </tr>
+
+                                        <!-- 1px Transparent Gap Row -->
+                                        <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- Row 4 -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
+                                            <td class="py-2 px-4 text-center">Synerwiz</td>
+                                            <td class="py-2 px-4 text-center">SSE</td>
+                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
+                                            <td class="py-2 px-4 text-center">8133088228</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Assam</td>
+                                            <td class="py-2 px-4 text-center">India</td>
+                                        </tr>
+
+                                        <!-- 1px Transparent Gap Row -->
+                                        <tr class="h-[1px] bg-transparent">
+                                            <td colspan="7" class="border-t border-transparent"></td>
+                                        </tr>
+
+                                        <!-- Row 5 -->
+                                        <tr class="border-t border-transparent bg-white">
+                                            <td class="py-2 px-4 flex items-center space-x-2">Broker</td>
+                                            <td class="py-2 px-4 text-center">Synerwiz</td>
+                                            <td class="py-2 px-4 text-center">SSE</td>
+                                            <td class="py-2 px-4 text-center">v.sarojladdha@adfactorspr.com</td>
+                                            <td class="py-2 px-4 text-center">8133088228</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Jorhat</td>
+                                            <td class="py-2 px-4 text-center">Assam</td>
+                                            <td class="py-2 px-4 text-center">India</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
                             </div>
                         </div>
 
-                        <div class="flex text-[#686868] text-xs px-6 py-4 justify-end h-full items-end">Powered by : Adfactors</div>
+                        <div class="flex text-[#686868] text-xs px-6 py-4 justify-end items-end">Powered by : Adfactors
+                        </div>
                     </div>
                 </div>
                 <div id="contentOverlay"
