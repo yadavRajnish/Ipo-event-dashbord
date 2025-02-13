@@ -28,6 +28,7 @@
                         </div>
                     </nav>
                 </header>
+                <!-- for large device -->
                 <div class="hidden md:block main-container" style="opacity: 1; transform: none;">
                     <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar" style="width: 64px;">
                         <div class="top_section">
@@ -220,10 +221,11 @@
                     </div>
                 </div>
 
+                <!-- for small device -->
                 <div class="block md:hidden main-container" style="opacity: 1; transform: none;">
                     <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar"
                         style="width: 0px;">
-                        <div class="top_section">
+                        <div class="top_section" id="closeMobileSidebar">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
                                 <span

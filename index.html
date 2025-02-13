@@ -448,7 +448,7 @@
                                         class="flex justify-between sm:justify-start items-center gap-[20px] w-full sm:w-[70%]">
                                         <h2 class="text-sm font-medium leading-[17px]">Upcoming Events</h2>
 
-                                        <div class="custom-select !w-[102px] !rounded-xs">
+                                        <div class="md:block hidden custom-select !w-[102px] !rounded-xs">
                                             <select id="dropdown" class="!text-[10px]" onchange="this.setAttribute('value', this.value)">
                                                 <option value="" disabled selected hidden>All Clients</option>
                                                 <option value="option1">Client 1</option>
@@ -462,7 +462,7 @@
 
                                     <div
                                         class="flex justify-between sm:justify-end w-full items-center space-x-4 text-[var(--primary)] sm:w-[30%]">
-                                        <div
+                                        <!-- <div
                                             class="md:hidden block relative float-label min-w-[102px] bg-white border border-gray-300 rounded-xs">
                                             <select id="dropdown"
                                                 class="block px-3 w-full pr-10 py-3 cursor-pointer focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
@@ -482,6 +482,16 @@
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
                                             </svg>
+                                        </div> -->
+                                        <div class="md:hidden block custom-select !w-[102px] !rounded-xs">
+                                            <select id="dropdown" class="!text-[10px]" onchange="this.setAttribute('value', this.value)">
+                                                <option value="" disabled selected hidden>All Clients</option>
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <label for="dropdown" id="dropdownLabel"
+                                                class="!-top-[10px] !text-xs">Clients</label>
                                         </div>
                                         <button
                                             class="flex items-center px-3 py-3 h-[26px] border rounded-xs cursor-pointer text-xs font-normal leading-[14.52px] whitespace-nowrap">
