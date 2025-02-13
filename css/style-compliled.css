@@ -1826,6 +1826,11 @@
       top: calc(1/2 * 100%);
     }
   }
+  .peer-placeholder-shown\:top-5 {
+    &:is(:where(.peer):placeholder-shown ~ *) {
+      top: calc(var(--spacing) * 5);
+    }
+  }
   .peer-placeholder-shown\:-translate-y-1\/2 {
     &:is(:where(.peer):placeholder-shown ~ *) {
       --tw-translate-y: calc(calc(1/2 * 100%) * -1);
