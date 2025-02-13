@@ -1238,6 +1238,9 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -1481,6 +1484,10 @@
   .leading-\[16\.94px\] {
     --tw-leading: 16.94px;
     line-height: 16.94px;
+  }
+  .leading-\[16px\] {
+    --tw-leading: 16px;
+    line-height: 16px;
   }
   .leading-\[17px\] {
     --tw-leading: 17px;
