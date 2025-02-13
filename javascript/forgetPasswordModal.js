@@ -20,11 +20,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Toggle Password Visibility
-    document.querySelectorAll(".togglePassword").forEach((icon) => {
-        icon.addEventListener("click", function () {
-            let input = this.previousElementSibling;
-            input.type = input.type === "password" ? "text" : "password";
-        });
-    });
 });

@@ -707,14 +707,64 @@
                                         class="flex sm:flex-row flex-col justify-start sm:justify-between items-start sm:items-center mb-4 gap-2 sm: gap-0">
 
                                         <h2
-                                            class="text-base font-medium leading-5 text-black flex items-center justify-between">
+                                            class="text-base font-medium leading-5 text-black flex items-center justify-between relative">
                                             <span>Past Event Attendees</span>
-                                            <svg class="h-6 w-6 pt-1" width="24" height="24" viewBox="0 0 24 24"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg id="showEventsModal" class="h-6 w-6 pt-1 cursor-pointer" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                                     d="M11.9995 15.0532L6.3457 9.39945L7.39945 8.3457L11.9995 12.9457L16.5994 8.3457L17.6532 9.39945L11.9995 15.0532Z"
                                                     fill="#6E7174" />
                                             </svg>
+                                            <div id="showEventsList"
+                                                class="absolute top-0 -right-[105px] bg-white border border-gray-300 rounded-xs shadow-lg hidden z-10 text-text-primary">
+                                                <ul class="text-xs font-normal">
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total Tweet
+                                                    </li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total Reach
+                                                    </li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total Views
+                                                    </li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total
+                                                        Engagement</li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Media &
+                                                        Influencers</li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total
+                                                        Participants</li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Total Threads
+                                                    </li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        New
+                                                        Participants</li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        New Threads
+                                                    </li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Active
+                                                        Participants</li>
+                                                    <li
+                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
+                                                        Active
+                                                        Threads</li>
+                                                </ul>
+                                            </div>
                                         </h2>
 
                                         <div
@@ -828,5 +878,6 @@
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/customSelect.js"></script>
+<script src="./javascript/showEventList.js"></script>
 
 </html>
