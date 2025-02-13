@@ -5,7 +5,7 @@
     border: 1px solid #d1d5db; /* Tailwind's gray-300 */
     border-radius: 4px; /* Tailwind's rounded-sm */
     cursor: pointer;
-    font-size: 14px; /* Tailwind's text-sm */
+    font-size: 12px; /* Tailwind's text-sm */
     font-weight: 400; /* Tailwind's font-medium */
     /* padding: 12px; Tailwind's py-3 px-3 */
     color: var(--text-primary);
@@ -21,7 +21,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 12px;
-    font-size: 14px;
+    font-size: 12px;
     color: #4b5563; /* Tailwind's text-gray-600 */
     cursor: pointer;
   }
@@ -29,23 +29,26 @@
   .select-selected:after {
     content: "";
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 12px;
     width: 10px;
     height: 10px;
-    border: 1.5px solid transparent;
-    border-right-color: #4b5563;
-    border-bottom-color: #4b5563; 
-    transform: rotate(45deg);
+    /* border: 2.5px solid transparent; */
+    background: url("/Images/dropdwon-arrow.svg");
+    /* border-right-color: #4b5563; */
+    /* border-bottom-color: #4b5563;  */
+    /* transform: rotate(180deg); */
+    background-repeat: no-repeat;
   }
   
   .select-selected.select-arrow-active:after {
-    border-right-color: transparent;
+    /* border-right-color: transparent;
     border-bottom-color: transparent; 
-    
     border-top-color: #4b5563;
-    border-left-color: #4b5563;
-    top: 17px;
+    border-left-color: #4b5563; */
+    top: 15px;
+    transform: rotate(180deg);
+
   }
   
   .select-items {
@@ -65,7 +68,7 @@
   .select-items div {
     padding: 10px 16px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
 
   }
@@ -82,18 +85,18 @@
 
 .custom-select label {
     position: absolute;
-    top: 10.5px;
-    left: 12px;
+    top: 12px;
+    left: 8px;
     background: white;
     padding: 0 4px;
-    font-size: 14px;
+    font-size: 12px;
     color: #6b7280;
     transition: all 0.2s ease-in-out;
   }
   
 label:has(~ .select-items:not(.select-hide)), .custom-select>select.input ~ label {
     top: -10px;
-    left: 12px;
+    left: 8px;
     background: white;
     padding: 0 4px;
     font-size: 12px;

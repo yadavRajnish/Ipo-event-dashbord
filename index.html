@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style-compliled.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="./css/dropdown.css">
 </head>
 
 <body class="content-background">
@@ -446,28 +447,17 @@
                                     <div
                                         class="flex justify-between sm:justify-start items-center gap-[20px] w-full sm:w-[70%]">
                                         <h2 class="text-sm font-medium leading-[17px]">Upcoming Events</h2>
-                                        <div
-                                            class="md:block hidden relative float-label w-[102px] bg-white border border-gray-300 rounded-xs">
-                                            <select id="dropdown"
-                                                class="block w-full px-3 pr-10 py-3 cursor-pointer focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
-                                                onchange="this.setAttribute('value', this.value)">
+
+                                        <div class="custom-select !w-[102px] !rounded-xs">
+                                            <select id="dropdown" class="!text-[10px]" onchange="this.setAttribute('value', this.value)">
                                                 <option value="" disabled selected hidden>All Clients</option>
                                                 <option value="option1">Client 1</option>
                                                 <option value="option2">Client 2</option>
                                                 <option value="option3">Client 3</option>
                                             </select>
-                                            <label for="dropdown"
-                                                class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
-                                                Client
-                                            </label>
-                                            <svg class="absolute right-3 top-4 w-3 h-3 text-gray-400 pointer-events-none"
-                                                width="9" height="5" viewBox="0 0 9 5" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
-                                            </svg>
+                                            <label for="dropdown" id="dropdownLabel"
+                                                class="!-top-[10px] !text-xs">Clients</label>
                                         </div>
-
                                     </div>
 
                                     <div
@@ -846,5 +836,6 @@
 <script src="./javascript/chart.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
+<script src="./javascript/customSelect.js"></script>
 
 </html>

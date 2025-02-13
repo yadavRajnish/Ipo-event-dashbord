@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin>
+    <link rel="stylesheet" href="./css/dropdown.css">
 
 </head>
 
@@ -460,20 +461,16 @@
                             </div>
                             <form action="">
                                 <div class="flex flex-col gap-4 mt-4">
-                                    <div
-                                        class="relative float-label bg-white border border-primary-gray rounded-sm cursor-pointer w-[400px]">
-                                        <select id="dropdown"
-                                            class="block w-full px-3 py-3 pr-2 focus:outline-none peer font-medium font-normal text-sm tracking-wider leading-[24px] h-full"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
+                                   
+                                    <div class="custom-select !rounded-sm !w-[400px]">
+                                        <select id="dropdown" class="!text-medium !font-normal !text-sm tracking-wider leading-[24px] " onchange="this.setAttribute('value', this.value)">
+                                            <option value="" disabled selected hidden>Select Email Sender</option>
                                             <option value="option1">Client 1</option>
                                             <option value="option2">Client 2</option>
                                             <option value="option3">Client 3</option>
                                         </select>
-                                        <label for="dropdown"
-                                            class="absolute left-3 px-1 text-gray-600 text-xs transition-transform transform duration-200 ease-in-out font-normal  tracking-wider">
-                                            Client
-                                        </label>
+                                        <label for="dropdown" id="dropdownLabel"
+                                            class="!text-xs tracking-wider">Select Email Sender</label>
                                     </div>
 
                                     <div class="text-base font-medium leading-[19.36px] text-black">Invitation Template
@@ -610,4 +607,6 @@
 <script src="./javascript//navigate.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
+<script src="./javascript/customSelect.js"></script>
+
 </html>
