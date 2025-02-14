@@ -473,8 +473,8 @@
                         <div
                             class="w-full h-[40px] mt-2 md:mt-[45px] md:mt-5 flex items-center justify-between md:my-0">
                             <div
-                                class="flex md:flex-col flex-row gap-4  h-full justify-between w-full flex-wrap items-center">
-                                <div class="relative h-full">
+                                class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-0 lg:flex h-full justify-between w-full flex-wrap items-center">
+                                <div class="relative h-[40px] lg:h-full">
                                     <input type="text" id="eventname"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-xs bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] h-full"
                                         placeholder="Event Name" required>
@@ -482,7 +482,7 @@
                                         class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-xs tracking-wider">Event
                                         Name</label>
                                 </div>
-                                <div class="relative h-full max-w-[128px]">
+                                <div class="relative h-full w-full lg:max-w-[128px]">
                                     <input type="date" id="start_date" aria-describedby="outlined_success_help"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm !bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
                                         data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
@@ -499,7 +499,7 @@
                                     </div>
                                 </div>
 
-                                <div class="relative h-full max-w-[128px]">
+                                <div class="relative h-full w-full lg:max-w-[128px]">
                                     <input type="date" id="end_date" aria-describedby="outlined_success_help"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
                                         data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
@@ -515,7 +515,7 @@
                                         <img src="/Images/calendar.svg" alt="calendar">
                                     </div>
                                 </div>
-                                <div class="custom-select h-full !max-w-[185px]">
+                                <div class="custom-select h-full !w-full lg:!max-w-[185px]">
                                     <select id="dropdown" class="h-full !w-full"
                                         onchange="this.setAttribute('value', this.value)">
                                         <option value="" disabled selected hidden>⠀</option>
@@ -526,14 +526,14 @@
                                     <label for="dropdown" id="dropdownLabel" class="whitespace-nowrap">Select
                                         Approval Status</label>
                                 </div>
-                                <div class="relative h-full">
+                                <div class="relative  h-[40px] lg:h-full">
                                     <input type="text" id="location"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] h-full"
                                         placeholder="Location" required>
                                     <label for="location"
                                         class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider">Location</label>
                                 </div>
-                                <div class="relative h-full">
+                                <div class="relative h-[40px] lg:h-full">
                                     <input type="text" id="attendee"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider h-full"
                                         placeholder="Attendee Name" required>
