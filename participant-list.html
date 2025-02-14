@@ -13,7 +13,7 @@
     <div class="flex flex-col h-[100dvh]">
         <div class="content-background flex justify-between flex-col">
             <div class="client-onboard-wrapper w-full h-full fixed hidden"></div>
-            <div class="content-wrapper relative">
+            <div class="content-wrapper relative h-full">
                 <header
                     class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-2 md:ps-5 py-2 min-h-[56px]"
                     style="opacity: 1; transform: none;">
@@ -21,7 +21,7 @@
                         class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
                     <nav class="w-full flex justify-between items-center" aria-label="Global">
                         <div class="flex items-center space-x-4 ml-auto">
-                            <div > <img src="./Images/notification.svg" alt=""></div>
+                            <div> <img src="./Images/notification.svg" alt=""></div>
                             <div class="h-[24px] w-[24px] ">
                                 <img src="./Images/person.jpg" class="h-full w-full rounded-full" alt="person">
                             </div>
@@ -41,7 +41,7 @@
 
                         </div>
                         <div class="flex flex-col mb-6 h-full">
-                            <section class="routes"><a  href="index.html">
+                            <section class="routes"><a href="index.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -59,7 +59,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="events.html">
+                            <section class="routes"><a href="events.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -77,7 +77,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="">
+                            <section class="routes"><a href="">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -95,7 +95,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="contact-master.html">
+                            <section class="routes"><a href="contact-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -114,7 +114,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="client-master.html">
+                            <section class="routes"><a href="client-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -132,7 +132,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="user-master.html">
+                            <section class="routes"><a href="user-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -151,7 +151,7 @@
                                 </a>
                             </section>
 
-                            <section class="routes"><a  href="reports.html">
+                            <section class="routes"><a href="reports.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -171,7 +171,7 @@
                             </section>
                             <section class="routes">
                                 <div class="group">
-                                    <a  href="">
+                                    <a href="">
                                         <div
                                             class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                             <div class="icon text-[#a4a7b3] text-4xl">
@@ -198,7 +198,7 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="routes"><a  href="">
+                            <section class="routes"><a href="">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -223,7 +223,7 @@
                 <div class="block md:hidden main-container" style="opacity: 1; transform: none;">
                     <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar"
                         style="width: 0px;">
-                        <div class="top_section">
+                        <div class="top_section" id="closeMobileSidebar">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
                                 <span
@@ -234,7 +234,7 @@
 
                         </div>
                         <div class="flex flex-col mb-6 h-full">
-                            <section class="routes"><a  href="index.html">
+                            <section class="routes"><a href="index.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -252,7 +252,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="events.html">
+                            <section class="routes"><a href="events.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -270,7 +270,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="">
+                            <section class="routes"><a href="">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -288,7 +288,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="contact-master.html">
+                            <section class="routes"><a href="contact-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -307,7 +307,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="client-master.html">
+                            <section class="routes"><a href="client-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -325,7 +325,7 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes"><a  href="user-master.html">
+                            <section class="routes"><a href="user-master.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -344,7 +344,7 @@
                                 </a>
                             </section>
 
-                            <section class="routes"><a  href="reports.html">
+                            <section class="routes"><a href="reports.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -364,7 +364,7 @@
                             </section>
                             <section class="routes">
                                 <div class="group">
-                                    <a  href="">
+                                    <a href="">
                                         <div
                                             class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                             <div class="icon text-[#a4a7b3] text-4xl">
@@ -391,7 +391,7 @@
                                     </div>
                                 </div>
                             </section>
-                            <section class="routes"><a  href="">
+                            <section class="routes"><a href="">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
@@ -424,13 +424,13 @@
                                     <path fill-rule="evenodd"
                                         d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
                                         clip-rule="evenodd"></path>
-                                </svg><a  href="/home/clientslist"><span
+                                </svg><a href="/home/clientslist"><span
                                         class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Home</span></a><svg
                                     stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
                                     stroke-linecap="round" stroke-linejoin="round" height="14" width="14"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg><a  href="/home/clientslist"><span
+                                </svg><a href="/home/clientslist"><span
                                         class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Clients
                                         List</span></a><svg stroke="currentColor" fill="none" stroke-width="2"
                                     viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="14"
@@ -755,78 +755,77 @@
                     </div>
                 </div>
                 <div id="contentOverlay"
-                    class="absolute h-full w-full z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
+                    class="fixed inset-0  z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
                 </div>
-
             </div>
         </div>
         <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
-        style="background-color: rgba(35, 35, 35, 0.3);">
-        <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
-            <!-- Close Button -->
-            <button id="closeChangePasswordModal"
-                class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
+            style="background-color: rgba(35, 35, 35, 0.3);">
+            <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+                <!-- Close Button -->
+                <button id="closeChangePasswordModal"
+                    class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
 
-            <!-- Title -->
-            <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
+                <!-- Title -->
+                <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
 
-            <!-- Form -->
-            <form id="changePasswordForm" class="space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Current Password -->
-                    <div class="relative">
-                        <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
-                            class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                            placeholder="Current Password" data-testid="floating-label" autocomplete="off"
-                            style="padding-right: 35px;">
-                        <label for="currentPassword"
-                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                            Current Password
-                        </label>
-                        <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                            <img src="/Images/toggle.svg" alt="toggle">
+                <!-- Form -->
+                <form id="changePasswordForm" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Current Password -->
+                        <div class="relative">
+                            <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="Current Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="currentPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                Current Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
+                        </div>
+
+                        <!-- New Password -->
+                        <div class="relative">
+                            <input type="password" id="newPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="New Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="newPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                New Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
+                        </div>
+                        <!-- Confirm New Password -->
+                        <div class="relative">
+                            <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="confirmPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                Confirm Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
                         </div>
                     </div>
-
-                    <!-- New Password -->
-                    <div class="relative">
-                        <input type="password" id="newPassword" aria-describedby="outlined_success_help"
-                            class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                            placeholder="New Password" data-testid="floating-label" autocomplete="off"
-                            style="padding-right: 35px;">
-                        <label for="newPassword"
-                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                            New Password
-                        </label>
-                        <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                            <img src="/Images/toggle.svg" alt="toggle">
-                        </div>
+                    <!-- Submit Button -->
+                    <div class="flex justify-center items-center">
+                        <button type="submit"
+                            class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
+                            Change Password
+                        </button>
                     </div>
-                    <!-- Confirm New Password -->
-                    <div class="relative">
-                        <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
-                            class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                            placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
-                            style="padding-right: 35px;">
-                        <label for="confirmPassword"
-                            class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                            Confirm Password
-                        </label>
-                        <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                            <img src="/Images/toggle.svg" alt="toggle">
-                        </div>
-                    </div>
-                </div>
-                <!-- Submit Button -->
-                <div class="flex justify-center items-center">
-                    <button type="submit"
-                        class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
-                        Change Password
-                    </button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
 
 </body>
@@ -834,4 +833,5 @@
 <script src="./javascript/table.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
+
 </html>

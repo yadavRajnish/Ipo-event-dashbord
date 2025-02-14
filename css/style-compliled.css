@@ -686,9 +686,6 @@
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
   }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -779,6 +776,12 @@
   .h-\[29px\] {
     height: 29px;
   }
+  .h-\[258px\] {
+    height: 258px;
+  }
+  .h-\[300px\] {
+    height: 300px;
+  }
   .h-\[32px\] {
     height: 32px;
   }
@@ -793,12 +796,6 @@
   }
   .h-\[48px\] {
     height: 48px;
-  }
-  .h-\[258px\] {
-    height: 258px;
-  }
-  .h-\[300px\] {
-    height: 300px;
   }
   .h-\[calc\(100\%-3rem\)\] {
     height: calc(100% - 3rem);
@@ -818,15 +815,6 @@
   .\!min-h-\[350px\] {
     min-height: 350px !important;
   }
-  .min-h-\[120px\] {
-    min-height: 120px;
-  }
-  .min-h-\[180px\] {
-    min-height: 180px;
-  }
-  .min-h-\[450px\] {
-    min-height: 450px;
-  }
   .min-h-\[45px\] {
     min-height: 45px;
   }
@@ -838,6 +826,15 @@
   }
   .min-h-\[76px\] {
     min-height: 76px;
+  }
+  .min-h-\[120px\] {
+    min-height: 120px;
+  }
+  .min-h-\[180px\] {
+    min-height: 180px;
+  }
+  .min-h-\[450px\] {
+    min-height: 450px;
   }
   .\!w-\[102px\] {
     width: 102px !important;
@@ -869,6 +866,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-\[21px\] {
+    width: 21px;
+  }
   .w-\[24px\] {
     width: 24px;
   }
@@ -889,9 +889,6 @@
   }
   .w-\[15px\] {
     width: 15px;
-  }
-  .w-\[21px\] {
-    width: 21px;
   }
   .w-\[26px\] {
     width: 26px;
@@ -1193,6 +1190,12 @@
   .border-gray-400 {
     border-color: var(--color-gray-400);
   }
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
+  }
+  .border-red-500 {
+    border-color: var(--color-red-500);
+  }
   .border-transparent {
     border-color: transparent;
   }
@@ -1229,17 +1232,8 @@
   .bg-\[var\(--primary\)\] {
     background-color: var(--primary);
   }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
-  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
-  }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
-  }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
   }
   .bg-transparent {
     background-color: transparent;
@@ -2123,24 +2117,9 @@
       max-width: 60%;
     }
   }
-  .dark\:bg-blue-500 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-blue-500);
-    }
-  }
-  .dark\:bg-gray-700 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-700);
-    }
-  }
   .dark\:text-gray-400 {
     @media (prefers-color-scheme: dark) {
       color: var(--color-gray-400);
-    }
-  }
-  .dark\:text-white {
-    @media (prefers-color-scheme: dark) {
-      color: var(--color-white);
     }
   }
 }
