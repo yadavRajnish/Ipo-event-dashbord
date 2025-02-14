@@ -124,8 +124,8 @@
   visibility: hidden;
 }
 .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
   animation: wave-4 0.4s ease;
 }
 .checkbox-wrapper-4 .inp-cbx:checked:disabled + .cbx span:first-child {

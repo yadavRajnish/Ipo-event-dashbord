@@ -447,3 +447,9 @@ input[type=date]:focus::-webkit-datetime-edit {
   border: 1px solid rgba(22, 40, 49, 0.1);
   border-style: dashed;
 }
+
+button:hover{
+  background: #2445ec;
+  color: white;
+  transition: 0.2 ease-in-out;
+}
