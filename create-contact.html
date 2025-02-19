@@ -22,7 +22,27 @@
                         class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
                     <nav class="w-full flex justify-between items-center" aria-label="Global">
                         <div class="flex items-center space-x-4 ml-auto">
-                            <div> <img src="./Images/notification.svg" alt=""></div>
+                            <div class="ps-2 md:ps-0 relative">
+                                <img src="./Images/notification.svg" alt="Notification" id="notification-icon"
+                                    class="cursor-pointer">
+                                <div id="notification-popup"
+                                    class="hidden absolute top-10 right-0 bg-white text-black shadow-lg border border-[#EBEBE6] rounded-lg p-4"
+                                    style="min-width: 180px;">
+                                    <div class="text-sm font-medium leading-[17px]">Notifications</div>
+
+                                    <ul class="mt-2 space-y-2 flex flex-col gap-2">
+                                        <li class="text-xs items-center space-x-2">
+                                            <span class="text-sm block">New Messages</span>
+                                            <span class="text-xs text-gray-500">new unread
+                                                messages.</span>
+                                        </li>
+                                        <li class="text-xs items-center space-x-2">
+                                            <span class="text-sm block">New Alerts</span>
+                                            <span class="text-xs text-gray-500">new system alerts.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="h-[24px] w-[24px] ">
                                 <img src="./Images/person.jpg" class="h-full w-full rounded-full" alt="person">
                             </div>
@@ -629,5 +649,5 @@
 <script src="./javascript/customSelect.js"></script>
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
-
+<script src="./javascript/notificationPopup.js"></script>
 </html>
