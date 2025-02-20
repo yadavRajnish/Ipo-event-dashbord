@@ -454,6 +454,19 @@ button:hover {
   transition: 0.2 ease-in-out;
 }
 
-.ck.ck-editor__main>.ck-editor__editable {
+.ck.ck-editor__main > .ck-editor__editable {
   height: 200px !important;
+}
+
+.pagination-dropdown {
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--border-primary-gray);
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+  padding: 4px;
+  outline: none;
 }
