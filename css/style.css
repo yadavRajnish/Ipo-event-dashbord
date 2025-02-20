@@ -239,10 +239,10 @@ body {
 .query-field:last-child {
   margin-bottom: 0px;
 }
-
+/* 
 *::-webkit-calendar-picker-indicator {
   display: none;
-}
+} */
 
 .react-toastify {
   --toastify-color-light: #fff;
@@ -469,4 +469,53 @@ button:hover {
   color: var(--text-primary);
   padding: 4px;
   outline: none;
+}
+
+.selected-option {
+  border: 1px solid var(--border-primary-gray);
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+.close-button {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  color: red !important;
+}
+.close-button:hover{
+  background: none !important;
+}
+.options-conter {
+  color: var(--gray-light);
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+.dropdown-li{
+  padding: 8px;
+  cursor: pointer;
+}
+.dropdown-li:hover{
+  background-color: rgba(0, 0, 0, 0.05)
+}
+
+.text-red{
+  color: red;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  background: url(../Images/calendar.svg) no-repeat;
+  height: 18px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  display: block;
+  background: url(../Images/calendar.svg) no-repeat;
+  height: 18px;
 }
