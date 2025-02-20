@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
-    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin>
+    <!-- <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin> -->
     <link rel="stylesheet" href="./css/dropdown.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+
 </head>
 <style>
     .ck.ck-editor__main>.ck-editor__editable{
@@ -495,7 +497,7 @@
                                     </div>
                                     <div class="text-base font-medium leading-[19.36px] text-black">Body</div>
 
-                                    <div class="main-container !relative !z-10"
+                                    <!-- <div class="main-container !relative !z-10"
                                         style="width: calc(100dvw - 115px); min-height: 220px;">
                                         <div class="editor-container editor-container_classic-editor editor-container_include-block-toolbar !absolute w-full"
                                             id="editor-container">
@@ -509,6 +511,13 @@
                                         <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"
                                             crossorigin></script>
                                         <script src="https://cdn.ckbox.io/ckbox/2.6.1/ckbox.js" crossorigin></script>
+                                    </div> -->
+
+                                    <div class="bg-white ">
+                                        <div id="editor" class="min-h-[180px]">
+                                            <p>Compose your email content here ...</p>
+                                        </div>
+                                        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
                                     </div>
                                     <div
                                         class="w-full h-[40px] mt-[20px] md:mt-5 flex items-center justify-end md:my-0">
@@ -612,5 +621,6 @@
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/customSelect.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
+<script src="./javascript/quillEditor.js"></script>
 
 </html>

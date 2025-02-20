@@ -465,13 +465,13 @@
                             <div class="flex justify-between items-center">
                                 <h1 class="event-head whitespace-nowrap">Send Invitation</h1>
                             </div>
-                            <div class="w-full h-[40px] mt-5 flex items-center justify-between">
-                                <div class=" flex gap-4 justify-between md:justify-start w-full md:w-fit">
+                            <div class="w-[100%] h-[40px] mt-5 flex items-center justify-between">
+                                <div class=" flex gap-4 justify-between md:justify-start !w-full md:!w-[50%]">
                                     <!-- dropdown -->
-                                    <div class="custom-select !w-[121px] !rounded-xs">
+                                    <div class="custom-select  !rounded-xs">
                                         <select id="dropdown" class="!text-[10px]"
                                             onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>Pakka Limited</option>
+                                            <option value="" disabled selected hidden whitespace-nowrap >Pakka Limited</option>
                                             <option value="option1">Client 1</option>
                                             <option value="option2">Client 2</option>
                                             <option value="option3">Client 3</option>
@@ -480,10 +480,10 @@
                                             class="!-top-[10px] !text-xs">Clients</label>
                                     </div>
 
-                                    <div class="custom-select !w-[121px] !rounded-xs">
+                                    <div class="custom-select  !rounded-xs">
                                         <select id="dropdown" class="!text-[10px]"
                                             onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>Investor met</option>
+                                            <option value="" disabled selected hidden whitespace-nowrap >Investor met</option>
                                             <option value="option1">Client 1</option>
                                             <option value="option2">Client 2</option>
                                             <option value="option3">Client 3</option>
@@ -492,10 +492,10 @@
                                             class="!-top-[10px] !text-xs">Event</label>
                                     </div>
 
-                                    <div class="custom-select !w-[121px] !rounded-xs">
+                                    <div class="custom-select  !rounded-xs">
                                         <select id="dropdown" class="!text-[10px]"
                                             onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>Analyst</option>
+                                            <option value="" disabled selected hidden whitespace-nowrap >Analyst</option>
                                             <option value="option1">Client 1</option>
                                             <option value="option2">Client 2</option>
                                             <option value="option3">Client 3</option>
@@ -505,7 +505,7 @@
                                     </div>
                                 </div>
                                 <!-- this button for large device -->
-                                <div class="hidden md:flex gap-4">
+                                <div class="hidden md:flex justify-end gap-4 !w-[50%]">
                                     <button
                                         class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-white text-primary border-primary text-white">
                                         Send Invitation

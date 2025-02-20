@@ -429,6 +429,14 @@ textarea {
   background-color: rgba(251, 131, 12, 0.1);
 }
 
+.hold-button{
+  background-color: rgb(175 167 167 / 10%);
+}
+.hold-button span{
+  color: rgb(110, 113, 116)!important;
+}
+
+
 /* 
 ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
 ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
@@ -448,11 +456,11 @@ input[type=date]:focus::-webkit-datetime-edit {
   border-style: dashed;
 }
 
-button:hover {
+/* button:hover {
   background: #2445ec;
   color: white;
   transition: 0.2 ease-in-out;
-}
+} */
 
 .ck.ck-editor__main > .ck-editor__editable {
   height: 200px !important;

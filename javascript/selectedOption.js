@@ -29,7 +29,16 @@ function selectOption(option) {
 
 function updateSelectedOptions() {
   selectedOptions.innerHTML = "";
+
+  if (selectedList.length === 0) {
+    selectedOptions.textContent = "Select an option"; 
+    selectedOptions.classList.add("text-gray-500"); 
+    return;
+  }
+
+  selectedOptions.classList.remove("text-gray-500");
   const displayedOptions = selectedList.slice(0, 2);
+
   displayedOptions.forEach(text => {
     const span = document.createElement("span");
     span.className = "selected-option";

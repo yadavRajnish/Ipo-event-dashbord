@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
 </head>
 
 <body>
@@ -489,7 +490,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div
+                                    <!-- <div
                                         class="relative float-label min-w-[102px] bg-white border border-gray-300 rounded-xs cursor-pointer">
                                         <select id="dropdown2"
                                             class="block w-full px-3 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
@@ -509,8 +510,16 @@
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
                                         </svg>
+                                    </div> -->
+                                    <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
+                                        <select id="dropdown" class="!text-[10px] w-full"
+                                            onchange="this.setAttribute('value', this.value)">
+                                            <option value="" disabled selected hidden>All Clients</option>
+                                            <option value="option1">Client 1</option>
+                                            <option value="option2">Client 2</option>
+                                            <option value="option3">Client 3</option>
+                                        </select>
                                     </div>
-
                                 </div>
                                 <!-- this button for large device -->
                                 <div class="hidden md:flex gap-4">
@@ -670,9 +679,9 @@
                                             <td class="py-2 px-4">Analyst</td>
                                             <td class="py-2 px-4">27-Oct-2024</td>
                                             <td class="py-2 px-4">
-                                                <div class="pending-button status-button">
-                                                    <span class="!text-[#FB830C]">Pending</span>
-                                                    <img src="./Images/pace.svg" alt="bolt">
+                                                <div class="hold-button status-button">
+                                                    <span >Hold</span>
+                                                    <img src="./Images/hold.svg" alt="bolt">
                                                 </div>
                                             </td>
                                             <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
@@ -863,4 +872,6 @@
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
+<script src="./javascript/customSelect.js"></script>
+
 </html>
