@@ -2,7 +2,8 @@
     position: relative;
     width: 100%;
     background-color: white;
-    border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+    /* border: 1px solid #d1d5db; */
+    border: 1px solid var(--border-primary-gray);
     border-radius: 4px; /* Tailwind's rounded-sm */
     cursor: pointer;
     font-size: 12px; /* Tailwind's text-sm */

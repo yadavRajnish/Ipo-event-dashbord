@@ -448,8 +448,12 @@ input[type=date]:focus::-webkit-datetime-edit {
   border-style: dashed;
 }
 
-button:hover{
+button:hover {
   background: #2445ec;
   color: white;
   transition: 0.2 ease-in-out;
+}
+
+.ck.ck-editor__main>.ck-editor__editable {
+  height: 200px !important;
 }

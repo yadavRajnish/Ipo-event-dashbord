@@ -7,53 +7,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/dashbord.css">
     <link rel="stylesheet" href="./css/style-compliled.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.css" crossorigin>
     <link rel="stylesheet" href="./css/dropdown.css">
 </head>
 <style>
-    .select-selected {
-        padding: 8px !important;
-    }
-
-    .select-selected:after {
-        top: 15px;
-    }
-
-    .select-selected.select-arrow-active:after {
-        top: 10px;
+    .ck.ck-editor__main>.ck-editor__editable{
+        height: 200px !important;
     }
 </style>
-
-<body class="content-background">
+<body>
     <div class="flex flex-col h-[100dvh]">
-        <div class=" flex justify-between flex-col">
+        <div class=" content-background flex justify-between flex-col">
             <div class="client-onboard-wrapper w-full h-full fixed hidden"></div>
             <div class="content-wrapper relative">
                 <header
-                    class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-2 md:ps-5 py-2 min-h-[56px]">
-                    <nav class="w-full flex items-center">
-                
-                        <button id="openMobileSidebar"
-                            class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
-
-                        <div class="flex-1 flex justify-center">
-                            <div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[425px]">
-
-                                <div class="flex items-center w-full text-md rounded-xs
-                                border border-[#a0a0a780] h-8 p-2">
-
-                                    <span class="cursor-pointer text-xl flex items-center justify-center h-full">
-                                        <img src="Images/search-icon.svg" alt="search-icon">
-                                    </span>
-                                    <input class="border-none outline-none bg-transparent w-full text-base px-2 text-sm"
-                                        type="text" placeholder="Search by client, events, user name" value="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Icons & Profile Image (Right Side) -->
-                        <div class="flex items-center space-x-2 md:space-x-4">
+                    class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-2 md:ps-5 py-2 min-h-[56px]"
+                    style="opacity: 1; transform: none;">
+                    <button id="openMobileSidebar"
+                        class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
+                    <nav class="w-full flex justify-between items-center" aria-label="Global">
+                        <div class="flex items-center space-x-4 ml-auto">
                             <div class="ps-2 md:ps-0 relative">
                                 <img src="./Images/notification.svg" alt="Notification" id="notification-icon"
                                     class="cursor-pointer">
@@ -75,18 +48,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="h-[24px] w-[24px]">
-                                <img src="./Images/person.jpg" class="h-full w-full rounded-full" alt="Profile">
+                            <div class="h-[24px] w-[24px] ">
+                                <img src="./Images/person.jpg" class="h-full w-full rounded-full" alt="person">
                             </div>
                         </div>
-                        <!-- Notification Popup -->
-
                     </nav>
                 </header>
-
-                <!-- for large device -->
                 <div class="hidden md:block main-container" style="opacity: 1; transform: none;">
-                    <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar">
+                    <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar" style="width: 64px;">
                         <div class="top_section">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
@@ -95,17 +64,18 @@
                                     Event Management
                                 </span>
                             </div>
+
                         </div>
                         <div class="flex flex-col mb-6 h-full">
                             <section class="routes"><a href="index.html">
                                     <div
-                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2 15.9997H5.34625V10.0575H10.6538V15.9997H14V6.99972L8 2.48047L2 6.99972V15.9997ZM0.5 17.4997V6.24972L8 0.605469L15.5 6.24972V17.4997H9.15375V11.5575H6.84625V17.4997H0.5Z"
-                                                    fill="#4B65E1" />
+                                                    fill="#6E7174" />
                                             </svg>
                                         </div>
                                         <span
@@ -117,13 +87,13 @@
                             </section>
                             <section class="routes"><a href="events.html">
                                     <div
-                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.30775 19.5C1.80258 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V4.30777C0.5 3.8026 0.675 3.37502 1.025 3.02502C1.375 2.67502 1.80258 2.50002 2.30775 2.50002H3.69225V0.384766H5.23075V2.50002H12.8077V0.384766H14.3077V2.50002H15.6923C16.1974 2.50002 16.625 2.67502 16.975 3.02502C17.325 3.37502 17.5 3.8026 17.5 4.30777V17.6923C17.5 18.1974 17.325 18.625 16.975 18.975C16.625 19.325 16.1974 19.5 15.6923 19.5H2.30775ZM2.30775 18H15.6923C15.7692 18 15.8398 17.9679 15.9038 17.9038C15.9679 17.8398 16 17.7693 16 17.6923V8.30777H2V17.6923C2 17.7693 2.03208 17.8398 2.09625 17.9038C2.16025 17.9679 2.23075 18 2.30775 18ZM2 6.80777H16V4.30777C16 4.23077 15.9679 4.16026 15.9038 4.09626C15.8398 4.0321 15.7692 4.00002 15.6923 4.00002H2.30775C2.23075 4.00002 2.16025 4.0321 2.09625 4.09626C2.03208 4.16026 2 4.23077 2 4.30777V6.80777ZM4.25 11.75V10.25H13.75V11.75H4.25ZM4.25 15.75V14.25H10.75V15.75H4.25Z"
-                                                    fill="#6E7174" />
+                                                    fill="#4B65E1" />
                                             </svg>
                                         </div>
                                         <span
@@ -206,6 +176,7 @@
                                     </div>
                                 </a>
                             </section>
+
                             <section class="routes"><a href="reports.html">
                                     <div
                                         class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
@@ -275,10 +246,10 @@
                     </div>
                 </div>
 
-                <!--for mobile sidebar  -->
                 <div class="block md:hidden main-container" style="opacity: 1; transform: none;">
-                    <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar" style="width:0px;">
-                        <div class="top_section !ps-2" id="closeMobileSidebar">
+                    <div class="sidebar transition-all duration-300 ease-in-out" id="mobile_sidebar"
+                        style="width: 0px;">
+                        <div class="top_section">
                             <div class="bars cursor-pointer flex gap-[15px] items-center">
                                 <img src="./Images/logo.png" class="h-[29px] w-[26px] !transition-none fill-black">
                                 <span
@@ -286,17 +257,18 @@
                                     Event Management
                                 </span>
                             </div>
+
                         </div>
                         <div class="flex flex-col mb-6 h-full">
                             <section class="routes"><a href="index.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2 15.9997H5.34625V10.0575H10.6538V15.9997H14V6.99972L8 2.48047L2 6.99972V15.9997ZM0.5 17.4997V6.24972L8 0.605469L15.5 6.24972V17.4997H9.15375V11.5575H6.84625V17.4997H0.5Z"
-                                                    fill="#4B65E1" />
+                                                    fill="#6E7174" />
                                             </svg>
                                         </div>
                                         <span
@@ -308,13 +280,13 @@
                             </section>
                             <section class="routes"><a href="events.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent link-active">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="18" height="20" viewBox="0 0 18 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.30775 19.5C1.80258 19.5 1.375 19.325 1.025 18.975C0.675 18.625 0.5 18.1974 0.5 17.6923V4.30777C0.5 3.8026 0.675 3.37502 1.025 3.02502C1.375 2.67502 1.80258 2.50002 2.30775 2.50002H3.69225V0.384766H5.23075V2.50002H12.8077V0.384766H14.3077V2.50002H15.6923C16.1974 2.50002 16.625 2.67502 16.975 3.02502C17.325 3.37502 17.5 3.8026 17.5 4.30777V17.6923C17.5 18.1974 17.325 18.625 16.975 18.975C16.625 19.325 16.1974 19.5 15.6923 19.5H2.30775ZM2.30775 18H15.6923C15.7692 18 15.8398 17.9679 15.9038 17.9038C15.9679 17.8398 16 17.7693 16 17.6923V8.30777H2V17.6923C2 17.7693 2.03208 17.8398 2.09625 17.9038C2.16025 17.9679 2.23075 18 2.30775 18ZM2 6.80777H16V4.30777C16 4.23077 15.9679 4.16026 15.9038 4.09626C15.8398 4.0321 15.7692 4.00002 15.6923 4.00002H2.30775C2.23075 4.00002 2.16025 4.0321 2.09625 4.09626C2.03208 4.16026 2 4.23077 2 4.30777V6.80777ZM4.25 11.75V10.25H13.75V11.75H4.25ZM4.25 15.75V14.25H10.75V15.75H4.25Z"
-                                                    fill="#6E7174" />
+                                                    fill="#4B65E1" />
                                             </svg>
                                         </div>
                                         <span
@@ -326,7 +298,7 @@
                             </section>
                             <section class="routes"><a href="">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +316,7 @@
                             </section>
                             <section class="routes"><a href="contact-master.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -363,7 +335,7 @@
                             </section>
                             <section class="routes"><a href="client-master.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -381,7 +353,7 @@
                             </section>
                             <section class="routes"><a href="user-master.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -397,9 +369,10 @@
                                     </div>
                                 </a>
                             </section>
+
                             <section class="routes"><a href="reports.html">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -446,7 +419,7 @@
                             </section>
                             <section class="routes"><a href="">
                                     <div
-                                        class="link flex min-h-[45px] px-[10px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                         <div class="icon text-[#a4a7b3] text-4xl">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -465,479 +438,179 @@
                         </div>
                     </div>
                 </div>
-                <!--end mobile sidebar  -->
 
-                <div class="flex relative justify-end ml-auto h-full w-full md:w-[calc(100%-4rem)]">
+                <div class="flex justify-end ml-auto h-full w-full md:w-[calc(100%-4rem)]">
                     <div
                         class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6 justify-between flex flex-col h-[calc(100%-3rem)] mt-10">
                         <div>
-                            <h1
-                                class="text-xl md:text-2xl font-extralight leading-[24px] md:leading-[29px] !text-[#232323]">
-                                Welcome Back, Ashish
-                            </h1>
+                            <div class="text-secondary-light mb-5 text-sm font-normal flex items-center gap-3.5"><svg
+                                    onclick="history.back()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 20 20" aria-hidden="true" class="text-secondary-dark cursor-pointer"
+                                    height="14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg><a href=""><span
+                                        class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Home</span></a><svg
+                                    stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                    stroke-linecap="round" stroke-linejoin="round" height="14" width="14"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg><a href=""><span
+                                        class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Clients
+                                        List</span></a><svg stroke="currentColor" fill="none" stroke-width="2"
+                                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="14"
+                                    width="14" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
 
-                            <div class="flex flex-col gap-4 mt-8 w-full">
-                                <div
-                                    class="flex flex-col sm:flex-row items-start justify-between sm:items-center h-[40px] w-full sm:gap-0 gap-4 mb-10 sm:mb-0">
-                                    <div
-                                        class="flex justify-between sm:justify-start items-center gap-[20px] w-full sm:w-[50%]">
-                                        <h2 class="text-sm font-medium leading-[17px]">Upcoming Events</h2>
+                            <h1 class="event-head whitespace-nowrap">Configure Event Email</h1>
 
-                                        <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
-                                            <select id="dropdown" class="!text-[10px] w-full"
+                            <p class="text-base font-medium text-black mt-4">Event List</p>
+
+                            <form action="" class="">
+                                <div class="flex flex-col gap-4 mt-4">
+                                    <div class="flex gap-4 flex-wrap">
+                                        <div class="custom-select !rounded-sm" style="width: 400px;">
+                                            <select id="dropdown"
+                                                class="!text-medium !font-normal !text-sm tracking-wider leading-[24px] "
                                                 onchange="this.setAttribute('value', this.value)">
-                                                <option value="" disabled selected hidden>All Clients</option>
+                                                <option value="" disabled selected hidden>Email Template</option>
                                                 <option value="option1">Client 1</option>
                                                 <option value="option2">Client 2</option>
                                                 <option value="option3">Client 3</option>
                                             </select>
-                                            <!-- <label for="dropdown" id="dropdownLabel"
-                                                class="!-top-[10px] !text-xs">Clients</label> -->
+                                            <label for="dropdown" id="dropdownLabel"
+                                                class="!text-xs !-top-[10px]">Select Template</label>
+                                        </div>
+
+                                        <div class="relative !w-[400px]">
+                                            <input type="text" id="eventname"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-sm bg-white py-3 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] w-full"
+                                                placeholder="Event Name" required>
+                                            <label for="eventname"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Event
+                                                Name</label>
                                         </div>
                                     </div>
+                                    <div class="text-base font-medium leading-[19.36px] text-black">Body</div>
 
-                                    <div
-                                        class="flex justify-between sm:justify-end w-full items-center space-x-4 text-[var(--primary)] sm:w-[50%]">
-
-                                        <div class="md:hidden block custom-select !rounded-xs" style="width: 250px;">
-                                            <select id="dropdown" class="!text-[10px]"
-                                                onchange="this.setAttribute('value', this.value)">
-                                                <option value="" disabled selected hidden>All Clients</option>
-                                                <option value="option1">Client 1</option>
-                                                <option value="option2">Client 2</option>
-                                                <option value="option3">Client 3</option>
-                                            </select>
-                                            <!-- <label for="dropdown" id="dropdownLabel"
-                                                class="!-top-[10px] !text-xs">Clients</label> -->
-                                        </div>
-                                        <button
-                                            class="flex items-center px-3 py-3 h-[26px] border rounded-xs cursor-pointer text-xs font-normal leading-[14.52px] whitespace-nowrap">
-                                            <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                                </path>
-                                            </svg>
-
-                                            Create Event
-                                        </button>
-                                        <a href="./events.html" class="text-xs font-normal leading-[14.52px]">View
-                                            All</a>
-                                    </div>
-                                </div>
-
-                                <!-- Table -->
-                                <div class="overflow-x-auto w-full">
-                                    <table class="w-full border border-[#EBEBE6] rounded-lg event-table">
-                                        <thead class="bg-[#F9F9F9] h-[32px]">
-                                            <tr class="text-sm font-medium text-[#6E7174]">
-                                                <th class="py-2 px-4 text-left">Event Title</th>
-                                                <th class="py-2 px-4 text-left">
-                                                    <span class="flex gap-2">
-                                                        Venue
-                                                        <span> <svg width="14" height="15" viewBox="0 0 14 15"
-                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M12.0006 8.72816L8.98069 11.7608C8.63 12.1129 8.3457 11.9955 8.3457 11.4985V2.5"
-                                                                    stroke="#B5BCD7" stroke-linecap="round" />
-                                                                <path
-                                                                    d="M2 5.73572L5.01991 2.70311C5.37061 2.35094 5.6549 2.46835 5.6549 2.96535V11.9639"
-                                                                    stroke="#B5BCD7" stroke-linecap="round" />
-                                                            </svg></span>
-                                                    </span>
-                                                </th>
-                                                <th class="py-2 px-4">Date</th>
-                                                <th class="py-2 px-4">Total Registrations</th>
-                                                <th class="py-2 px-4">Confirm Registrations</th>
-                                                <th class="py-2 px-4">Pending Approval</th>
-                                                <th class="py-2 px-4"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-sm event-table-tbody">
-                                            <!-- Row 1 -->
-                                            <tr class="border-t border-transparent bg-white">
-                                                <td class="py-2 px-4 flex items-center space-x-2">
-                                                    <img src="Images/client-log-1.svg" alt="logo" class="h-6 w-6">
-                                                    <span>Swiggy IPO</span>
-                                                </td>
-                                                <td class="py-2 px-4">Mumbai</td>
-                                                <td class="py-2 px-4 text-center">20 Jul 2024</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4">
-                                                    <div
-                                                        class="flex items-center justify-center space-x-3 md:w-auto w-[100px]">
-                                                        <img onclick="window.location.href = './participant-list.html'"
-                                                            src="Images/list_alrt.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="list">
-                                                        <img onclick="window.location.href='./send-invitations.html'"
-                                                            src="Images/Group.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="group">
-                                                        <img src="Images/3-Dot.svg"
-                                                            class="h-[20px] w-[20px] object-contain" alt="3 dot">
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <!-- 1px Transparent Gap Row -->
-                                            <tr class="h-[1px] bg-transparent">
-                                                <td colspan="7" class="border-t border-transparent"></td>
-                                            </tr>
-
-                                            <!-- Row 2 -->
-                                            <tr class="border-t border-[#EBEBE6] bg-white">
-                                                <td class="py-2 px-4 flex items-center space-x-2">
-                                                    <img src="Images/client-logo-3.svg" alt="logo" class="h-6 w-6">
-                                                    <span>Ola Electric IPO</span>
-                                                </td>
-                                                <td class="py-2 px-4">Indore</td>
-                                                <td class="py-2 px-4 text-center">19 Jul 2024</td>
-                                                <td class="py-2 px-4 text-center">2</td>
-                                                <td class="py-2 px-4 text-center">2</td>
-                                                <td class="py-2 px-4 text-center">2</td>
-                                                <td class="py-2 px-4">
-                                                    <div class="flex items-center justify-center space-x-3 w-full">
-                                                        <img onclick="window.location.href = './participant-list.html'"
-                                                            src="Images/list_alrt.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="list">
-                                                        <img onclick="window.location.href='./send-invitations.html'"
-                                                            src="Images/Group.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="group">
-                                                        <img src="Images/3-Dot.svg"
-                                                            class="h-[20px] w-[20px] object-contain" alt="3 dot">
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <!-- 1px Transparent Gap Row -->
-                                            <tr class="h-[1px] !bg-transparent">
-                                                <td colspan="7" class="border-t border-transparent"></td>
-                                            </tr>
-
-                                            <!-- Row 3 -->
-                                            <tr class="border-t border-[#EBEBE6] bg-white">
-                                                <td class="py-2 px-4 flex items-center space-x-2">
-                                                    <img src="Images/client-log-1.svg" alt="logo" class="h-6 w-6">
-                                                    <span>NTPC Green...</span>
-                                                </td>
-                                                <td class="py-2 px-4">Delhi</td>
-                                                <td class="py-2 px-4 text-center">18 Jul 2024</td>
-                                                <td class="py-2 px-4 text-center">10</td>
-                                                <td class="py-2 px-4 text-center">10</td>
-                                                <td class="py-2 px-4 text-center">10</td>
-                                                <td class="py-2 px-4">
-                                                    <div class="flex items-center justify-center space-x-3 w-full">
-                                                        <img onclick="window.location.href = './participant-list.html'"
-                                                            src="Images/list_alrt.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="list">
-                                                        <img onclick="window.location.href='./send-invitations.html'"
-                                                            src="Images/Group.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="group">
-                                                        <img src="Images/3-Dot.svg"
-                                                            class="h-[20px] w-[20px] object-contain" alt="3 dot">
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <!-- 1px Transparent Gap Row -->
-                                            <tr class="h-[1px] bg-transparent">
-                                                <td colspan="7" class="border-t border-transparent"></td>
-                                            </tr>
-
-                                            <!-- Row 4 -->
-                                            <tr class="border-t border-[#EBEBE6] bg-white">
-                                                <td class="py-2 px-4 flex items-center space-x-2">
-                                                    <img src="Images/client-logo-3.svg" alt="logo" class="h-6 w-6">
-                                                    <span>HDB Financial Services</span>
-                                                </td>
-                                                <td class="py-2 px-4">Bangalore</td>
-                                                <td class="py-2 px-4 text-center">17 Jul 2024</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4 text-center">5</td>
-                                                <td class="py-2 px-4">
-                                                    <div class="flex items-center justify-center space-x-3 w-full">
-                                                        <img onclick="window.location.href = './participant-list.html'"
-                                                            src="Images/list_alrt.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="list">
-                                                        <img onclick="window.location.href='./send-invitations.html'"
-                                                            src="Images/Group.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="group">
-                                                        <img src="Images/3-Dot.svg"
-                                                            class="h-[20px] w-[20px] object-contain" alt="3 dot">
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <!-- 1px Transparent Gap Row -->
-                                            <tr class="h-[1px] bg-transparent">
-                                                <td colspan="7" class="border-t border-transparent"></td>
-                                            </tr>
-
-                                            <!-- Row 5 -->
-                                            <tr class="border-t border-[#EBEBE6] bg-white">
-                                                <td class="py-2 px-4 flex items-center space-x-2">
-                                                    <img src="Images/client-log-2.svg" alt="logo" class="h-6 w-6">
-                                                    <span>Waaree Energy IPO</span>
-                                                </td>
-                                                <td class="py-2 px-4">Chennai</td>
-                                                <td class="py-2 px-4 text-center">20 Jul 2024</td>
-                                                <td class="py-2 px-4 text-center">0</td>
-                                                <td class="py-2 px-4 text-center">0</td>
-                                                <td class="py-2 px-4 text-center">0</td>
-                                                <td class="py-2 px-4">
-                                                    <div class="flex items-center justify-center space-x-3 w-full">
-                                                        <img onclick="window.location.href = './participant-list.html'"
-                                                            src="Images/list_alrt.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="list">
-                                                        <img onclick="window.location.href='./send-invitations.html'"
-                                                            src="Images/Group.svg"
-                                                            class="h-[20px] w-[20px] cursor-pointer object-contain"
-                                                            alt="group">
-                                                        <img src="Images/3-Dot.svg"
-                                                            class="h-[20px] w-[20px] object-contain" alt="3 dot">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-
-                                    </table>
-                                </div>
-
-                                <!-- card -->
-                                <div
-                                    class="md:flex gap-4 min-h-[76px] flex-wrap grid grid-cols-2 justify-center items-center">
-                                    <!-- Card 1 -->
-                                    <div class="relative flex-1 !h-full max-w-xs w-full">
-                                        <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
-                                            <p class="font-normal text-xs leading-3">Total Events</p>
-                                            <p class="text-lg font-medium leading-5 text-black">75</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 2 -->
-                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
-                                        <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex justify-between items-center bg-white rounded-xs p-2 md:p-4 border  border-primary pl-5">
-                                            <div class="flex gap-1 flex-col">
-                                                <p class="font-normal text-xs leading-3">Past Event Attendees</p>
-                                                <p class="text-lg font-medium leading-5 text-black">15</p>
+                                    <div class="main-container !relative !z-10"
+                                        style="width: calc(100dvw - 115px); min-height: 220px;">
+                                        <div class="editor-container editor-container_classic-editor editor-container_include-block-toolbar !absolute w-full"
+                                            id="editor-container">
+                                            <div class="editor-container__editor">
+                                                <div id="editor">
+                                                    Compose your email content here ...
+                                                   
+                                                </div>
                                             </div>
-                                            <img src="Images/equalizer.svg" alt="">
                                         </div>
+                                        <script src="https://cdn.ckeditor.com/ckeditor5/44.1.0/ckeditor5.umd.js"
+                                            crossorigin></script>
+                                        <script src="https://cdn.ckbox.io/ckbox/2.6.1/ckbox.js" crossorigin></script>
                                     </div>
-
-                                    <!-- Card 3 -->
-                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
-                                        <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
-                                            <p class="font-normal text-xs leading-3">New Users Added</p>
-                                            <p class="text-lg font-medium leading-5 text-black">15</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Card 4 -->
-                                    <div class="relative flex-1 h-fit md:h-full max-w-xs w-full">
-                                        <div class="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-xs"></div>
-                                        <div
-                                            class="flex gap-1 flex-col bg-white rounded-xs p-2 md:p-4 border  border-[#EBEBE6] pl-5">
-                                            <p class="font-normal text-xs leading-3">New Clients Added</p>
-                                            <p class="text-lg font-medium leading-5 text-black">25</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- chart -->
-                                <div class="bg-white p-4 border border-[#EBEBE6]">
                                     <div
-                                        class="flex sm:flex-row flex-col justify-start sm:justify-between items-start sm:items-center mb-4 gap-2 sm: gap-0">
-
-                                        <h2
-                                            class="text-base font-medium leading-5 text-black flex items-center justify-between relative">
-                                            <span>Past Event Attendees</span>
-                                            <svg id="showEventsModal" class="h-6 w-6 pt-1 cursor-pointer" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M11.9995 15.0532L6.3457 9.39945L7.39945 8.3457L11.9995 12.9457L16.5994 8.3457L17.6532 9.39945L11.9995 15.0532Z"
-                                                    fill="#6E7174" />
-                                            </svg>
-                                            <div id="showEventsList"
-                                                class="absolute top-0 -right-[105px] bg-white border border-gray-300 rounded-xs shadow-lg hidden z-10 text-text-primary">
-                                                <ul class="text-xs font-normal">
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total Tweet
-                                                    </li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total Reach
-                                                    </li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total Views
-                                                    </li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total
-                                                        Engagement</li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Media &
-                                                        Influencers</li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total
-                                                        Participants</li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Total Threads
-                                                    </li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        New
-                                                        Participants</li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        New Threads
-                                                    </li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Active
-                                                        Participants</li>
-                                                    <li
-                                                        class="px-2 py-1 cursor-pointer hover:bg-gray-100 hover:text-black">
-                                                        Active
-                                                        Threads</li>
-                                                </ul>
-                                            </div>
-                                        </h2>
-
-                                        <div
-                                            class="grid sm:grid-cols-5 grid-cols-3 gap-2 sm:gap-0 space-x-2 text-[10px] font-medium leading-3 chart-btn">
-                                            <button class="p-[10px] border rounded-xs text-[#41414E] bg-gray-btn">This
-                                                Month</button>
-                                            <button class="p-[10px] border rounded-xs text-text-primary">Last
-                                                Month</button>
-                                            <button class="p-[10px] border rounded-xs text-text-primary">This
-                                                Year</button>
-                                            <button class="p-[10px] border rounded-xs text-text-primary">Last
-                                                Year</button>
+                                        class="w-full h-[40px] mt-[20px] md:mt-5 flex items-center justify-end md:my-0">
+                                        <div class="flex gap-4 md:w-auto w-full justify-between">
                                             <button
-                                                class="p-[10px] w-full border rounded-xs bg-gray-light-btn flex justify-center items-center gap-4">
-                                                <span class="whitespace-nowrap"> Hide Chart</span>
-                                                <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M0.5 1.75V0.25H13.5V1.75H0.5Z" fill="#6E7174" />
-                                                </svg>
-                                            </button>
+                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">
+                                                Cancel</button>
+
+                                            <button type="button"
+                                                onclick="window.location.href=''"
+                                                class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Save</button>
+
                                         </div>
                                     </div>
-
-                                    <div class="w-full h-[300px]">
-                                        <canvas id="barChart"></canvas>
-                                    </div>
-
                                 </div>
-
-                            </div>
-                            <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
+                            </form>
                         </div>
-                    </div>
-                    <div id="contentOverlay"
-                        class="fixed inset-0 z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
+                        <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
                     </div>
                 </div>
-            </div>
-            <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
-                style="background-color: rgba(35, 35, 35, 0.3);">
-                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
-                    <!-- Close Button -->
-                    <button id="closeChangePasswordModal"
-                        class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
-
-                    <!-- Title -->
-                    <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
-
-                    <!-- Form -->
-                    <form id="changePasswordForm" class="space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Current Password -->
-                            <div class="relative">
-                                <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
-                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                    placeholder="Current Password" data-testid="floating-label" autocomplete="off"
-                                    style="padding-right: 35px;">
-                                <label for="currentPassword"
-                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                    Current Password
-                                </label>
-                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                    <img src="/Images/toggle.svg" alt="toggle">
-                                </div>
-                            </div>
-
-                            <!-- New Password -->
-                            <div class="relative">
-                                <input type="password" id="newPassword" aria-describedby="outlined_success_help"
-                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                    placeholder="New Password" data-testid="floating-label" autocomplete="off"
-                                    style="padding-right: 35px;">
-                                <label for="newPassword"
-                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                    New Password
-                                </label>
-                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                    <img src="/Images/toggle.svg" alt="toggle">
-                                </div>
-                            </div>
-                            <!-- Confirm New Password -->
-                            <div class="relative">
-                                <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
-                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                    placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
-                                    style="padding-right: 35px;">
-                                <label for="confirmPassword"
-                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                    Confirm Password
-                                </label>
-                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                    <img src="/Images/toggle.svg" alt="toggle">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Submit Button -->
-                        <div class="flex justify-center items-center">
-                            <button type="submit"
-                                class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
-                                Change Password
-                            </button>
-                        </div>
-                    </form>
+                <div id="contentOverlay"
+                    class="fixed inset-0  z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
                 </div>
+
             </div>
         </div>
+        <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
+            style="background-color: rgba(35, 35, 35, 0.3);">
+            <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+                <!-- Close Button -->
+                <button id="closeChangePasswordModal"
+                    class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
+
+                <!-- Title -->
+                <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
+
+                <!-- Form -->
+                <form id="changePasswordForm" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Current Password -->
+                        <div class="relative">
+                            <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="Current Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="currentPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                Current Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
+                        </div>
+
+                        <!-- New Password -->
+                        <div class="relative">
+                            <input type="password" id="newPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="New Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="newPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                New Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
+                        </div>
+                        <!-- Confirm New Password -->
+                        <div class="relative">
+                            <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
+                                style="padding-right: 35px;">
+                            <label for="confirmPassword"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                Confirm Password
+                            </label>
+                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                <img src="/Images/toggle.svg" alt="toggle">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="flex justify-center items-center">
+                        <button type="submit"
+                            class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
+                            Change Password
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="./javascript/sidebar.js"></script>
-<script src="./javascript/chart.js"></script>
+<script src="./javascript/ckEditor.js"></script>
+<script src="./javascript//navigate.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/customSelect.js"></script>
-<script src="./javascript/showEventList.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
 
 </html>
