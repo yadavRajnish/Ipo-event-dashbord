@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 12px;
+    padding: 11px 12px;
     font-size: 12px;
     color: #4b5563; /* Tailwind's text-gray-600 */
     cursor: pointer;
@@ -30,24 +30,17 @@
   .select-selected:after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 12px;
     width: 10px;
     height: 10px;
     /* border: 2.5px solid transparent; */
     background: url("/Images/dropdwon-arrow.svg");
-    /* border-right-color: #4b5563; */
-    /* border-bottom-color: #4b5563;  */
-    /* transform: rotate(180deg); */
     background-repeat: no-repeat;
   }
   
   .select-selected.select-arrow-active:after {
-    /* border-right-color: transparent;
-    border-bottom-color: transparent; 
-    border-top-color: #4b5563;
-    border-left-color: #4b5563; */
-    top: 15px;
+    top: 12px;
     transform: rotate(180deg);
 
   }
