@@ -494,7 +494,7 @@
                         <div
                             class="w-full h-[40px] mt-2 md:mt-[45px] md:mt-5 flex items-center justify-between md:my-0">
                             <div
-                                class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:gap-0 lg:flex h-full justify-between w-full flex-wrap items-center">
+                                class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-7 xl:gap-0 xl:flex xl:justify-between h-full  w-full flex-wrap items-center">
                                 <div class="relative h-[40px] lg:h-full">
                                     <input type="text" id="eventname"
                                         class="peer block w-full appearance-none placeholder-transparent rounded-sm border  border-primary-gray text-xs bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px] h-full"
@@ -503,40 +503,31 @@
                                         class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-xs tracking-wider">Event
                                         Name</label>
                                 </div>
-                                <div class="relative h-full w-full lg:max-w-[128px]">
+                                <div class="relative">
                                     <input type="date" id="start_date" aria-describedby="outlined_success_help"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm !bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
-                                        data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
+                                        class="peer block w-full appearance-none rounded-sm bg-white !py-2 !px-3 text-base focus:border-primary focus:outline-none focus:ring-0 font-sm text-sm leading-[24px] shadow-md"
+                                        data-testid="floating-label" autocomplete="off"
                                         oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                        value="2025-02-12" data-has-value="true">
+                                        data-has-value="false">
                                     <label for="start_date"
-                                        class="absolute left-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5 font-normal text-[8px] tracking-wider"
-                                        style="transition: all 0.3s ease;">
+                                        class="absolute left-2 bg-white px-1 text-xs"
+                                        style="top: -10px;">
                                         Start Date
                                     </label>
-
-                                    <div class="flex absolute inset-y-0 right-3 items-center">
-                                        <img src="/Images/calendar.svg" alt="calendar">
-                                    </div>
                                 </div>
-
-                                <div class="relative h-full w-full lg:max-w-[128px]">
+                                <div class="relative">
                                     <input type="date" id="end_date" aria-describedby="outlined_success_help"
-                                        class="peer block w-full appearance-none placeholder-transparent rounded-sm shadow-md text-sm bg-white px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal leading-[24px] h-full w-full"
-                                        data-testid="floating-label" autocomplete="off" style="padding-right: 35px;"
+                                        class="peer block w-full appearance-none rounded-sm bg-white !py-2 !px-3 text-base focus:border-primary focus:outline-none focus:ring-0 font-sm text-sm shadow-md"
+                                        data-testid="floating-label" autocomplete="off"
                                         oninput="this.setAttribute('data-has-value', this.value ? 'true' : 'false');"
-                                        value="2025-02-15" data-has-value="true">
+                                        data-has-value="false">
                                     <label for="end_date"
-                                        class="absolute left-2 top-0 z-10 origin-[0] -translate-y-1/2 scale-100 bg-white px-2 text-base text-gray-500 transition-transform duration-300 peer-focus:top-2 peer-focus:-translate-y-5  font-normal text-[8px] tracking-wider"
-                                        style="transition: all 0.3s ease;">
+                                        class="absolute left-2 bg-white px-1 text-xs"
+                                        style="top: -10px;">
                                         End Date
                                     </label>
-
-                                    <div class="flex absolute inset-y-0 right-3 items-center">
-                                        <img src="/Images/calendar.svg" alt="calendar">
-                                    </div>
                                 </div>
-                                <div class="custom-select h-full !w-full lg:!max-w-[185px]">
+                                <div class="custom-select h-full !w-full xl:!max-w-[185px]">
                                     <select id="dropdown" class="h-full !w-full"
                                         onchange="this.setAttribute('value', this.value)">
                                         <option value="" disabled selected hidden>⠀</option>
@@ -563,7 +554,7 @@
                                         Name</label>
                                 </div>
                                 <button
-                                    class="text-sm cursor-pointer whitespace-nowrap font-semibold h-full leading-4 py-[10px] px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Fetch
+                                    class="text-sm cursor-pointer whitespace-nowrap font-semibold py-2 px-3 rounded-sm border bg-[#1F7BF4] text-white border-[#1F7BF4]">Fetch
                                     Report
                                 </button>
                             </div>
