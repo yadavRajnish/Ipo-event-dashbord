@@ -475,33 +475,26 @@
                             <div class="w-full h-[40px] mt-5 flex items-center justify-between">
                                 <div class="flex gap-4 justify-between md:justify-start w-full md:w-fit">
                                     <!-- input search -->
-                                    <div class="min-w-[260px] bg-white">
+                                    <div class="min-w-[260px] bg-white flex gap-2 relative  border border-primary-gray">
                                         <div class="flex items-center w-full text-md rounded-xs
-                                            border border-primary-gray py-3 px-3">
+                                            py-3 px-3">
                                             <input
                                                 class="border-none outline-none bg-transparent w-full font-medium text-xs"
                                                 type="text" placeholder="Search Events" value="">
-                                            <span
-                                                class="cursor-pointer text-xl flex items-center justify-center h-full">
+                                            <!-- <span
+                                                class="cursor-pointer text-xl flex items-center justify-center h-full bg-primary h-full">
                                                 <img src="Images/search-icon.svg" alt="search-icon"
                                                     class="h-[18px] w-[15px]">
-                                            </span>
+                                            </span> -->
                                         </div>
+                                        <span
+                                            class="absolute right-0 px-3 top-0 bottom-0 cursor-pointer text-xl flex items-center justify-center h-full bg-primary ">
+                                            <img src="Images/search-icon.svg" alt="search-icon">
+                                        </span>
                                     </div>
+
+
                                     <!-- dropdown -->
-                                    <!-- <div class="custom-select !w-[102px] !rounded-xs">
-                                        <select id="dropdown" class="!text-[10px]"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
-                                            <option value="option1">Client 1</option>
-                                            <option value="option2">Client 2</option>
-                                            <option value="option3">Client 3</option>
-                                        </select>
-                                        <label for="dropdown" id="dropdownLabel"
-                                            class="!-top-[10px] !text-xs">Clients</label>
-                                    </div> -->
-
-
                                     <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
                                         <select id="dropdown" class="!text-[10px] w-full"
                                             onchange="this.setAttribute('value', this.value)">
@@ -700,18 +693,45 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="flex items-center justify-end bg-white space-x-4 text-gray-700 text-sm w-full py-2 px-4 border border-[#EBEBE6]"
-                                    style="border-top: 0px;">
-                                    <div class="flex items-center space-x-2">
-                                        <span class="whitespace-nowrap">Rows per page:</span>
-                                        <select class="pagination-dropdown">
-                                            <option value="5">5</option>
-                                            <option value="10">10</option>
-                                            <option value="20">20</option>
-                                        </select>
-                                    </div>
-                                    <span>1-5 of 10</span>
+                                <!-- start pagination -->
+                                <div
+                                class="flex items-center justify-end bg-white space-x-4 text-gray-700 text-sm w-full py-2 px-4 border border-[#EBEBE6]">
+                                <!-- Previous Button -->
+                                <button id="prevBtn" class="rotate-180 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                        <path
+                                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                                    </svg>
+                                </button>
+
+                                <!-- Page Numbers -->
+                                <div id="pagination" class="flex items-center space-x-1">
+                                    <!-- Page numbers will be dynamically inserted here -->
                                 </div>
+
+                                <!-- Next Button -->
+                                <button id="nextBtn" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                        <path
+                                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+                                    </svg>
+                                </button>
+
+                                <!-- Items Per Page Dropdown -->
+                                <div class="relative">
+                                    <select class="border rounded px-2 py-1 text-gray-500 outline-none appearance-none bg-white cursor-pointer pr-8">
+                                        <option>5</option>
+                                        <option>10</option>
+                                        <option>15</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                            </div>
                             </div>
                         </div>
                         <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
@@ -824,5 +844,6 @@
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/customSelect.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
+<script src="./javascript/pagination.js"></script>
 
 </html>
