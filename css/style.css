@@ -527,3 +527,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background: url(../Images/calendar.svg) no-repeat;
   height: 18px;
 }
+
+
+.custom-dropdown {
+  max-width: 400px;
+  min-width: 200px;
+  border: 1px solid rgba(110, 113, 116, 0.2);
+  outline: none;
+  border-radius: 2px;
+  padding: 8px;
+  appearance: none;
+}

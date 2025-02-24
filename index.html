@@ -516,7 +516,7 @@
                                         class="flex justify-between sm:justify-start items-center gap-[20px] w-full sm:w-[50%]">
                                         <eh2 class="text-sm font-medium leading-[17px]">Upcoming Events</eh2>
 
-                                        <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
+                                        <!-- <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
                                             <select id="dropdown" class="!text-[10px] w-full"
                                                 onchange="this.setAttribute('value', this.value)">
                                                 <option value="" disabled selected hidden>All Clients</option>
@@ -524,6 +524,23 @@
                                                 <option value="option2">Client 2</option>
                                                 <option value="option3">Client 3</option>
                                             </select>
+                                        </div> -->
+
+                                        <div class="relative">
+                                            <select class="custom-dropdown">
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <div
+                                                class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
 
