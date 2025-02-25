@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/dashbord.css">
+    <link rel="stylesheet" href="../css/style-compliled.css">
+</head>
+
+<body class="content-background">
+    <div class="flex flex-col h-[100dvh] w-[100dvw]">
+        <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row m-auto md:w-[70%] w-full">
+            <!-- Left Side - Event Details -->
+            <div
+                class="md:w-[50%] w-full flex flex-col gap-5 md:gap-[3rem] md:border-r border-gray-300 pr-6 p-4 bg-[#f9f9f9]">
+                <h2 class="text-2xl font-bold text-orange-500">Event Details</h2>
+                <div class="my-4 flex items-center gap-2">
+                    <img src="../Images/logo.png" class="h-[35px] w-[35px] rounded !transition-none p-1 bg-[#e28f26]">
+                    <div class="">
+                        <span class="text-black block text-md font-medium tracking-[1px]">ADFACTORS PR</span>
+                        <span class="block text-[10px]">Reputation & Critical issues Advisory</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p><span class="font-bold">Event Name:</span> test microsite url</p>
+                    <p><span class="font-bold">Description:</span> desc</p>
+                    <p><span class="font-bold">Date:</span> December 28, 2024</p>
+                    <p><span class="font-bold">Time:</span> 14:19</p>
+                    <p><span class="font-bold">Venue:</span> Mumbai</p>
+                    <p><span class="font-bold">Agenda:</span> agenda</p>
+                </div>
+            </div>
+
+            <!-- Right Side - Registration Form -->
+            <div class="md:w-[50%] w-full pl-6 mt-6 md:mt-0 p-4">
+                <h3 class="text-xl font-bold">Register Now</h3>
+                <p class="mt-2 font-medium">Your Information</p>
+                <form class="mt-4 space-y-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        <div class="relative">
+                            <select class="custom-dropdown">
+                                <option value="" disabled selected hidden>Event</option>
+                                <option value="option1">Client 1</option>
+                                <option value="option2">Client 2</option>
+                                <option value="option3">Client 3</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <select class="custom-dropdown">
+                                <option value="" disabled selected hidden>Contact</option>
+                                <option value="option1">Client 1</option>
+                                <option value="option2">Client 2</option>
+                                <option value="option3">Client 3</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <select class="custom-dropdown">
+                                <option value=""disabled selected hidden>Contact Type</option>
+                                <option value="option1">Client 1</option>
+                                <option value="option2">Client 2</option>
+                                <option value="option3">Client 3</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="firstname"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="First Name" required>
+                            <label for="firstname"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">First
+                                Name</label>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="lastname"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="Last Name" required>
+                            <label for="lastname"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Last
+                                Name</label>
+                        </div>
+                        <div class="relative">
+                            <input type="email" id="email"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="Email" required>
+                            <label for="email"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Email</label>
+                        </div>
+                        <div class="relative">
+                            <input type="tel" id="mobile"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="" Mobile required>
+                            <label for="mobile"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Mobile</label>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="designation"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="Designation" required>
+                            <label for="designation"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Designation</label>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="yourcompany"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="Your Company" required>
+                            <label for="yourcompany"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Your
+                                Company</label>
+                        </div>
+                        <div class="relative">
+                            <input type="text" id="yourcity"
+                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                placeholder="Your City" required>
+                            <label for="yourcity"
+                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Your
+                                City</label>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <button type="submit"
+                            class="bg-orange-500 text-white px-6 py-2 rounded-full mt-4 hover:bg-orange-600 transition cursor-pointer">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

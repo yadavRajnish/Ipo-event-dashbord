@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/dashbord.css">
+    <link rel="stylesheet" href="../css/style-compliled.css">
+</head>
+
+<body class="content-background">
+    <div class="flex flex-col h-[100dvh] w-[100dvw]">
+        <div class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row md:m-auto md:w-[70%] w-full">
+            <!-- Left Side - Event Details -->
+            <div class="md:w-[60%] w-full flex flex-col gap-5 md:gap-[3rem] md:border-r border-gray-300 pr-6 p-4 bg-[#f9f9f9]">
+                <h2 class="text-2xl font-bold text-orange-500">Event Details</h2>
+                <div class="my-4 flex items-center gap-2">
+                    <img src="../Images/logo.png" class="h-[35px] w-[35px] rounded !transition-none p-1 bg-[#e28f26]">
+                    <div class="">
+                        <span class="text-black block text-md font-medium tracking-[1px]">ADFACTORS PR</span>
+                        <span class="block text-[10px]">Reputation & Critical issues Advisory</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p><span class="font-bold">Event Name:</span> test microsite url</p>
+                    <p><span class="font-bold">Description:</span> desc</p>
+                    <p><span class="font-bold">Date:</span> December 28, 2024</p>
+                    <p><span class="font-bold">Time:</span> 14:19</p>
+                    <p><span class="font-bold">Venue:</span> Mumbai</p>
+                    <p><span class="font-bold">Agenda:</span> agenda</p>
+                </div>
+            </div>
+
+            <!-- Right Side - Registration Form -->
+            <div class="md:w-[40%] w-full pl-6 mt-6 md:mt-0 p-4">
+                <h3 class="text-xl font-bold">Register Now</h3>
+                <p class="mt-2 font-medium">Will you be attending test microsite url?</p>
+                <form class="mt-4 space-y-3">
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="attendance" class="form-radio text-orange-500">
+                        <span>Yes</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="attendance" class="form-radio text-orange-500">
+                        <span>No</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="attendance" class="form-radio text-orange-500">
+                        <span>My Colleague will attend</span>
+                    </label>
+                    <label class="flex items-center space-x-2">
+                        <input type="radio" name="attendance" class="form-radio text-orange-500">
+                        <span>I and my Colleague will attend</span>
+                    </label>
+                    <div class="flex justify-center items-center">
+                        <button type="submit"
+                            class="bg-orange-500 text-white px-6 py-2 rounded-full mt-4 hover:bg-orange-600 transition cursor-pointer">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

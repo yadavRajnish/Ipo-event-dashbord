@@ -530,11 +530,13 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 .custom-dropdown {
-  max-width: 400px;
-  min-width: 200px;
-  border: 1px solid rgba(110, 113, 116, 0.2);
+  border: 1px solid var(--border-primary-gray);
   outline: none;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 8px;
   appearance: none;
+  width: 100%;
 }
+
+
+/* microsite */
