@@ -12,11 +12,11 @@
 
 <body>
     <div class="flex flex-col h-[100dvh]">
-        <div class="content-background flex justify-between flex-col">
+        <div class=" content-background flex justify-between flex-col">
             <div class="client-onboard-wrapper w-full h-full fixed hidden"></div>
-            <div class="content-wrapper relative h-full">
+            <div class="content-wrapper relative">
                 <header
-                    class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-2 md:ps-5 py-2 min-h-[56px]"
+                    class="flex fixed border-b border-[#80808066] top-0 w-full bg-white container-shadow z-50 px-7 ps-5 py-2 min-h-[56px]"
                     style="opacity: 1; transform: none;">
                     <button id="openMobileSidebar"
                         class="md:hidden text-xl focus:outline-none flex pr-2 cursor-pointer">&#9776;</button>
@@ -49,6 +49,7 @@
                         </div>
                     </nav>
                 </header>
+                <!-- for large device -->
                 <div class="hidden md:block main-container" style="opacity: 1; transform: none;">
                     <div class="sidebar transition-all duration-300 ease-in-out" id="sidebar" style="width: 64px;">
                         <div class="top_section">
@@ -191,23 +192,23 @@
                                 </a>
                             </section>
                             <section class="routes"><a href="configure-event-email.html">
-                                <div
-                                    class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
-                                    <div class="icon text-[#a4a7b3] text-4xl">
-                                        <?xml version="1.0" encoding="utf-8"?>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
-                                            <path
-                                                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
-                                        </svg>
+                                    <div
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        <div class="icon text-[#a4a7b3] text-4xl">
+                                            <?xml version="1.0" encoding="utf-8"?>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
+                                                <path
+                                                    d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
+                                            </svg>
+                                        </div>
+                                        <span
+                                            class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            Configure Email
+                                        </span>
                                     </div>
-                                    <span
-                                        class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
-                                        Configure Email
-                                    </span>
-                                </div>
-                            </a>
-                        </section>
+                                </a>
+                            </section>
                             <section class="routes">
                                 <div class="group">
                                     <a href="">
@@ -270,7 +271,6 @@
                                     Event Management
                                 </span>
                             </div>
-
                         </div>
                         <div class="flex flex-col mb-6 h-full">
                             <section class="routes"><a href="index.html">
@@ -402,23 +402,23 @@
                                 </a>
                             </section>
                             <section class="routes"><a href="configure-event-email.html">
-                                <div
-                                    class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
-                                    <div class="icon text-[#a4a7b3] text-4xl">
-                                        <?xml version="1.0" encoding="utf-8"?>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
-                                            <path
-                                                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
-                                        </svg>
+                                    <div
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        <div class="icon text-[#a4a7b3] text-4xl">
+                                            <?xml version="1.0" encoding="utf-8"?>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
+                                                <path
+                                                    d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
+                                            </svg>
+                                        </div>
+                                        <span
+                                            class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            Configure Email
+                                        </span>
                                     </div>
-                                    <span
-                                        class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
-                                        Configure Email
-                                    </span>
-                                </div>
-                            </a>
-                        </section>
+                                </a>
+                            </section>
                             <section class="routes">
                                 <div class="group">
                                     <a href="">
@@ -472,472 +472,233 @@
 
                 <div class="flex justify-end ml-auto h-full w-full md:w-[calc(100%-4rem)]">
                     <div
-                        class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6 justify-between flex flex-col h-[calc(100%-3rem)] mt-10">
+                        class="transition-all duration-[400ms] w-full px-4 lg:px-6 pt-6 flex flex-col h-[calc(100%-3rem)] mt-10">
                         <div>
                             <div class="text-secondary-light mb-5 text-sm font-normal flex items-center gap-3.5"><svg
-                                onclick="history.back()"
-                                    stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20"
-                                    aria-hidden="true" class="text-secondary-dark cursor-pointer" height="14" width="14"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    onclick="history.back()" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                    viewBox="0 0 20 20" aria-hidden="true" class="text-secondary-dark cursor-pointer"
+                                    height="14" width="14" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
                                         d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
                                         clip-rule="evenodd"></path>
                                 </svg><a href=""><span
-                                        class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Home</span></a><svg
+                                        class="cursor-pointer text-[#A3A4A5] opacity-70">Home</span></a><svg
                                     stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
                                     stroke-linecap="round" stroke-linejoin="round" height="14" width="14"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg><a href=""><span
-                                        class="cursor-pointer text-[#A3A4A5] opacity-70 text-[11px]">Clients
+                                </svg><a href=""><span class="cursor-pointer text-[#A3A4A5] opacity-70">Clients
                                         List</span></a><svg stroke="currentColor" fill="none" stroke-width="2"
                                     viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="14"
                                     width="14" xmlns="http://www.w3.org/2000/svg">
                                     <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg><span class="text-[#6E7174] opacity-70 text-[11px]">Overview</span></div>
-
-                            <div class="flex justify-between items-center">
-                                <h1 class="event-head whitespace-nowrap">Participant List</h1>
-                                <!-- for mobile button -->
-                                <button onclick="window.location.href='./create-participant-list.html'"
-                                    class="block md:hidden flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                        </path>
-                                    </svg>
-                                    Add Participant
-                                </button>
+                                </svg><span class="text-[#6E7174] opacity-70">Repository</span>
                             </div>
-                            <div class="mt-4 text-base font-normal">Events name</div>
-                            
-                            <div class="w-full h-[40px] mt-5 flex items-center justify-between">
-                                <div class="flex gap-4 justify-between md:justify-start w-full md:w-fit">
-                                    <!-- input search -->
-                                    <div class="min-w-[260px] bg-white">
-                                        <div
-                                            class="flex items-center w-full text-md rounded-xs border border-primary-gray py-[11px] px-3">
-                                            <input
-                                                class="border-none outline-none bg-transparent w-full font-medium text-xs"
-                                                type="text" placeholder="Search Events" value="">
-                                            <span
-                                                class="cursor-pointer text-xl flex items-center justify-center h-full">
-                                                <img src="Images/search-icon.svg" alt="search-icon"
-                                                    class="h-[18px] w-[15px]">
-                                            </span>
+                            <div>
+                                <h1 class="event-head whitespace-nowrap">Create Participant List</h1>
+                                <form action="" class="mt-8">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+
+                                        <div class="relative bg-white">
+                                            <select class="custom-dropdown">
+                                                <option value="" disabled selected hidden>Test Event</option>
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <div
+                                                class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="relative bg-white">
+                                            <select class="custom-dropdown">
+                                                <option value="" disabled selected hidden>Select Contact</option>
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <div
+                                                class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="relative bg-white">
+                                            <select class="custom-dropdown">
+                                                <option value="" disabled selected hidden>Select Contact Type</option>
+                                                <option value="option1">Client 1</option>
+                                                <option value="option2">Client 2</option>
+                                                <option value="option3">Client 3</option>
+                                            </select>
+                                            <div
+                                                class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500"
+                                                    viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="relative">
+                                            <input type="text" id="firstname"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="First Name" required>
+                                            <label for="firstname"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">First
+                                                Name</label>
+                                        </div>
+
+                                        <div class="relative">
+                                            <input type="text" id="lastname"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="Last Name :" required>
+                                            <label for="lastname"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Last
+                                                Name</label>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="email" id="email"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="Email" required>
+                                            <label for="email"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Email</label>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="tel" id="Mobile"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="Mobile" required>
+                                            <label for="Mobile"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Mobile</label>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="text" id="Company"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="Company" required>
+                                            <label for="Company"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Company</label>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="text" id="Designation"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="Designation" required>
+                                            <label for="Designation"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">Designation</label>
+                                        </div>
+
+                                        <div class="relative">
+                                            <input type="text" id="City"
+                                                class="peer block w-full appearance-none placeholder-transparent rounded-sm border border-primary-gray text-sm bg-white py-2 px-3 focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0 font-normal tracking-wider leading-[24px]"
+                                                placeholder="City" required>
+                                            <label for="City"
+                                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75 bg-white px-2  transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 font-normal text-sm tracking-wider leading-[24px]">City</label>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="w-full h-[40px] mt-[20px] md:mt-5 flex items-center justify-end md:my-0">
+                                        <div class="flex gap-4 md:w-auto w-full justify-between">
+                                            <button
+                                                class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">Cancel</button>
+                                            <button onclick="window.location.href='./events.html'"
+                                                class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Create</button>
                                         </div>
                                     </div>
-                                    <!-- <div
-                                        class="relative float-label min-w-[102px] bg-white border border-gray-300 rounded-xs cursor-pointer">
-                                        <select id="dropdown2"
-                                            class="block w-full px-3 py-3 focus:outline-none appearance-none peer text-[#6E7174] text-[10px] font-medium"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
-                                            <option value="option1">Client 1</option>
-                                            <option value="option2">Client 2</option>
-                                            <option value="option3">Client 3</option>
-                                        </select>
-                                        <label for="dropdown2"
-                                            class="absolute left-3 px-1 text-gray-600 text-[8px] transition-transform transform duration-200 ease-in-out">
-                                            Event
-                                        </label>
-                                        <svg class="absolute right-3 top-4 w-2 h-1 text-gray-400 pointer-events-none"
-                                            width="9" height="5" viewBox="0 0 9 5" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M4.40375 4.40375L0 0H8.8075L4.40375 4.40375Z" fill="#858585" />
-                                        </svg>
-                                    </div> -->
-                                    <div class="md:block hidden custom-select !rounded-xs" style="width: 250px;">
-                                        <select id="dropdown" class="!text-[10px] w-full"
-                                            onchange="this.setAttribute('value', this.value)">
-                                            <option value="" disabled selected hidden>All Clients</option>
-                                            <option value="option1">Client 1</option>
-                                            <option value="option2">Client 2</option>
-                                            <option value="option3">Client 3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!-- this button for large device -->
-                                <div class="hidden md:flex gap-4">
-                                    <button
-                                    onclick="window.location.href='./create-participant-list.html'"
-                                        class="flex items-center py-2 px-3  border rounded-xs cursor-pointer text-sm font-medium leading-[16.52px] whitespace-nowrap bg-primary border-primary text-white">
-                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4">
-                                            </path>
-                                        </svg>
-                                        Add Participant
-                                    </button>
-                                </div>
-                            </div>
-                            <!-- Table -->
-                            <div class="overflow-x-auto w-full mt-4">
-                                <table class="w-full border border-[#EBEBE6] rounded-lg event-table table-auto">
-                                    <thead class="bg-[#F9F9F9] h-[32px]">
-                                        <tr class="text-sm font-bold text-[#6E7174] text-center">
-                                            <th class="py-2 px-4 text-left">Name</th>
-                                            <th class="py-2 px-4">Mobile</th>
-                                            <th class="py-2 px-4">Email</th>
-                                            <th class="py-2 px-4">Company</th>
-                                            <th class="py-2 px-4">Designation</th>
-                                            <th class="py-2 px-4">Registration Date</th>
-                                            <th class="py-2 px-4">Approval Status</th>
-                                            <th class="py-2 px-4">Invite Mail</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-sm event-table-tbody text-center">
-                                        <!-- Row 1 -->
-
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Kushal Mishra</td>
-                                            <td class="py-2 px-4">9734567891</td>
-                                            <td class="py-2 px-4">kushal.kant007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="approved-button status-button">
-                                                    <span class="!text-[#12B28C]">Approved</span>
-                                                    <img src="./Images/bolt.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <span class="relative">
-                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg"
-                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
-                                                        alt="mail">
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="reject-button status-button">
-                                                    <span class="!text-[#DF514C]">Reject</span>
-                                                    <img src="./Images/close_small.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <span class="relative">
-                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg"
-                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
-                                                        alt="mail">
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="pending-button status-button">
-                                                    <span class="!text-[#FB830C]">Pending</span>
-                                                    <img src="./Images/pace.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
-                                                    alt="mail">
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="reject-button status-button">
-                                                    <span class="!text-[#DF514C]">Reject</span>
-                                                    <img src="./Images/close_small.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <span class="relative">
-                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg"
-                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
-                                                        alt="mail">
-                                                </span>
-                                            </td>
-                                        </tr>
-
-
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="hold-button status-button">
-                                                    <span >Hold</span>
-                                                    <img src="./Images/hold.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <span class="relative">
-                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg"
-                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
-                                                        alt="mail">
-                                                </span>
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="approved-button status-button">
-                                                    <span class="!text-[#12B28C]">Approved</span>
-                                                    <img src="./Images/bolt.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
-                                                    alt="mail">
-                                            </td>
-                                        </tr>
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="reject-button status-button">
-                                                    <span class="!text-[#DF514C]">Reject</span>
-                                                    <img src="./Images/close_small.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <span class="relative">
-                                                    <img src="Images/mail.svg" class="h-[19px] w-[21px]" alt="mail">
-                                                    <img src="Images/success-tick.svg"
-                                                        class="h-[10px] w-[10px] absolute -bottom-[1px] -right-1"
-                                                        alt="mail">
-                                                </span>
-                                            </td>
-                                        </tr>
-
-                                        <!-- Transparent border  -->
-                                        <tr class="h-[1px] bg-transparent">
-                                            <td colspan="7" class="border-t border-transparent"></td>
-                                        </tr>
-
-                                        <!-- table row -->
-                                        <tr class="border-t border-transparent bg-white">
-                                            <td class="py-2 px-4 text-left">Anita Gupta</td>
-                                            <td class="py-2 px-4">9523678901</td>
-                                            <td class="py-2 px-4">anitadevit007@gmail.com</td>
-                                            <td class="py-2 px-4">Synerwiz</td>
-                                            <td class="py-2 px-4">Analyst</td>
-                                            <td class="py-2 px-4">27-Oct-2024</td>
-                                            <td class="py-2 px-4">
-                                                <div class="approved-button status-button">
-                                                    <span class="!text-[#12B28C]">Approved</span>
-                                                    <img src="./Images/bolt.svg" alt="bolt">
-                                                </div>
-                                            </td>
-                                            <td class="py-2 px-4 flex justify-center items-center min-w-[100px]">
-                                                <img src="Images/forward_to_inbox.svg" class="h-[19px] w-[21px]"
-                                                    alt="mail">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div
-                                class="flex items-center justify-end bg-white space-x-4 text-gray-700 text-sm w-full py-2 px-4 border border-[#EBEBE6]">
-                                <!-- Previous Button -->
-                                <button id="prevBtn" class="rotate-180 cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                        <path
-                                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-                                    </svg>
-                                </button>
-
-                                <!-- Page Numbers -->
-                                <div id="pagination" class="flex items-center space-x-1">
-                                    <!-- Page numbers will be dynamically inserted here -->
-                                </div>
-
-                                <!-- Next Button -->
-                                <button id="nextBtn" class="cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                        <path
-                                            d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-                                    </svg>
-                                </button>
-
-                                <!-- Items Per Page Dropdown -->
-                                <div class="relative">
-                                    <select class="border rounded px-2 py-1 text-gray-500 outline-none appearance-none bg-white cursor-pointer pr-8">
-                                        <option>5</option>
-                                        <option>10</option>
-                                        <option>15</option>
-                                    </select>
-                                    <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                
-                            </div>
+                                </form>
                             </div>
                         </div>
                         <div class="flex text-[#686868] text-xs px-6 py-4 justify-end">Powered by : Adfactors</div>
                     </div>
+                    <div id="contentOverlay"
+                        class="fixed inset-0 z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
+                    </div>
                 </div>
-                <div id="contentOverlay"
-                    class="fixed inset-0  z-50 opacity-0 transition-opacity duration-500 ease-in-out bg-[rgba(35,35,35,0.3)] pointer-events-none">
+            </div>
+            <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
+                style="background-color: rgba(35, 35, 35, 0.3);">
+                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+                    <!-- Close Button -->
+                    <button id="closeChangePasswordModal"
+                        class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
+
+                    <!-- Title -->
+                    <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
+
+                    <!-- Form -->
+                    <form id="changePasswordForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Current Password -->
+                            <div class="relative">
+                                <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
+                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                    placeholder="Current Password" data-testid="floating-label" autocomplete="off"
+                                    style="padding-right: 35px;">
+                                <label for="currentPassword"
+                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                    Current Password
+                                </label>
+                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                    <img src="/Images/toggle.svg" alt="toggle">
+                                </div>
+                            </div>
+
+                            <!-- New Password -->
+                            <div class="relative">
+                                <input type="password" id="newPassword" aria-describedby="outlined_success_help"
+                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                    placeholder="New Password" data-testid="floating-label" autocomplete="off"
+                                    style="padding-right: 35px;">
+                                <label for="newPassword"
+                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                    New Password
+                                </label>
+                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                    <img src="/Images/toggle.svg" alt="toggle">
+                                </div>
+                            </div>
+                            <!-- Confirm New Password -->
+                            <div class="relative">
+                                <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
+                                    class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
+                                    placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
+                                    style="padding-right: 35px;">
+                                <label for="confirmPassword"
+                                    class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
+                                    Confirm Password
+                                </label>
+                                <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
+                                    <img src="/Images/toggle.svg" alt="toggle">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="flex justify-center items-center">
+                            <button type="submit"
+                                class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
+                                Change Password
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
-            style="background-color: rgba(35, 35, 35, 0.3);">
-            <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
-                <!-- Close Button -->
-                <button id="closeChangePasswordModal"
-                    class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
-
-                <!-- Title -->
-                <h2 class="text-base leading-[19.36px] font-semibold text-black md:pb-6 pb-4">Change Password</h2>
-
-                <!-- Form -->
-                <form id="changePasswordForm" class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Current Password -->
-                        <div class="relative">
-                            <input type="password" id="currentPassword" aria-describedby="outlined_success_help"
-                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                placeholder="Current Password" data-testid="floating-label" autocomplete="off"
-                                style="padding-right: 35px;">
-                            <label for="currentPassword"
-                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                Current Password
-                            </label>
-                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                <img src="/Images/toggle.svg" alt="toggle">
-                            </div>
-                        </div>
-
-                        <!-- New Password -->
-                        <div class="relative">
-                            <input type="password" id="newPassword" aria-describedby="outlined_success_help"
-                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                placeholder="New Password" data-testid="floating-label" autocomplete="off"
-                                style="padding-right: 35px;">
-                            <label for="newPassword"
-                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                New Password
-                            </label>
-                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                <img src="/Images/toggle.svg" alt="toggle">
-                            </div>
-                        </div>
-                        <!-- Confirm New Password -->
-                        <div class="relative">
-                            <input type="password" id="confirmPassword" aria-describedby="outlined_success_help"
-                                class="peer block w-full appearance-none placeholder-transparent rounded-md border border-[#E7E5E5]  !py-3 !px-3 text-base focus:placeholder-secondary-light/50 focus:border-primary focus:outline-none focus:ring-0"
-                                placeholder="Confirm Password" data-testid="floating-label" autocomplete="off"
-                                style="padding-right: 35px;">
-                            <label for="confirmPassword"
-                                class="absolute left-2 top-2 z-10 origin-[0] -translate-y-5 scale-75  px-2 text-base text-gray-500 transition-transform duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-5 peer-focus:scale-75 bg-white">
-                                Confirm Password
-                            </label>
-                            <div class="flex absolute top-[17px] right-0 !mr-4 cursor-pointer togglePassword">
-                                <img src="/Images/toggle.svg" alt="toggle">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit Button -->
-                    <div class="flex justify-center items-center">
-                        <button type="submit"
-                            class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
-                            Change Password
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 </body>
 <script src="./javascript/sidebar.js"></script>
-<script src="./javascript/table.js"></script>
-<script src="./javascript/forgetPasswordModal.js"></script>
-<script src="./javascript/floatLabel.js"></script>
-<script src="./javascript/notificationPopup.js"></script>
 <script src="./javascript/customSelect.js"></script>
-<script src="./javascript/pagination.js"></script>
-<script src="./javascript/statusButton.js"></script>
+<script src="./javascript/floatLabel.js"></script>
+<script src="./javascript/forgetPasswordModal.js"></script>
+<script src="./javascript/notificationPopup.js"></script>
 
 </html>
