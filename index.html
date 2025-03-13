@@ -264,7 +264,7 @@
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Edit
                                             Profile</a>
                                         <a id="openChangePasswordModal"
-                                            class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Change
+                                            class="py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Change
                                             Password</a>
                                     </div>
                                 </div>
@@ -449,9 +449,9 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes">
+                            <section class="routes" id="closeSidebar">
                                 <div class="group">
-                                    <a href="">
+                                    <a href="" id="settingsTab">
                                         <div
                                             class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                             <div class="icon text-[#a4a7b3] text-4xl">
@@ -462,19 +462,19 @@
                                                         fill="#5F6368" />
                                                 </svg>
                                             </div>
-                                            <span
-                                                class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            <span id="toggleSubmenu" 
+                                                class="navTab text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
                                                 Settings
                                             </span>
                                         </div>
                                     </a>
-                                    <div class="hidden group-hover:block pl-12">
+                                    <div id="submenu" class="hidden pl-12">
                                         <a href="create-user-profile.html"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Edit
                                             Profile</a>
-                                        <a id="openChangePasswordModal"
+                                        <span id="openChangePasswordModal"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Change
-                                            Password</a>
+                                            Password</span>
                                     </div>
                                 </div>
                             </section>
@@ -548,7 +548,7 @@
                                     <div
                                         class="flex justify-between sm:justify-end w-full items-center space-x-4 text-[var(--primary)] sm:w-[50%]">
 
-                                        <div class="md:hidden block custom-select !rounded-xs" style="width: 250px;">
+                                        <!-- <div class="md:hidden block custom-select !rounded-xs" style="width: 250px;">
                                             <select id="dropdown" class="!text-[10px]"
                                                 onchange="this.setAttribute('value', this.value)">
                                                 <option value="" disabled selected hidden>All Clients</option>
@@ -556,9 +556,7 @@
                                                 <option value="option2">Client 2</option>
                                                 <option value="option3">Client 3</option>
                                             </select>
-                                            <!-- <label for="dropdown" id="dropdownLabel"
-                                                class="!-top-[10px] !text-xs">Clients</label> -->
-                                        </div>
+                                        </div> -->
                                         <button
                                             class="flex items-center px-3 py-3 h-[26px] border rounded-xs cursor-pointer text-xs font-normal leading-[14.52px] whitespace-nowrap">
                                             <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -956,7 +954,7 @@
             </div>
             <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
                 style="background-color: rgba(35, 35, 35, 0.3);">
-                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] lg:max-h-[286px] h-auto relative ">
                     <!-- Close Button -->
                     <button id="closeChangePasswordModal"
                         class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
@@ -1012,7 +1010,7 @@
                             </div>
                         </div>
                         <!-- Submit Button -->
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center mb-4">
                             <button type="submit"
                                 class="w-full bg-primary max-w-[272px] text-white py-2 rounded-sm text-sm font-medium leading-[17px] cursor-pointer">
                                 Change Password
@@ -1032,5 +1030,6 @@
 <script src="./javascript/showEventList.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
 <script src="./javascript/pagination.js"></script>
+<script src="./javascript/settingSubMenu.js"></script>
 
 </html>

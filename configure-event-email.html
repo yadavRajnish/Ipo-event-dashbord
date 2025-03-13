@@ -13,10 +13,11 @@
 
 </head>
 <style>
-    .ck.ck-editor__main>.ck-editor__editable{
+    .ck.ck-editor__main>.ck-editor__editable {
         height: 200px !important;
     }
 </style>
+
 <body>
     <div class="flex flex-col h-[100dvh]">
         <div class=" content-background flex justify-between flex-col">
@@ -198,23 +199,23 @@
                                 </a>
                             </section>
                             <section class="routes"><a href="configure-event-email.html">
-                                <div
-                                    class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
-                                    <div class="icon text-[#a4a7b3] text-4xl">
-                                        <?xml version="1.0" encoding="utf-8"?>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
-                                            <path
-                                                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
-                                        </svg>
+                                    <div
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        <div class="icon text-[#a4a7b3] text-4xl">
+                                            <?xml version="1.0" encoding="utf-8"?>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
+                                                <path
+                                                    d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
+                                            </svg>
+                                        </div>
+                                        <span
+                                            class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            Configure Email
+                                        </span>
                                     </div>
-                                    <span
-                                        class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
-                                        Configure Email
-                                    </span>
-                                </div>
-                            </a>
-                        </section>
+                                </a>
+                            </section>
                             <section class="routes">
                                 <div class="group">
                                     <a href="">
@@ -409,26 +410,26 @@
                                 </a>
                             </section>
                             <section class="routes"><a href="configure-event-email.html">
-                                <div
-                                    class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
-                                    <div class="icon text-[#a4a7b3] text-4xl">
-                                        <?xml version="1.0" encoding="utf-8"?>
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
-                                            <path
-                                                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
-                                        </svg>
+                                    <div
+                                        class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
+                                        <div class="icon text-[#a4a7b3] text-4xl">
+                                            <?xml version="1.0" encoding="utf-8"?>
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" stroke="#6E7174" stroke-width="2">
+                                                <path
+                                                    d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8" />
+                                            </svg>
+                                        </div>
+                                        <span
+                                            class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            Configure Email
+                                        </span>
                                     </div>
-                                    <span
-                                        class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
-                                        Configure Email
-                                    </span>
-                                </div>
-                            </a>
-                        </section>
-                            <section class="routes">
+                                </a>
+                            </section>
+                            <section class="routes" id="closeSidebar">
                                 <div class="group">
-                                    <a href="">
+                                    <a href="" id="settingsTab">
                                         <div
                                             class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                             <div class="icon text-[#a4a7b3] text-4xl">
@@ -439,19 +440,19 @@
                                                         fill="#5F6368" />
                                                 </svg>
                                             </div>
-                                            <span
-                                                class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            <span id="toggleSubmenu"
+                                                class="navTab text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
                                                 Settings
                                             </span>
                                         </div>
                                     </a>
-                                    <div class="hidden group-hover:block pl-12">
+                                    <div id="submenu" class="hidden pl-12">
                                         <a href="create-user-profile.html"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Edit
                                             Profile</a>
-                                        <a id="openChangePasswordModal"
+                                        <span id="openChangePasswordModal"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Change
-                                            Password</a>
+                                            Password</span>
                                     </div>
                                 </div>
                             </section>
@@ -546,8 +547,7 @@
                                                 class="text-sm cursor-pointer font-medium leading-4 py-[10px] px-3 rounded-sm border bg-transparent text-primary border-primary min-w-[128px]">
                                                 Cancel</button>
 
-                                            <button type="button"
-                                                onclick="window.location.href=''"
+                                            <button type="button" onclick="window.location.href=''"
                                                 class="text-sm cursor-pointer font-semibold leading-4 py-[10px] px-3 rounded-sm border bg-primary text-white border-primary min-w-[128px]">Save</button>
 
                                         </div>
@@ -566,7 +566,7 @@
         </div>
         <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
             style="background-color: rgba(35, 35, 35, 0.3);">
-            <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+            <div class="bg-white p-6 rounded-md shadow-lg w-[708px] lg:max-h-[286px] h-auto relative  ">
                 <!-- Close Button -->
                 <button id="closeChangePasswordModal"
                     class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
@@ -642,5 +642,6 @@
 <script src="./javascript/customSelect.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
 <script src="./javascript/quillEditor.js"></script>
+<script src="./javascript/settingSubMenu.js"></script>
 
 </html>

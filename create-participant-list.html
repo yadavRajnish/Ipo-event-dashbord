@@ -209,9 +209,9 @@
                                     </div>
                                 </a>
                             </section>
-                            <section class="routes">
+                            <section class="routes" id="closeSidebar">
                                 <div class="group">
-                                    <a href="">
+                                    <a href="" id="settingsTab">
                                         <div
                                             class="link flex min-h-[54px] px-[17px] gap-[15px] items-center bg-transparent border-l-4 border-transparent">
                                             <div class="icon text-[#a4a7b3] text-4xl">
@@ -222,19 +222,19 @@
                                                         fill="#5F6368" />
                                                 </svg>
                                             </div>
-                                            <span
-                                                class="navTab hidden text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
+                                            <span id="toggleSubmenu" 
+                                                class="navTab text-sm font-normal leading-[17px] text-[#6e7174] whitespace-nowrap">
                                                 Settings
                                             </span>
                                         </div>
                                     </a>
-                                    <div class="hidden group-hover:block pl-12">
+                                    <div id="submenu" class="hidden pl-12">
                                         <a href="create-user-profile.html"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Edit
                                             Profile</a>
-                                        <a id="openChangePasswordModal"
+                                        <span id="openChangePasswordModal"
                                             class="block py-2 text-sm font-normal leading-[17px] text-[#6e7174] hover:text-[#4b65e1]">Change
-                                            Password</a>
+                                            Password</span>
                                     </div>
                                 </div>
                             </section>
@@ -627,7 +627,7 @@
             </div>
             <div id="changePasswordModal" class="fixed inset-0 flex items-center justify-center hidden z-[999]"
                 style="background-color: rgba(35, 35, 35, 0.3);">
-                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] max-h-[286px] relative ">
+                <div class="bg-white p-6 rounded-md shadow-lg w-[708px] lg:max-h-[286px] h-auto relative  ">
                     <!-- Close Button -->
                     <button id="closeChangePasswordModal"
                         class="text-gray-500 text-base font-bold absolute right-[10px] top-[2px] cursor-pointer">&times;</button>
@@ -700,5 +700,5 @@
 <script src="./javascript/floatLabel.js"></script>
 <script src="./javascript/forgetPasswordModal.js"></script>
 <script src="./javascript/notificationPopup.js"></script>
-
+<script src="./javascript/settingSubMenu.js"></script>
 </html>
